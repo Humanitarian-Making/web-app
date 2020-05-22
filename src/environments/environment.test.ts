@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://us-central1-humanitarian-making-test-abb29.cloudfunctions.net/api/v1/',
+  apiUrl: 'https://us-central1-humanitarian-making-dev.cloudfunctions.net/api/v1/',
   mapbox: {
     accessToken: 'pk.eyJ1IjoiYWRtaW4taHVtYW5pdGFyaWFuLW1ha2luZyIsImEiOiJjazkxY3ozemQwMXNlM2xwbDNwZWpiNmlnIn0.3z2mttbszjIsVOr7CVld2w'
   },

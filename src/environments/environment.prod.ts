@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  apiUrl: 'https://us-central1-humanitarian-making-production.cloudfunctions.net/api/v1/',
   mapbox: {
     accessToken: 'pk.eyJ1IjoiYWRtaW4taHVtYW5pdGFyaWFuLW1ha2luZyIsImEiOiJjazkxY3d6enUwMWc1M21sa3FpbWEyYjY5In0.BHnPqdHkkoE6DaRt0N3vZQ'
   },
