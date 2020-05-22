@@ -1,0 +1,41 @@
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+      <span></span>
+      <span></span>
+      <button 
+          class="action-button" 
+          (click)="clickEdit()" 
+          mat-mini-fab color="accent">
+          <mat-icon>edit</mat-icon>
+      </button>
+  </div>
+    <img *ngIf="user && user.photoURL" class="profile-picture" src="{{user.photoURL}}">
+    <h1 *ngIf="user && user.displayName">{{user.displayName}}</h1>
+    <p *ngIf="user && user.language">Language: {{user.language}}</p>
+    <button class="button" mat-raised-button (click)="clickSignOut()">
+        Sign Out
+    </button> 
+    <h4>User Groups</h4>
+    <table mat-table [dataSource]="userGroups" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>User Group</th>
+          <td mat-cell *matCellDef="let userGroup"> {{userGroup.userGroup.name}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef> Role </th>
+          <td mat-cell *matCellDef="let userGroup"> {{userGroup.role}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="open">
+            <th mat-header-cell *matHeaderCellDef> Open </th>
+            <td mat-cell *matCellDef="let userGroup"> {{userGroup.userGroup.open === true ? 'Open' : 'Private' }} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="['name', 'open','role']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['name','open','role'];"></tr>
+      </table>
+
+</div>

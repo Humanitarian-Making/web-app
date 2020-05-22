@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutAlign="start center" >
+    <h4>Sign In</h4>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="start center">
+        <div class="form-group">
+            <label for="firstName">Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Full Name is required</div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+        <button [disabled]="loading" mat-raised-button color="primary">Sign In</button>
+    </form>
+    <a routerLink="/sign-up" class="link">Create an Account</a>
+    <a routerLink="/sign-up" class="link">Forgot Password</a>
+</div>
+
+<app-provider-sign-in></app-provider-sign-in>

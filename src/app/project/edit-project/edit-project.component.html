@@ -1,0 +1,59 @@
+<div *ngIf="project" fxLayout="column" fxLayoutAlign="start center">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+        <span></span>
+        <span></span>
+        <button 
+            class="action-button" 
+            (click)="clickCancel()" 
+            mat-mini-fab color="accent">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+        <div class="field-label">User Group: {{project.userGroup.name}} 
+            <button *ngIf="project.canChangeUserGroup"mat-icon-button aria-label="" color="primary" (click)="clickEditUserGroup()">
+                  <mat-icon>edit</mat-icon>
+            </button>
+      </div> 
+    </div>
+    <!-- Header Row -->
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="project-name">{{langService.getLanguageOption(project.name)}}</div>
+    <button *ngIf="project.canEditName"mat-icon-button aria-label="" color="primary" (click)="clickEditName()">
+        <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <img class="image" src={{project.imageUrl}} alt="Image of project" >
+
+
+  <!-- Tag Row -->
+  <div class="tags" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row" fxLayoutAlign.xs="start center">
+    <mat-chip-list cdkDropList (cdkDropListDropped)="reorderTags($event)" class="mat-chip-list-stacked" aria-label="Tags">
+        <mat-chip *ngFor="let tag of project.tags;  let i = index" cdkDrag (removed)="removeTag(i)">
+            {{langService.getLanguageOption(tag.parent.name)}} | {{langService.getLanguageOption(tag.name)}}
+            <mat-icon matChipRemove *ngIf="project.canRemoveTag">cancel</mat-icon>
+        </mat-chip>
+        <mat-chip *ngIf="project.canAddTag" (click)="addTag()"> 
+            Add
+            <mat-icon>add</mat-icon>
+        </mat-chip>
+      </mat-chip-list>
+  </div>
+  
+  <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+      <div class="field-label">Description 
+          <button *ngIf="project.canEditDesc"mat-icon-button aria-label="" color="primary" (click)="clickEditDesc()">
+                <mat-icon>edit</mat-icon>
+        </button>
+    </div> 
+    <div class="field-text">{{langService.getLanguageOption(project.desc)}}</div>
+  </div>
+</div>
+<div *ngIf="errorMessage" fxLayout="column" fxLayoutAlign="start center">
+    <h1>{{errorMessage}}</h1>
+</div>
+<div *ngIf="loading">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+    <p style="text-align: center;">Loading</p>
+</div>

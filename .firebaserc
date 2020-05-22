@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "test": "humanitarian-making-test-abb29",
+    "prod": "humanitarian-making-f8635",
+    "default": "humanitarian-making-test-abb29"
+  },
+  "targets": {
+    "humanitarian-making-f8635": {
+      "hosting": {}
+    }
+  }
+}

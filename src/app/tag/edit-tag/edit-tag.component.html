@@ -1,0 +1,64 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="tag">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+        <span></span>
+        <span></span>
+        <button 
+            class="action-button" 
+            (click)="clickCancel()" 
+            mat-mini-fab color="accent">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+    <img class="tag-image" src="{{imageURL | async }}">
+    <mat-divider class="divider"></mat-divider>
+    <p class="tags-label">UserGroup</p>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <p>{{tag.userGroup.name}}</p>
+        <button mat-icon-button aria-label="" color="primary" *ngIf="tag.canChangeUserGroup"
+            (click)="clickEditUserGroup()">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <p class="tags-label">Name</p>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <lang-opt [array]="tag.name"></lang-opt>
+        <button mat-icon-button aria-label="" color="primary" *ngIf="tag.canEditName" (click)="clickEditName()">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <p class="tags-label">Description</p>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <lang-opt [array]="tag.desc"></lang-opt>
+        <button mat-icon-button aria-label="" color="primary" *ngIf="tag.canEditName" (click)="clickEditDesc()">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <p class="tags-label">Selectable</p>
+    <mat-slide-toggle [color]="'primary'" [checked]="tag.selectable" (change)="clickSelectable($event)">
+    </mat-slide-toggle>
+    <mat-divider class="divider"></mat-divider>
+    <p class="tags-label">Tags</p>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-chip-list cdkDropList (cdkDropListDropped)="reorderTags($event)" class="mat-chip-list-stacked"
+            aria-label="Tags">
+            <mat-chip *ngFor="let tag of tag.children" cdkDrag>
+                <div class="tag-link">
+                    <lang-opt [array]="tag.name"></lang-opt>
+                </div>
+            </mat-chip>
+            <mat-chip (click)="clickCreateTag()" *ngIf="tag.canAddTag">
+                Add
+                <mat-icon>add</mat-icon>
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+</div>
+<div *ngIf="loading">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>
+<div *ngIf="errorMessage" fxLayout="column" fxLayoutAlign="start center">
+    <h1>{{errorMessage}}</h1>
+</div>

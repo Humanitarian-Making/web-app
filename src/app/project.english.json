@@ -1,0 +1,61 @@
+{ "projects": [
+    {
+        "id": "o7vDe2RJOD2J8ip9AwZR",
+        "organisation": {
+            "name": "Field Ready",
+            "description": "Field Ready meets humanitarian and reconstruction aid needs by transforming logistics through technology, design and engaging people in new ways.", 
+            "wikifactory": {
+                "organisationUrl": "https://www.humanitarianmaking.org/+msf",
+                "logoUrl": "https://res.cloudinary.com/dbshcjrt3/image/upload/w_240,h_240,c_fill,g_auto,q_auto/wikifactory-prod.uploads/44068/msf-logo.png"
+            }
+        },
+        "name": "Water Truck Clamp",
+        "description":  "This is an open source solution to damaged hoses in different areas within the world. This product is made for the purpose of preventing water leakage from a hose. It was created by Field Ready.",
+        "wikifactory": {
+            "projectUrl": "https://www.humanitarianmaking.org/+msf",
+            "imageUrl": "https://res.cloudinary.com/dbshcjrt3/image/upload/w_240,h_240,c_fill,g_auto,q_auto/wikifactory-prod.uploads/44068/msf-logo.png"
+        },
+        "stage": {
+            "name": "Production",
+            "description": "Ready to be used as a product in the field"
+        }, 
+        "categories": [
+            {
+                "group": {
+                    "id": "8984923428348",
+                    "name": "Manufacturing Method",
+                    "description": "Technique Used to Manufacture"
+                },
+                "value": {
+                    "id": "568989898979",
+                    "name": "3D Printing",
+                    "description": "The 3D printing process builds a three-dimensional object from a computer-aided design (CAD) model, usually by successively adding material layer by layer"
+                }
+            }, 
+            {
+                "group": {
+                    "id": "8984923428348",
+                    "name": "Country",
+                    "description": ""
+                },
+                "value": {
+                    "id": "568989898979",
+                    "name": "South Africa",
+                    "description": ""
+                }
+            }, {
+                "group": {
+                    "id": "7duq3w8r909",
+                    "name": "Production Level",
+                    "description": ""
+                },
+                "value": {
+                    "id": "678987656789",
+                    "name": "Production Ready",
+                    "description": ""
+                }
+            }
+        ] 
+    }    
+]
+}

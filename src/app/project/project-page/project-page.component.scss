@@ -1,0 +1,70 @@
+.floatRight{
+    float: right;        
+    margin-left: 54%;        
+    margin-top: 04em;
+} 
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.actionButton {
+    margin: 10px;
+}
+
+.fields {
+    padding-left: 1em;
+}
+
+.page {
+    padding: 1em;
+}
+.simple-font {
+    font-size: 14px;
+}
+
+.image {
+    max-width: 350px;    
+}
+
+.tags {
+    margin: 1em;
+}
+
+.desc-field {
+    margin: 0em;
+}
+.field-label {
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+}
+.field-text {
+    font-size: 1em;
+}
+
+.action-button-group {
+    margin-left: 3em;
+}
+.action-button {
+    margin: 0.25em;
+}
+.project-name {
+    font-size: 1.5em;
+}
+
+.tag-link {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.tag-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.top-row {
+    width: 100%;
+}

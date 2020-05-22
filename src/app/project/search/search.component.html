@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="search-label">Search: </div>
+  <mat-form-field class="drop-down-field">
+    <mat-label>Organisation</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let org of organisations; let i = index;" [value]="org._id" (click)="selectOrganisation(i)">
+        {{langService.getLanguageOption(org.name)}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="drop-down-field">
+    <mat-label>Sector</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let sector of sectors; let i = index;" [value]="sector._id" (click)="selectSector(i)">
+        {{langService.getLanguageOption(sector.name)}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-chip-list aria-label="Tag Selection">
+    <mat-chip class="chip" *ngFor="let tag of tags; let i = index" (removed)="removeQueryItem(i)">
+      {{langService.getLanguageOption(tag.parent.name)}} | {{langService.getLanguageOption(tag.name)}}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <mat-chip class="add-chip" (click)="clickAddTag()">
+      <mat-icon>add</mat-icon>
+      Add
+    </mat-chip>
+  </mat-chip-list>
+</div>

@@ -1,0 +1,435 @@
+{
+    "data": {
+        "projects": {
+            "result": {
+                "pageInfo": {
+                    "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                    "endCursor": "YXJyYXljb25uZWN0aW9uOjU=",
+                    "hasNextPage": true,
+                    "__typename": "PageInfo"
+                },
+                "totalCount": 9,
+                "edges": [
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                        "node": {
+                            "id": "UHJvamVjdDoxNDQ3NTQ=",
+                            "image": {
+                                "id": "RmlsZToxNDQ5NDU=",
+                                "filename": "WA013_Image_edited.jpg",
+                                "path": "15553/wa013imageedited-df83b.jpg",
+                                "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15553/wa013imageedited-df83b.jpg",
+                                "completed": true,
+                                "private": false,
+                                "__typename": "File"
+                            },
+                            "slug": "water-hose-clamp-project",
+                            "descriptionSnippet": "This is an open source solution to damaged hoses in different areas within the world. This product i",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDoxNDQ3NTQ=",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 11,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6MTU1NTM=",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [
+                                {
+                                    "id": "VGFnOjg2MDc=",
+                                    "name": "sdg",
+                                    "__typename": "Tag"
+                                },
+                                {
+                                    "id": "VGFnOjQxMTk=",
+                                    "name": "3dprinted",
+                                    "__typename": "Tag"
+                                },
+                                {
+                                    "id": "VGFnOjQxMTg=",
+                                    "name": "environment",
+                                    "__typename": "Tag"
+                                },
+                                {
+                                    "id": "VGFnOjQxMTc=",
+                                    "name": "sustainability",
+                                    "__typename": "Tag"
+                                }
+                            ],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 7,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    },
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+                        "node": {
+                            "id": "UHJvamVjdDoxNDU2MTE=",
+                            "image": {
+                                "id": "RmlsZToxNDYwMDM=",
+                                "filename": "84d105_2ffffd3442c84312bdfc545c729aa90a.jpg",
+                                "path": "15655/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15655/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                "completed": true,
+                                "private": false,
+                                "__typename": "File"
+                            },
+                            "slug": "field-ready-template",
+                            "descriptionSnippet": "Use this Template Project to start a new FieldReady project that follows the requirements for it to ",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDoxNDU2MTE=",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 9,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6MTU2NTU=",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 10,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    },
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
+                        "node": {
+                            "id": "UHJvamVjdDoyNTQ3OQ==",
+                            "image": {
+                                "id": "RmlsZToyNTQ4MQ==",
+                                "filename": "DR001_Image.jpg",
+                                "path": "3047/dr001image-0.jpg",
+                                "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/3047/dr001image-0.jpg",
+                                "completed": true,
+                                "private": false,
+                                "__typename": "File"
+                            },
+                            "slug": "rescue-airbag",
+                            "descriptionSnippet": "Field Ready’s heavy lift airbags for deployment in search and rescue operations.",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDoyNTQ3OQ==",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 8,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6MzA0Nw==",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [
+                                {
+                                    "id": "VGFnOjg3MzU=",
+                                    "name": "sdg",
+                                    "__typename": "Tag"
+                                }
+                            ],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 36,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    },
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjM=",
+                        "node": {
+                            "id": "UHJvamVjdDoxNDQxNDI=",
+                            "image": {
+                                "id": "RmlsZToxNDQxNDQ=",
+                                "filename": "DS011_Image.jpeg",
+                                "path": "15511/ds011image-0ca54.jpeg",
+                                "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15511/ds011image-0ca54.jpeg",
+                                "completed": true,
+                                "private": false,
+                                "__typename": "File"
+                            },
+                            "slug": "ds011-latrine-rails",
+                            "descriptionSnippet": "To aid in safe and easy transfers between wheelchair and latrine",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDoxNDQxNDI=",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 7,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6MTU1MTE=",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [
+                                {
+                                    "id": "VGFnOjg2OTI=",
+                                    "name": "sdg",
+                                    "__typename": "Tag"
+                                }
+                            ],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 8,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    },
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjQ=",
+                        "node": {
+                            "id": "UHJvamVjdDoyMDczNzM=",
+                            "image": {
+                                "id": "RmlsZToyMDkyMzM=",
+                                "filename": "DS006_Image.jpg",
+                                "path": "21566/ds006image-8b68f.jpg",
+                                "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/21566/ds006image-8b68f.jpg",
+                                "completed": true,
+                                "private": false,
+                                "__typename": "File"
+                            },
+                            "slug": "wheelchair-cup-holder",
+                            "descriptionSnippet": "DS006A holder that attaches to the wheelchairs arms, providing a storge for a cup",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDoyMDczNzM=",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 3,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6MjE1NjY=",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 19,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    },
+                    {
+                        "cursor": "YXJyYXljb25uZWN0aW9uOjU=",
+                        "node": {
+                            "id": "UHJvamVjdDozMjU1NjA=",
+                            "image": null,
+                            "slug": "wa001",
+                            "descriptionSnippet": "Hose collar for output of a diesel water pump (3” OD)) ",
+                            "private": false,
+                            "content": {
+                                "id": "Q29udGVudDozMjU1NjA=",
+                                "type": "project",
+                                "whitelabel": "humanitarian-makers",
+                                "isLiked": false,
+                                "likesCount": 0,
+                                "isFollowed": false,
+                                "followersCount": 2,
+                                "creator": {
+                                    "id": "VXNlcjozODI=",
+                                    "username": "@brynmorjohn",
+                                    "__typename": "User"
+                                },
+                                "inSpace": {
+                                    "id": "U3BhY2U6NDE5NTY=",
+                                    "__typename": "Space"
+                                },
+                                "__typename": "Content"
+                            },
+                            "tags": [],
+                            "parentContent": {
+                                "id": "Q29udGVudDoxNDQxMzc=",
+                                "title": "Field Ready",
+                                "whitelabel": "humanitarian-makers",
+                                "avatar": {
+                                    "id": "RmlsZToxNDQxNTg=",
+                                    "path": "15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "url": "https://s3.eu-central-1.amazonaws.com/wikifactory-prod.uploads/15506/84d1052ffffd3442c84312bdfc545c729aa90a.jpg",
+                                    "__typename": "File"
+                                },
+                                "type": "initiative",
+                                "imageFallbackChar": "f",
+                                "__typename": "Content"
+                            },
+                            "space": {
+                                "id": "U3BhY2U6MTU1MDY=",
+                                "spaceType": "INITIATIVE",
+                                "content": {
+                                    "id": "Q29udGVudDoxNDQxMzc=",
+                                    "slug": "FieldReady",
+                                    "__typename": "Content"
+                                },
+                                "__typename": "Space"
+                            },
+                            "contributionCount": 6,
+                            "__typename": "Project"
+                        },
+                        "__typename": "ProjectEdge"
+                    }
+                ],
+                "__typename": "ProjectConnection"
+            },
+            "userErrors": [],
+            "__typename": "ProjectConnectionErrorHandler"
+        }
+    }
+}

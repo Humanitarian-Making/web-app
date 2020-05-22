@@ -1,0 +1,34 @@
+<div fxLayout="column" fxLayoutAlign="start center" >
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+    <span></span>
+    <span></span>
+    <button 
+        class="action-button" 
+        (click)="goToProfile()" 
+        mat-mini-fab color="accent">
+        <mat-icon>cancel</mat-icon>
+    </button>
+</div>
+  <h4>Update Details</h4>
+  <form *ngIf="user" [formGroup]="updateUserDetailsForm" (ngSubmit)="clickUpdateUserDetails()" fxLayout="column" fxLayoutAlign="start center">
+      <div class="form-group">
+          <label for="displayName">Full Name</label>
+          <input type="text" formControlName="displayName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.displayName.errors }" />
+          <div *ngIf="submitted && f.displayName.errors" class="invalid-feedback">
+              <div *ngIf="f.displayName.errors.required">Full Name is required</div>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="Language">Language</label>
+        <select class="form-control" id="exampleFormControlSelect1" formControlName="language" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.language.errors }">
+          <option *ngFor="let lang of languages" [value]="lang.value" >{{lang.label}}</option>
+        </select>
+        <div *ngIf="submitted && f.language.errors" class="invalid-feedback">
+          <div *ngIf="f.language.errors.required">Full Name is required</div>
+      </div>
+    </div>
+      <button [disabled]="loading" mat-raised-button class="action-button" color="primary">Update</button>
+  </form>
+  <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+  <p *ngIf="updated" class="success-message">Updated</p>
+</div>

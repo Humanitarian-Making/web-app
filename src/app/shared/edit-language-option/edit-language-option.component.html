@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Edit {{input.fieldLabel}} Language Options</h1>
+<div mat-dialog-content>
+    <div  *ngFor="let item of array; let i=index" fxLayout="column"  fxLayoutAlign="space-around stretch" >
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="row" *ngIf="item.status === 'display'">
+            <p matLine class="text">{{i+1}}. {{langService.getLabel(item.language)}}</p>
+            <p matLine class="text">{{item.text}}</p>
+            <div>
+                <button mat-icon-button (click)="startEditOption(i)">
+                    <mat-icon color="primary">edit</mat-icon>
+                 </button>
+                 <button mat-icon-button (click)="deleteOption(i)">
+                    <mat-icon color="primary">delete</mat-icon>
+                 </button> 
+            </div>
+        </div>
+        <div  *ngIf="item.status==='edit'">
+            <form [formGroup]="optionForm" fxLayout="row" fxLayoutAlign="space-between center" class="row">
+                <mat-form-field>
+                    <mat-label>Language</mat-label>
+                    <mat-select formControlName="language">
+                        <mat-option *ngFor="let lang of languages" [value]="lang.value" >
+                          {{lang.label}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                
+                  <mat-form-field class="" >
+                        <mat-label>Text</mat-label>
+                        <input matInput value="{{item.text}}" formControlName="text">
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button color="primary" (click)="confirmEditOption(i)">
+                        <mat-icon>done</mat-icon>
+                        Edit
+                     </button>
+                    <button mat-raised-button color="accent" (click)="cancelEditOption(i)">
+                        <mat-icon>close</mat-icon>
+                        Cancel
+                    </button>
+                  </div>
+            </form>
+        </div>
+            <div fxLayout="row" fxLayoutAlign="center center" class="row" *ngIf="item.status==='add'">
+                <button mat-mini-fab color="accent" aria-label="Add Option" (click)="startAddOption()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="cancelEdit()">Cancel</button>
+    <button mat-button (click)='confirmEdit()'>Confirm Edit</button>
+  </div>

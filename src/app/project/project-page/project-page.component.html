@@ -1,0 +1,36 @@
+<div fxLayout="column" fxLayoutAlign="start center"  class="page" *ngIf="project">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+    <button mat-mini-fab color="accent" (click)="goToProjects()" class="action-button">
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+    <div class="action-button-group">
+      <button mat-mini-fab color="accent" (click)="goToProject(project.projectUrl)" class="action-button">
+          <mat-icon>visibility</mat-icon>
+      </button>
+      <button class="action-button" (click)="editProject()" mat-mini-fab  color="accent" aria-label="Example icon button with a bookmark icon" *ngIf="authService.auth.user | async">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="project-name">{{langService.getLanguageOption(project.name)}}</div>
+  <img class="image" src={{project.imageUrl}} alt="Image of project" >
+
+
+  <!-- Tag Row -->
+  <div class="tags" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row" fxLayoutAlign.xs="start center">
+    <mat-chip-list aria-label="Tag Selection" *ngIf="project.tags.length > 0">
+      <mat-chip *ngFor="let tag of project.tags" (click)="goToTag(tag._id)">
+        {{langService.getLanguageOption(tag.parent.name)}} | {{langService.getLanguageOption(tag.name)}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  
+  <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+      <div class="field-label">Description</div> 
+      <div class="field-text">{{langService.getLanguageOption(project.desc)}}</div>
+  </div>
+
+</div>
+<div *ngIf="!project">
+  <mat-spinner  style="margin:0 auto;"></mat-spinner>
+</div>

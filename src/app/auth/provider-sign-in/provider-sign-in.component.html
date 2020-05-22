@@ -1,0 +1,22 @@
+<div  
+    fxLayout="column" 
+    fxLayoutAlign="center center" 
+>
+    <div  
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="center center"
+    fxLayout="row" 
+    fxLayoutAlign="center center" 
+    >
+    <button class="button" mat-raised-button (click)="loginWithGoogle()">
+        <mat-icon class="svg" svgIcon="google" aria-hidden="false" aria-label="Google Icon"></mat-icon>
+        Google 
+    </button>
+    <button class="button" mat-raised-button (click)="loginWithFacebook()">
+        <mat-icon class="svg" svgIcon="facebook" aria-hidden="false" aria-label="Facebook Icon"></mat-icon>
+        Facebook 
+    </button>
+    </div>
+    <p *ngIf="providerError">{{providerError}}</p>
+</div>
+

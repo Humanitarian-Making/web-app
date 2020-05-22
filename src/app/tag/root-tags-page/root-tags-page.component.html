@@ -1,0 +1,22 @@
+<div>
+  <h2>Tags</h2>
+  <br>
+  <div *ngIf="!tags">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+    <p style="text-align: center;">Loading</p>
+  </div>
+  <div *ngIf="tags" fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
+      fxLayoutAlign="center stretch" fxLayoutGap="20px">
+      <!-- Tag -->
+      <div fxFlex fxFlex='25' fxFlex.md='30' fxFlex.sm='40' fxFlex.xs='95' *ngFor="let tag of tags" class="tag-card" (click)="goToTag(tag._id)">
+          {{langService.getLanguageOption(tag.name)}}
+      </div>
+      <!-- Create -->
+      <div fxFlex fxFlex='25' fxFlex.md='30' fxFlex.sm='40' fxFlex.xs='95' class="tag-card" (click)="onClickCreate()">
+        <mat-icon>add</mat-icon>
+        Root Tag
+      </div>
+    </div>
+  </div>
+</div>

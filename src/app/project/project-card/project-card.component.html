@@ -1,0 +1,11 @@
+<mat-card class="project-card" (click)="goToProject()" *ngIf="project">
+    <img mat-card-image src={{project.imageUrl}} alt="Image of project">
+    <mat-card-content>
+      <div class="name">
+        {{langService.getLanguageOption(project.name)}}
+      </div>
+      <div class="desc">
+        {{langService.getLanguageOption(project.desc)}}
+      </div>
+    </mat-card-content>
+  </mat-card>

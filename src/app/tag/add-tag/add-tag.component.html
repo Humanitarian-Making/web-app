@@ -1,0 +1,27 @@
+<h1 *ngIf="input.type === 'query'"mat-dialog-title>Add Tag to Query</h1>
+<h1 *ngIf="input.type === 'project'"mat-dialog-title>Add Tag to Project</h1>
+<div mat-dialog-content [formGroup]="addTagForm" *ngIf="!errorMessage">
+    <mat-form-field>
+        <mat-label>Parent Tag</mat-label>
+        <mat-select formControlName="parent">
+            <mat-option *ngFor="let parentTag of parentTags" [value]="parentTag._id" (click)="selectParent(parentTag._id)">
+                {{langService.getLanguageOption(parentTag.name) }} ({{parentTag.numChildren}})
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Tag</mat-label>
+        <mat-select formControlName="tag">
+            <mat-option *ngFor="let tag of tags" [value]="tag._id" (click)="selectChild(tag._id)">
+                {{langService.getLanguageOption(tag.name)}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-content *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)='addTag()'>Add</button>
+</div> 

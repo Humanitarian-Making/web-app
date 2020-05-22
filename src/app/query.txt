@@ -1,0 +1,107 @@
+fragment contentFields on Content {
+      id
+  type
+  whitelabel
+  isLiked
+  likesCount
+  isFollowed
+  followersCount
+  creator {
+        id
+    username
+    __typename
+  }
+  inSpace {
+        id
+    __typename
+  }
+  __typename
+}
+fragment projectListFields on Project {
+    id
+    image {
+        id
+        filename
+        path
+        url
+        completed
+        private
+            __typename
+          }
+          slug
+          descriptionSnippet
+          private
+          content {
+                ...contentFields
+            __typename
+          }
+          tags {
+                id
+            name
+            __typename
+          }
+          parentContent {
+                id
+            title
+            whitelabel
+            avatar {
+                  id
+              path
+              url
+              __typename
+            }
+            type
+            imageFallbackChar
+            __typename
+          }
+          space {
+                id
+            spaceType
+            content {
+                  id
+              slug
+              __typename
+            }
+            __typename
+          }
+          contributionCount
+          __typename
+        }
+fragment projectConnectionFields on ProjectConnection {
+    pageInfo {
+        startCursor
+    endCursor
+    hasNextPage
+    __typename
+  }
+  totalCount
+  edges {
+        cursor
+    node {
+          ...projectListFields
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+fragment userErrorFields on UserError {
+      message
+  key
+  code
+  __typename
+}
+
+query WhiteLabelProjects($batchSize: Int, $cursor: String, $sortBy: String, $contains: [String!], $notContains: [[String]], $filterBy: [[String!]], $whitelabels: [String]) {
+      projects(first: $batchSize, after: $cursor, sortBy: $sortBy, contains: $contains, notContains: $notContains, filterBy: $filterBy, whitelabels: $whitelabels) {
+        result {
+          ...projectConnectionFields
+      __typename
+    }
+    userErrors {
+          ...userErrorFields
+      __typename
+    }
+    __typename
+  }
+}

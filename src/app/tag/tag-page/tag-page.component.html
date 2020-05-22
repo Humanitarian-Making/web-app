@@ -1,0 +1,43 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="tag">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+    <span></span>
+    <button class="action-button" (click)="goToEditPage()" mat-mini-fab  color="accent" aria-label="Example icon button with a bookmark icon" *ngIf="authService.auth.user | async">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" class="top-row">
+    <button mat-stroked-button color="primary" (click)="goToTag(tag.parent._id)" *ngIf="tag.parent" class="tag-button">
+      {{langService.getLanguageOption(tag.parent.name)}}
+    </button>
+    <button mat-stroked-button color="primary" (click)="goToRootTags()" *ngIf="!tag.parent">
+      Root Tags
+    </button>
+  </div>
+  <img class="tag-image" src="{{imageURL | async }}">
+  <h5>{{tag.userGroup.name}}</h5>
+  <div fxLayout="row" fxLayoutAlign="center center" >
+    <h2>{{langService.getLanguageOption(tag.name)}}</h2>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" >
+    <p>{{langService.getLanguageOption(tag.desc)}}</p>
+  </div>
+  <div>
+    <button *ngFor="let child of tag.children" mat-stroked-button color="primary" (click)="goToTag(child._id)" class="tag-button">
+      {{langService.getLanguageOption(child.name)}}
+    </button>
+  </div>
+  <!-- <p> {{tag | json}}</p> -->
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <h4>Projects</h4>
+    <br>
+    <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
+    fxLayoutAlign="center stretch">
+    <div fxFlex='33' fxFlex.md='40' fxFlex.sm='40' fxFlex.xs='95' *ngFor="let project of projects">
+      <app-project-card [project]="project"></app-project-card>
+    </div>
+  </div>
+  </div>
+</div>
+<div *ngIf="!tag">
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>

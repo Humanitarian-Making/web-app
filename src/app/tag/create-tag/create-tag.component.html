@@ -1,0 +1,24 @@
+<h1 mat-dialog-title *ngIf="data.parent === null">Create Root Tag</h1>
+<h1 mat-dialog-title *ngIf="data.parent !== null">Create Tag under {{langService.getLanguageOption(data.parent.name)}}</h1>
+<div mat-dialog-content [formGroup]="createTagForm">
+          <mat-form-field *ngIf="userGroupRequired">
+            <mat-label>User Group</mat-label>
+            <mat-select formControlName="userGroup">
+                <mat-option *ngFor="let userGroup of userGroups" [value]="userGroup.userGroup._id">
+                  {{userGroup.userGroup.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="desc">
+        </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)='createTag()'>Create</button>
+</div>

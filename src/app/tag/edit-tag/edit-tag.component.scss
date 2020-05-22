@@ -1,0 +1,25 @@
+.tag-image {
+    // border-radius: 50%;
+    height: 4em;
+    margin-top: 1em;
+}
+
+.top-row {
+    width: 100%;
+}
+
+mat-chip {
+    min-width: 200px;
+    text-align: center;
+}
+
+.tags-label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.divider {
+    width: 70%;
+    margin: 0.1em;
+}
