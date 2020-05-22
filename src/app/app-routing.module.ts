@@ -18,6 +18,7 @@ import { ProjectPageComponent } from './project/project-page/project-page.compon
 import { ProjectsPageComponent } from './project/projects-page/projects-page.component';
 import { EditProjectComponent } from './project/edit-project/edit-project.component';
 
+
 // mapping
 import { MapPageComponent } from './mapping/map-page/map-page.component';
 
