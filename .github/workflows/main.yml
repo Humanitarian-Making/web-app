@@ -22,8 +22,8 @@ jobs:
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
-          name: dist/hm-catalog
-          path: dist/hm-catalog
+          name: web-app
+          path: dist/hm-catalog/*
   deploy:
     name: Deploy
     needs: build
