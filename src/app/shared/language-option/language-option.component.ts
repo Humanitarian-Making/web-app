@@ -1,10 +1,6 @@
-import { AuthService } from 'src/app/services/auth.service';
 import { LanguageService } from './../../services/language.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { LanguageOption, LanguageOptionRef } from 'functions/src/interfaces';
-
-import { User } from 'src/app/interfaces/user';
-import { MatDialog } from '@angular/material/dialog';
+import { LanguageOption, LanguageOptionRef } from './../../interfaces';
 
 @Component({
   // tslint:disable-next-line:component-selector

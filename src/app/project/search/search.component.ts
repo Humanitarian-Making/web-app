@@ -1,4 +1,4 @@
-import { TagsRes } from './../../../../functions/src/interfaces';
+import { TagsRes } from './../../interfaces';
 import { TagService } from 'src/app/services/tag.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';

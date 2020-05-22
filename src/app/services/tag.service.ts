@@ -1,6 +1,5 @@
-import { LanguageOption } from './../../../functions/src/interfaces';
 import { Injectable } from '@angular/core';
-import { CreateTagObject, CreateRootTagObject } from 'functions/src/interfaces';
+import { CreateTagObject, CreateRootTagObject, LanguageOption } from './../interfaces';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from './../../environments/environment';

@@ -1,7 +1,7 @@
 import { AuthService } from 'src/app/services/auth.service';
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LanguageOptionRef, LanguageOption, UserUserGroup, StandardResponse } from 'functions/src/interfaces';
+import { LanguageOptionRef, LanguageOption, UserUserGroup, StandardResponse } from './../../interfaces';
 import { LanguageService } from 'src/app/services/language.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserGroupService } from 'src/app/services/user-group.service';

@@ -1,4 +1,4 @@
-import { StandardResponse } from './../../../functions/src/interfaces';
+import { StandardResponse, LanguageOption } from './../interfaces';
 import { LanguageService } from './language.service';
 import { AuthService } from './auth.service';
 import { Injectable } from '@angular/core';
@@ -7,15 +7,12 @@ import { AngularFireFunctions } from '@angular/fire/functions';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from './../../environments/environment';
-import { Project, EditProject, ProjectObject } from '../interfaces/project';
-import { TagReference, GetEditableProjectRes, LanguageOption } from 'functions/src/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
   public projects: any[] = [];
-  public featured: Project[] = [];
   public currentProject = null;
   public editProjectId = null;
   public projects$ = new Subject();

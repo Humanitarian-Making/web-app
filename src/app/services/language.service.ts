@@ -1,6 +1,5 @@
-import { LanguageOption } from 'functions/src/interfaces';
+import { LanguageOption } from './../interfaces';
 import { Injectable } from '@angular/core';
-import { TextLangaugeOption } from '../interfaces/language';
 
 @Injectable({
   providedIn: 'root'
@@ -23,11 +22,11 @@ export class LanguageService {
     }
   }
 
-  getLanguageOption(optionArray: TextLangaugeOption[]): string {
+  getLanguageOption(optionArray: {text: string; language: string}[]): string {
     try {
       if (optionArray.length > 1) {
         const language: string = this.currentLanguage;
-        let selectedOption: TextLangaugeOption = null;
+        let selectedOption: {text: string; language: string} = null;
         for (const option of optionArray) {
           if (option.language === language) {
             selectedOption = option;

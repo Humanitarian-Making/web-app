@@ -1,11 +1,9 @@
 import { TagService } from '../../services/tag.service';
 import { LanguageService } from '../../services/language.service';
-import { TagSnippet, TagRes } from '../../../../functions/src/interfaces';
+import { TagSnippet, TagRes } from '../../interfaces';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/interfaces/user';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectService } from 'src/app/services/project.service';
 
@@ -18,7 +16,7 @@ export class TagPageComponent implements OnInit {
   tagId: string;
   tag;
   tagSnippet: TagSnippet;
-  user: User;
+  user;
   tags$;
   imageURL;
   public projects;

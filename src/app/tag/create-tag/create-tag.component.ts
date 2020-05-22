@@ -1,9 +1,8 @@
-import { CreateTagObject, CreateRootTagObject } from './../../../../functions/src/interfaces';
 import { Component, Inject } from '@angular/core';
 import { TagService } from 'src/app/services/tag.service';
 import { LanguageService } from 'src/app/services/language.service';
 import { FormGroup, FormControl } from '@angular/forms';
-import { TagSnippet } from 'functions/src/interfaces';
+import { TagSnippet, CreateTagObject, CreateRootTagObject } from './../../interfaces';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/auth.service';
 

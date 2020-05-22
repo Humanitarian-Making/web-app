@@ -1,7 +1,6 @@
-import { StandardResponse } from './../../../../functions/src/interfaces';
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LanguageOptionRef, LanguageOption } from 'functions/src/interfaces';
+import { LanguageOptionRef, LanguageOption, StandardResponse } from './../../interfaces';
 import { LanguageService } from 'src/app/services/language.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TagService } from 'src/app/services/tag.service';

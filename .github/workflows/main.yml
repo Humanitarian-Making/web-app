@@ -14,11 +14,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@master
         with:
-          node-version: '10.x'
+          node-version: '12.x'
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: ng build --configuration=production
+        run: npm run build -- --configuration=test
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:

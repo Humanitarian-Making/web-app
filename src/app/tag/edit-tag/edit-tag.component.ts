@@ -1,14 +1,12 @@
 import { SelectUserGroupInput, SelectUserGroupComponent } from './../../user-group/select-user-group/select-user-group.component';
-import { EditableTagRes, EditableTag, TagUpdateResponse, StandardResponse } from './../../../../functions/src/interfaces';
 import { EditLanguageOptionComponent, EditLanguageOptionInput } from './../../shared/edit-language-option/edit-language-option.component';
 import { TagService } from '../../services/tag.service';
 import { LanguageService } from '../../services/language.service';
-import { TagSnippet} from '../../../../functions/src/interfaces';
+import { TagSnippet, EditableTagRes, StandardResponse} from './../../interfaces';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/interfaces/user';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateTagComponent } from '../create-tag/create-tag.component';
 import { take, tap } from 'rxjs/operators';
@@ -24,7 +22,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 export class EditTagComponent implements OnInit {
   tagId: string;
   tagSnippet: TagSnippet;
-  user: User;
+  user;
   tag;
   public imageURL: Observable<string>;
   public loading = true;

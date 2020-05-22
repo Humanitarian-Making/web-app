@@ -1,12 +1,8 @@
-import { TagsRes } from './../../../../functions/src/interfaces';
+import { TagsRes } from './../../interfaces';
 import { CreateTagComponent } from './../create-tag/create-tag.component';
 import { TagService } from './../../services/tag.service';
 import { LanguageService } from '../../services/language.service';
-import { TagGroup } from '../../interfaces/tag-group';
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { DocumentChangeType } from '@google-cloud/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 

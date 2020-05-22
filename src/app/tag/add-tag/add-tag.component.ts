@@ -1,4 +1,4 @@
-import { StandardResponse, TagsRes, TagRes } from './../../../../functions/src/interfaces';
+import { StandardResponse, TagsRes, TagRes } from './../../interfaces';
 import { Component, Inject } from '@angular/core';
 import { TagService } from 'src/app/services/tag.service';
 import { FormGroup, FormControl } from '@angular/forms';

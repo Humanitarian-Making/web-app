@@ -1,4 +1,4 @@
-import { ProjectCategory, GetEditableProjectRes, StandardResponse } from './../../../../functions/src/interfaces';
+import { GetEditableProjectRes, StandardResponse } from './../../interfaces';
 import { TagService } from '../../services/tag.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
