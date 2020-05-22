@@ -2,7 +2,7 @@ name: Build and Deploy to Production
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build -- --configuration=production
+        run: npm run build -- --configuration=test
       - name: Choose Firebase Project
         uses: w9jds/firebase-action@master
         with:
@@ -28,6 +28,6 @@ jobs:
       - name: Deploy angular app to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting --project prod
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
