@@ -9,14 +9,14 @@ export const environment = {
     accessToken: 'pk.eyJ1IjoiYWRtaW4taHVtYW5pdGFyaWFuLW1ha2luZyIsImEiOiJjazkxY3p2dDcwMnU4M2dwYXV6NG5xY3FvIn0.oRelXCGLzlFFlwOfASPqIw'
   },
   firebase: {
-    apiKey: 'AIzaSyD7NveTz9RqC-vXrhIZpN8Ku5lPDMkTMQM',
-    authDomain: 'humanitarian-making-test-abb29.firebaseapp.com',
-    databaseURL: 'https://humanitarian-making-test-abb29.firebaseio.com',
-    projectId: 'humanitarian-making-test-abb29',
-    storageBucket: 'humanitarian-making-test-abb29.appspot.com',
-    messagingSenderId: '1076225681578',
-    appId: '1:1076225681578:web:311cd10d7159841e1808d3',
-    measurementId: 'G-1CMZ23HD7F'
+    apiKey: 'AIzaSyB4rh2DqTBhMFNZQb7Ip3_tW4yaa17JXWQ',
+    authDomain: 'humanitarian-making-dev.firebaseapp.com',
+    databaseURL: 'https://humanitarian-making-dev.firebaseio.com',
+    projectId: 'humanitarian-making-dev',
+    storageBucket: 'humanitarian-making-dev.appspot.com',
+    messagingSenderId: '143323369544',
+    appId: '1:143323369544:web:54ad6f5cc910fd9493087d',
+    measurementId: 'G-HS74RDCSSZ'
   }
 };
 

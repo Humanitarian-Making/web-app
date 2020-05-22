@@ -1,7 +1,6 @@
 {
   "projects": {
-    "test": "humanitarian-making-dev",
-    "prod": "humanitarian-making-dev",
-    "default": "humanitarian-making-dev"
+    "default": "humanitarian-making-dev",
+    "prod": "humanitarian-making-production"
   }
 }
