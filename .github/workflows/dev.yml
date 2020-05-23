@@ -1,16 +1,14 @@
 name: Build and Deploy to Dev
 on:
   push:
-    branches:
-      - dev
-
+    branches: [ dev ]
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@master
         with:
