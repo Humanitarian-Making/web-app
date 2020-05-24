@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -9,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'Humanitarian Making';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToProjects() {
+    this.router.navigateByUrl('projects');
+  }
+
+  goToReadiness() {
+    this.router.navigateByUrl('pages/readiness-levels');
   }
 
 }
