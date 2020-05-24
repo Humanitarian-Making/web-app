@@ -89,7 +89,6 @@
   margin: 2em;
   padding: 1em;
   color: #fff;
-  place-content: center;
 }
 
 .projects:hover {
@@ -100,7 +99,8 @@
 
 .readiness {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
+  font-weight: bold;
 }
 .readiness-text {
   font-size: 1.5em;
