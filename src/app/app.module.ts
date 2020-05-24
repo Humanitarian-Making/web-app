@@ -59,6 +59,7 @@ import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SelectUserGroupComponent } from './user-group/select-user-group/select-user-group.component';
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { SearchComponent } from './project/search/search.component';
+import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { SearchComponent } from './project/search/search.component';
     SignUpFormComponent,
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
-    SearchComponent
+    SearchComponent,
+    ReadinessLevelsComponent
   ],
   imports: [
     BrowserModule,

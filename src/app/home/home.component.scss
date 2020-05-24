@@ -80,3 +80,29 @@
 .foot-note {
   text-align: center;
 }
+
+.projects {
+  background-color: #4a8bcb;
+  border: 2px solid #4a8bcb;
+  border-radius: 1.5em;
+  height: 3em;
+  margin: 2em;
+  padding: 1em;
+  color: #fff;
+  place-content: center;
+}
+
+.projects:hover {
+  background-color: #fff;
+  border: 2px solid #4a8bcb;
+  color: #21252a;
+}
+
+.readiness {
+  text-align: center;
+  font-size: 3em;
+}
+.readiness-text {
+  font-size: 1.5em;
+  text-align: center;
+}

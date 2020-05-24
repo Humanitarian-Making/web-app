@@ -1,3 +1,4 @@
+import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UpdateUserDetailsComponent } from './auth/update-user-details/update-user-details.component';
 import { SignUpFormComponent } from './auth/sign-up-form/sign-up-form.component';
 import { TagPageComponent } from './tag/tag-page/tag-page.component';
@@ -39,9 +40,6 @@ const routes: Routes = [
   { path: 'project/:projectId',  component: ProjectPageComponent },
   { path: 'project/:projectId/edit',  component: EditProjectComponent, ...canActivate(redirectUnauthorizedToLogin) },
 
-  // organisation
-  { path: 'resources/ethics',  component: EthicsPageComponent },
-
   // tag
   { path: 'tags',  component:  RootTagsPageComponent},
   { path: 'tag/:tagId',  component:  TagPageComponent},
@@ -53,7 +51,10 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'profile/update', component: UpdateUserDetailsComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'verify-email-address', component: VerifyEmailComponent }
+  { path: 'verify-email-address', component: VerifyEmailComponent },
+
+  { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
+  { path: 'pages/code-of-practice',  component: EthicsPageComponent },
 ];
 
 @NgModule({
