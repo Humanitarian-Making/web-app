@@ -1,3 +1,4 @@
+import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UpdateUserDetailsComponent } from './auth/update-user-details/update-user-details.component';
 import { SignUpFormComponent } from './auth/sign-up-form/sign-up-form.component';
@@ -44,6 +45,9 @@ const routes: Routes = [
   { path: 'tags',  component:  RootTagsPageComponent},
   { path: 'tag/:tagId',  component:  TagPageComponent},
   { path: 'tag/:tagId/edit',  component:  EditTagComponent},
+
+  // user group
+  { path: 'user-group/:userGroupId',  component:  UserGroupPageComponent},
 
   // auth
   { path: 'sign-up', component: SignUpFormComponent },

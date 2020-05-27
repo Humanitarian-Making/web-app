@@ -142,6 +142,10 @@ export interface EditableTagRes extends StandardResponse {
     tag?: any;
 }
 
+export interface UserGroupRes extends StandardResponse {
+    userGroup?: any;
+}
+
 export interface CreateTagObject {
     name: LanguageOption[];
     desc: LanguageOption[];

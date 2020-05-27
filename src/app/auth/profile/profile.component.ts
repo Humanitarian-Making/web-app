@@ -47,5 +47,9 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['profile/update']);
   }
 
+  goToUserGroup(id) {
+    this.router.navigateByUrl(`user-group/${id}`);
+  }
+
 
 }

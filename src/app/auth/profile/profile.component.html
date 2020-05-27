@@ -20,7 +20,7 @@
 
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>User Group</th>
-          <td mat-cell *matCellDef="let userGroup"> {{userGroup.userGroup.name}} </td>
+          <td mat-cell *matCellDef="let userGroup" (click)="goToUserGroup(userGroup.userGroup._id)"> {{userGroup.userGroup.name}} </td>
         </ng-container>
       
         <!-- Name Column -->

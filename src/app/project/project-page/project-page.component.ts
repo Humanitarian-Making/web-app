@@ -76,6 +76,7 @@ export class ProjectPageComponent implements OnInit {
   }
 
   goToProject(url) {
+    console.log('goToProject: ', url);
     window.open(url, '_blank');
   }
 

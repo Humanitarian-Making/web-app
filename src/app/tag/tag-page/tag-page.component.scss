@@ -12,3 +12,12 @@
     min-width: 150px;
     margin: 0.25em;
 }
+
+.userGroup {
+    font-size: 1.2em;
+}
+
+.userGroup:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -60,6 +60,7 @@ import { SelectUserGroupComponent } from './user-group/select-user-group/select-
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { SearchComponent } from './project/search/search.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
+import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-lev
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
     SearchComponent,
-    ReadinessLevelsComponent
+    ReadinessLevelsComponent,
+    UserGroupPageComponent
   ],
   imports: [
     BrowserModule,
