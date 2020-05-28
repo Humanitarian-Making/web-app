@@ -1,0 +1,29 @@
+.example-container {
+  width: 100%;
+  height: calc(100vh - 132px);
+  border: 1px solid #555;
+}
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+mat-drawer {
+  width: 400px
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.query-toggle {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+}

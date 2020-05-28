@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="start center">
+<div fxLayout="column" fxLayoutAlign="start center" class="page">
   <div class="hero">
     <img class="hero-image" src="./../../assets/hm-logo.png">
     <div class="title">Humanitarian Making</div>
@@ -8,16 +8,7 @@
       fabrication, FabLabs and Makerspaces.
     </p>
   </div>
-  <div fxLayout="column" fxLayoutAlign="center center" class="projects" (click)="goToProjects()">
-    <div class="projectsText">Browse Projects</div>
-  </div>
-  <div class="readiness">Readiness Levels</div>
-  <div class="readiness-text">Humanitarian Making uses Readiness Levels to categorise the 'Readiness' of Project</div>
-  <div fxLayout="column" fxLayoutAlign="center center" class="projects"  (click)="goToReadiness()">
-    <div class="projectsText">Learn More</div>
-  </div>
-  <app-ethics-page></app-ethics-page>
-  <br>
+  <app-home-card-deck></app-home-card-deck>
   <p class="foot-note">This site is under active development for the original site please visit <a class="link"
       href="https://projects.humanitarianmaking.org">projects.humanitarianmaking.org</a></p>
 </div>

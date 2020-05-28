@@ -11,6 +11,10 @@ export interface TagUpdateResponse extends StandardResponse {
     };
 }
 
+export interface LocationsResponse extends StandardResponse {
+    locations?: any[];
+}
+
 export interface TagsResponse extends StandardResponse {
     tags?: any[];
 }

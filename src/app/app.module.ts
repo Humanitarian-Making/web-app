@@ -61,6 +61,8 @@ import { ValidateEqualModule } from 'ng-validate-equal';
 import { SearchComponent } from './project/search/search.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
+import { LocationFilterComponent } from './mapping/location-filter/location-filter.component';
+import { HomeCardDeckComponent } from './home/home-card-deck/home-card-deck.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +96,9 @@ import { UserGroupPageComponent } from './user-group/user-group-page/user-group-
     UpdateUserDetailsComponent,
     SearchComponent,
     ReadinessLevelsComponent,
-    UserGroupPageComponent
+    UserGroupPageComponent,
+    LocationFilterComponent,
+    HomeCardDeckComponent
   ],
   imports: [
     BrowserModule,

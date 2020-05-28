@@ -18,6 +18,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -39,7 +41,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatChipsModule,
     MatTableModule,
     MatSlideToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule,
+    MatCheckboxModule
   ],
   exports: [
     MatGridListModule,
@@ -58,7 +62,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatChipsModule,
     MatTableModule,
     MatSlideToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
