@@ -18,13 +18,6 @@
         </button>
       </a>
   </span>
-  <span>
-    <a [routerLink]="['/tags']">
-      <button mat-button>
-        Tags
-      </button>
-    </a>
-  </span>
   <span *ngIf="user">
     <a [routerLink]="['/profile']">
       <img mat-card-avatar src="{{authService.photoURL}}" class="avatarPhoto">

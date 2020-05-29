@@ -1,13 +1,15 @@
+// angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -16,14 +18,8 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
-import { MaterialModule } from './material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { HomeComponent } from './home/home.component';
-
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-
-import { EthicsPageComponent } from './resources/ethics-page/ethics-page.component';
+// custom modules
+import { MaterialModule } from './material.module';
 
 // auth
 import { ProfileComponent } from './auth/profile/profile.component';
@@ -59,10 +55,14 @@ import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SelectUserGroupComponent } from './user-group/select-user-group/select-user-group.component';
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { SearchComponent } from './project/search/search.component';
-import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { LocationFilterComponent } from './mapping/location-filter/location-filter.component';
-import { HomeCardDeckComponent } from './home/home-card-deck/home-card-deck.component';
+
+// pages
+import { HomeCardDeckComponent } from './pages/home/home-card-deck/home-card-deck.component';
+import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 
 @NgModule({
   declarations: [
