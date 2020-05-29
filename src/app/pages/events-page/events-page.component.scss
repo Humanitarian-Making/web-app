@@ -1,0 +1,67 @@
+
+.card:hover {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.20);
+    transform: translateY(-2px);
+    transition: all 0.15s ease-in;
+}
+
+.card-deck {
+    min-width: 250px;
+    max-width: 250px;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.15s ease-out;
+    margin: 0 1rem 2rem 1rem;
+}
+
+.card {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    margin: 0 1rem 2rem 1rem;
+    transition: all 0.15s ease-out;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+@media (min-width: 576px) {
+    .card-deck .card {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+} 
+
+.card-border-blue {
+    border-top: 6px solid #4A8BCB;
+}
+
+.card-border-yellow {
+    border-top: 6px solid #EFB044;
+}
+
+.title {
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+.event-date {
+    color: #4A8BCB;
+}

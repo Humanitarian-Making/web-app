@@ -63,6 +63,8 @@ import { HomeCardDeckComponent } from './pages/home/home-card-deck/home-card-dec
 import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +100,8 @@ import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-lev
     ReadinessLevelsComponent,
     UserGroupPageComponent,
     LocationFilterComponent,
-    HomeCardDeckComponent
+    HomeCardDeckComponent,
+    EventsPageComponent
   ],
   imports: [
     BrowserModule,

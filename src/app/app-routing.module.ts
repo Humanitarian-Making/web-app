@@ -12,8 +12,11 @@ const adminOnly = () => hasCustomClaim('admin');
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
+// pages
 import { HomeComponent } from './pages/home/home.component';
 import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+
 
 // project
 import { ProjectPageComponent } from './project/project-page/project-page.component';
@@ -56,6 +59,8 @@ const routes: Routes = [
   { path: 'profile/update', component: UpdateUserDetailsComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+
+  { path: 'events',  component:  EventsPageComponent},
 
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },
