@@ -1,14 +1,14 @@
 <div class="container">
     <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
     fxLayoutAlign="center stretch">
-            <div class="card card-border-blue">
+            <div class="card card-border-blue" (click)="goToUrl('projects')">
                 <div class="card-body">
                     <h5 class="card-title">Projects</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis</p>
                 </div>
             </div>
 
-            <div class="card card-border-yellow">
+            <div class="card card-border-yellow" (click)="goToUrl('map')">
                 <div class="card-body">
                     <h5 class="card-title">Map</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="card card-border-yellow">
+            <div class="card card-border-yellow" (click)="goToUrl('pages/code-of-practice')">
                 <div class="card-body">
                     <h5 class="card-title">Code of Practice</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis</p>
@@ -36,9 +36,9 @@
                 </div>
             </div>
 
-            <div class="card card-border-yellow">
+            <div class="card card-border-yellow" (click)="goToUrl('pages/readiness-levels')">
                 <div class="card-body">
-                    <h5 class="card-title">Resources</h5>
+                    <h5 class="card-title">Readiness Levels</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis</p>
                 </div>
             </div>
