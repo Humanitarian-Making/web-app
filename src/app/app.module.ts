@@ -64,6 +64,7 @@ import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { EventsPageComponent } from './pages/events-page/events-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -101,7 +102,8 @@ import { EventsPageComponent } from './pages/events-page/events-page.component';
     UserGroupPageComponent,
     LocationFilterComponent,
     HomeCardDeckComponent,
-    EventsPageComponent
+    EventsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
