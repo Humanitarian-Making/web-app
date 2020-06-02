@@ -1,7 +1,8 @@
 import { UserGroupService } from './../../services/user-group.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-user-group-page',
@@ -17,7 +18,9 @@ export class UserGroupPageComponent implements OnInit {
   public projectColumns = ['name', 'desc', 'created', 'updated', 'published', 'tags' ]
 
   constructor(
+    private authService: AuthService,
     private route: ActivatedRoute,
+    private router: Router,
     private userGroupService: UserGroupService,
     public langService: LanguageService
   ) { }
@@ -26,15 +29,20 @@ export class UserGroupPageComponent implements OnInit {
     this.loading = true;
     this.userGroupId = this.route.snapshot.paramMap.get('userGroupId');
     console.log('this.userGroupId :', this.userGroupId);
-    this.userGroupService.get(this.userGroupId).subscribe((res: any) => {
-      console.log('res :', res);
-      this.loading = false;
-      if (res.success) {
-        this.userGroup = res.userGroup;
-      } else {
-        this.errorMessage = res.message;
-      }
+    this.authService.auth.user.subscribe((user) => {
+      this.userGroupService.get(this.userGroupId).subscribe((res: any) => {
+        console.log('res :', res);
+        this.loading = false;
+        if (res.success) {
+          this.userGroup = res.userGroup;
+        } else {
+          this.errorMessage = res.message;
+        }
+      });
     });
   }
 
+  goToUserGroupUsers() {
+    this.router.navigateByUrl(`user-group/${this.userGroupId}/users`);
+  }
 }

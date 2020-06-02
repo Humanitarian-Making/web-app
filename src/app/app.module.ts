@@ -10,6 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -43,20 +45,25 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditLanguageOptionComponent } from './shared/edit-language-option/edit-language-option.component';
 import { LanguageOptionComponent } from './shared/language-option/language-option.component';
 import { GroupPageComponent } from './tag/group-page/group-page.component';
-import { TagPageComponent } from './tag/tag-page/tag-page.component';
-import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.component';
-import { EditTagGroupsPageComponent } from './tag/edit-tag-groups-page/edit-tag-groups-page.component';
-import { EditTagGroupPageComponent } from './tag/edit-tag-group-page/edit-tag-group-page.component';
-import { CreateTagComponent } from './tag/create-tag/create-tag.component';
-import { MatDialogRef } from '@angular/material/dialog';
-import { AddTagComponent } from './tag/add-tag/add-tag.component';
+
 import { TokenInterceptor } from './token.interceptor';
-import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SelectUserGroupComponent } from './user-group/select-user-group/select-user-group.component';
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { SearchComponent } from './project/search/search.component';
 import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { LocationFilterComponent } from './mapping/location-filter/location-filter.component';
+
+// tag
+import { TagPageComponent } from './tag/tag-page/tag-page.component';
+import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.component';
+import { EditTagGroupsPageComponent } from './tag/edit-tag-groups-page/edit-tag-groups-page.component';
+import { EditTagGroupPageComponent } from './tag/edit-tag-group-page/edit-tag-group-page.component';
+import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
+import { AddTagComponent } from './tag/add-tag/add-tag.component';
+import { CreateTagComponent } from './tag/create-tag/create-tag.component';
+
+
+
 
 // pages
 import { HomeCardDeckComponent } from './pages/home/home-card-deck/home-card-deck.component';
@@ -65,7 +72,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
+import { AddUserComponent } from './user-group/add-user/add-user.component';
+import { RemoveUserComponent } from './user-group/remove-user/remove-user.component';
+import { EditUserGroupUserComponent } from './user-group/edit-user-group-user/edit-user-group-user.component';
 
 @NgModule({
   declarations: [
@@ -103,7 +113,11 @@ import { FooterComponent } from './footer/footer.component';
     LocationFilterComponent,
     HomeCardDeckComponent,
     EventsPageComponent,
-    FooterComponent
+    FooterComponent,
+    UserGroupUsersComponent,
+    AddUserComponent,
+    RemoveUserComponent,
+    EditUserGroupUserComponent
   ],
   imports: [
     BrowserModule,
@@ -130,7 +144,7 @@ import { FooterComponent } from './footer/footer.component';
       multi: true
     }
   ],
-  entryComponents: [CreateTagComponent, EditLanguageOptionComponent, SelectUserGroupComponent],
+  entryComponents: [CreateTagComponent, EditLanguageOptionComponent, SelectUserGroupComponent, AddUserComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
