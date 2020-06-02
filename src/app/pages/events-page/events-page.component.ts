@@ -19,6 +19,12 @@ export class EventsPageComponent implements OnInit {
       desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis',
       date: moment().format('MMMM Do YYYY @ h:mm a'),
       location: 'London'
+    },
+    {
+      name: 'Event Name 2',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis',
+      date: moment().format('MMMM Do YYYY @ h:mm a'),
+      location: 'London'
     }
   ];
   constructor() { }
