@@ -1,3 +1,4 @@
+import { SyncService } from './../../services/sync.service';
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
 
@@ -8,12 +9,15 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class AdminPageComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private syncService: SyncService) { }
 
   ngOnInit(): void {
   }
+
   sync() {
-   this.projectService.sync();
+   this.syncService.sync().subscribe((res) => {
+     console.log('res: ', res);
+   });
   }
 
 }

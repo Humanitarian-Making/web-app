@@ -24,6 +24,7 @@ export class ProfileComponent implements OnInit {
       this.authService.getProfile().subscribe((res: any) => {
         if (res.success) {
           this.user = res.user;
+          console.log('this.user :', this.user);
           if (this.user) {
             this.authService.getUserGroups(true).subscribe((userGroupRes) => {
               if (userGroupRes.success) {
@@ -51,5 +52,8 @@ export class ProfileComponent implements OnInit {
     this.router.navigateByUrl(`user-group/${id}`);
   }
 
+  goToAdminPage(){
+    this.router.navigateByUrl(`admin`);
+  }
 
 }
