@@ -76,6 +76,7 @@ import { UserGroupUsersComponent } from './user-group/user-group-users/user-grou
 import { AddUserComponent } from './user-group/add-user/add-user.component';
 import { RemoveUserComponent } from './user-group/remove-user/remove-user.component';
 import { EditUserGroupUserComponent } from './user-group/edit-user-group-user/edit-user-group-user.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -117,7 +118,8 @@ import { EditUserGroupUserComponent } from './user-group/edit-user-group-user/ed
     UserGroupUsersComponent,
     AddUserComponent,
     RemoveUserComponent,
-    EditUserGroupUserComponent
+    EditUserGroupUserComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
 import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
@@ -66,6 +67,8 @@ const routes: Routes = [
 
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },
+
+  { path: 'admin',  component:  AdminPageComponent}
 ];
 
 @NgModule({
