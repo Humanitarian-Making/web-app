@@ -1,3 +1,5 @@
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
+import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
 import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UpdateUserDetailsComponent } from './auth/update-user-details/update-user-details.component';
@@ -51,6 +53,7 @@ const routes: Routes = [
 
   // user group
   { path: 'user-group/:userGroupId',  component:  UserGroupPageComponent},
+  { path: 'user-group/:userGroupId/users',  component:  UserGroupUsersComponent},
 
   // auth
   { path: 'sign-up', component: SignUpFormComponent },
@@ -64,6 +67,8 @@ const routes: Routes = [
 
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },
+
+  { path: 'admin',  component:  AdminPageComponent}
 ];
 
 @NgModule({

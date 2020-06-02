@@ -1,3 +1,13 @@
+export enum UserGroupRoles {
+    admin= 'admin',
+    user= 'user',
+}
+
+export interface UserGroupRoleLabel {
+    value: UserGroupRoles;
+    label: string;
+}
+
 export interface StandardResponse {
     success: boolean;
     message?: string;

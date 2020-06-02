@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Confirm Edit User Role</h1>
+<div mat-dialog-content *ngIf="!errorMessage">
+    <form fxLayout="column" fxLayoutAlign="start center">
+        <div class="desc-text">
+            You are about to change <span class="bold">{{input.displayName}}'s</span> role in <span class="bold">{{input.userGroupName}}</span> User Group. Please confirm.
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="button-row">
+            <button mat-raised-button (click)='clickCancel()'>Cancel</button>
+            <button mat-raised-button color="primary" (click)="clickConfirm()">Confirm</button>
+        </div>
+    </form>
+</div>
+<div mat-dialog-content *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div mat-dialog-actions>
+    
+</div>

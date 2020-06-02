@@ -1,0 +1,53 @@
+
+<div fxLayout="column" fxLayoutAlign="start start" class="page" *ngIf="userGroup">
+<div class="title">{{userGroup.name}} Users</div>
+<table  mat-table [dataSource]="userGroup.users">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let userRole"> {{userRole.user.displayName}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let userRole">{{userRole.user.email}}</td>
+      <td mat-cell>Add Location</td>
+    </ng-container>
+
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let userRole">
+          <mat-form-field>
+            <mat-select [(value)]="userRole.role" >
+              <mat-option *ngFor="let role of roles" [value]='role.value' (click)="clickEditUserRole(userRole.user._id, userRole.user.email, userRole.user.displayName, role.value)">
+                {{role.label}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>
+            <button mat-mini-fab color="accent" aria-label="Add User" (click)="clickAddUser()">
+                <mat-icon>person_add</mat-icon>
+            </button>
+        </th>
+        <td mat-cell *matCellDef="let userRole">
+            <button mat-mini-fab color="accent" aria-label="Remove User" (click)="clickRemoveUser(userRole.user._id, userRole.user.email, userRole.user.displayName)">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name', 'email', 'role', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name','email', 'role', 'actions'];"></tr>
+  </table>
+</div>
+<div *ngIf="errorMessage" fxLayout="column" fxLayoutAlign="center center" class="page error-message">
+  {{errorMessage}}
+</div>
+  <div *ngIf="loading">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+  </div>
+  

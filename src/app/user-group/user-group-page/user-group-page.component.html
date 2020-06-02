@@ -2,7 +2,7 @@
 <div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="userGroup">
   <div class="name">{{userGroup.name}}</div>
 
-  <div class="heading">Users ({{userGroup.users.length}}):</div>
+  <div class="heading" (click)="goToUserGroupUsers()">Users ({{userGroup.users.length}}):</div>
   <mat-list role="list" *ngFor="let user of userGroup.users">
     <mat-list-item role="listitem">{{user._id}} - {{user.role}}</mat-list-item>
   </mat-list>

@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add User to User Group</h1>
+<div mat-dialog-content *ngIf="!errorMessage">
+    <form fxLayout="column" fxLayoutAlign="start center"  [formGroup]="addUserForm" >
+        <mat-form-field class="add-user-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" [errorStateMatcher]="emailMatcher" placeholder="Ex. pat@example.com">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="add-user-full-width">
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role">
+                <mat-option *ngFor="let role of roles" [value]="role.value">
+                    {{role.label}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="roleFormControl.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div>
+            <button mat-raised-button (click)='clickCancel()'>Cancel</button>
+            <button mat-raised-button color="primary" [disabled]="!addUserForm.valid" (click)="clickAddUser()">Add User</button>
+        </div>
+    </form>
+</div>
+<div mat-dialog-content *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div mat-dialog-actions>
+    
+</div>
