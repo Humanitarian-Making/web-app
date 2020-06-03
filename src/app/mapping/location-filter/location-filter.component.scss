@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.button-row {
+  display: table-cell;
+}
+.location-name {
+  margin-top: 0.5em;
+  font-size: 1.8em;
+  min-height: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+}
+.location-desc {
+  font-size: 1.2em;
+  margin:0.5em;
+  text-align: center;
+}
+
+.website-link {
+  color: #455A64;
+  text-align: center;
+  margin:1em;
+}
+
+.website-link:hover {
+  text-decoration: underline;
+}

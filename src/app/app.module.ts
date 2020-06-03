@@ -1,13 +1,17 @@
+// angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -16,14 +20,8 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
-import { MaterialModule } from './material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { HomeComponent } from './home/home.component';
-
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-
-import { EthicsPageComponent } from './resources/ethics-page/ethics-page.component';
+// custom modules
+import { MaterialModule } from './material.module';
 
 // auth
 import { ProfileComponent } from './auth/profile/profile.component';
@@ -47,19 +45,39 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditLanguageOptionComponent } from './shared/edit-language-option/edit-language-option.component';
 import { LanguageOptionComponent } from './shared/language-option/language-option.component';
 import { GroupPageComponent } from './tag/group-page/group-page.component';
+
+import { TokenInterceptor } from './token.interceptor';
+import { SelectUserGroupComponent } from './user-group/select-user-group/select-user-group.component';
+import { ValidateEqualModule } from 'ng-validate-equal';
+import { SearchComponent } from './project/search/search.component';
+import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
+import { LocationFilterComponent } from './mapping/location-filter/location-filter.component';
+
+// tag
 import { TagPageComponent } from './tag/tag-page/tag-page.component';
 import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.component';
 import { EditTagGroupsPageComponent } from './tag/edit-tag-groups-page/edit-tag-groups-page.component';
 import { EditTagGroupPageComponent } from './tag/edit-tag-group-page/edit-tag-group-page.component';
-import { CreateTagComponent } from './tag/create-tag/create-tag.component';
-import { MatDialogRef } from '@angular/material/dialog';
-import { AddTagComponent } from './tag/add-tag/add-tag.component';
-import { TokenInterceptor } from './token.interceptor';
 import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
-import { SelectUserGroupComponent } from './user-group/select-user-group/select-user-group.component';
-import { ValidateEqualModule } from 'ng-validate-equal';
-import { SearchComponent } from './project/search/search.component';
+import { AddTagComponent } from './tag/add-tag/add-tag.component';
+import { CreateTagComponent } from './tag/create-tag/create-tag.component';
+
+
+
+
+// pages
+import { HomeCardDeckComponent } from './pages/home/home-card-deck/home-card-deck.component';
+import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
+import { AddUserComponent } from './user-group/add-user/add-user.component';
+import { RemoveUserComponent } from './user-group/remove-user/remove-user.component';
+import { EditUserGroupUserComponent } from './user-group/edit-user-group-user/edit-user-group-user.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
+import { SyncReportsComponent } from './admin/sync-reports/sync-reports.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +110,18 @@ import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-lev
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
     SearchComponent,
-    ReadinessLevelsComponent
+    ReadinessLevelsComponent,
+    UserGroupPageComponent,
+    LocationFilterComponent,
+    HomeCardDeckComponent,
+    EventsPageComponent,
+    FooterComponent,
+    UserGroupUsersComponent,
+    AddUserComponent,
+    RemoveUserComponent,
+    EditUserGroupUserComponent,
+    AdminPageComponent,
+    SyncReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +148,7 @@ import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-lev
       multi: true
     }
   ],
-  entryComponents: [CreateTagComponent, EditLanguageOptionComponent, SelectUserGroupComponent],
+  entryComponents: [CreateTagComponent, EditLanguageOptionComponent, SelectUserGroupComponent, AddUserComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

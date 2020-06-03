@@ -1,7 +1,10 @@
 .logo {
-    width: 45px
+    width: 45px;
   }
-  
+  .logo:hover {
+    width: 50px;
+    cursor:pointer;
+  }
   .avatarPhoto {
     height: 40px;
     width: 40px;

@@ -14,7 +14,7 @@
     </button>
   </div>
   <img class="tag-image" src="{{imageURL | async }}">
-  <h5>{{tag.userGroup.name}}</h5>
+  <div class="userGroup" (click)="goToUserGroup(tag.userGroup._id)">{{tag.userGroup.name}}</div>
   <div fxLayout="row" fxLayoutAlign="center center" >
     <h2>{{langService.getLanguageOption(tag.name)}}</h2>
   </div>

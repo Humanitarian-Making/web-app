@@ -55,11 +55,15 @@ export class TagPageComponent implements OnInit {
   }
 
   goToEditPage() {
-    this.router.navigateByUrl('tag/' + this.tagId + '/edit');
+    this.router.navigateByUrl(`tag/${this.tagId}/edit`);
   }
 
   goToRootTags() {
     this.router.navigateByUrl('tags');
+  }
+
+  goToUserGroup(id) {
+    this.router.navigateByUrl(`user-group/${id}`);
   }
 
   clickEditUserGroup() {

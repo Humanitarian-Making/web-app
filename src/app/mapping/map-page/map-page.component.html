@@ -1,1 +1,18 @@
-<app-map ></app-map>
+<div  class="map-page">
+    <mat-drawer-container class="example-container">
+        <mat-drawer #drawer mode="over" (keydown.escape)="close()">
+            <button class="query-toggle" (click)="close()" mat-mini-fab>
+                <mat-icon>close</mat-icon>
+            </button>
+            <app-location-filter></app-location-filter>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-map class="map"></app-map>
+            <button class="query-toggle" (click)="open()" mat-mini-fab>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-drawer-content>
+      </mat-drawer-container>
+</div>
+
+

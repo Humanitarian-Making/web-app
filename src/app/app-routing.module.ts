@@ -1,3 +1,6 @@
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
+import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
+import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
 import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
 import { UpdateUserDetailsComponent } from './auth/update-user-details/update-user-details.component';
 import { SignUpFormComponent } from './auth/sign-up-form/sign-up-form.component';
@@ -11,8 +14,11 @@ const adminOnly = () => hasCustomClaim('admin');
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
-import { HomeComponent } from './home/home.component';
-import { EthicsPageComponent } from './resources/ethics-page/ethics-page.component';
+// pages
+import { HomeComponent } from './pages/home/home.component';
+import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+
 
 // project
 import { ProjectPageComponent } from './project/project-page/project-page.component';
@@ -45,6 +51,10 @@ const routes: Routes = [
   { path: 'tag/:tagId',  component:  TagPageComponent},
   { path: 'tag/:tagId/edit',  component:  EditTagComponent},
 
+  // user group
+  { path: 'user-group/:userGroupId',  component:  UserGroupPageComponent},
+  { path: 'user-group/:userGroupId/users',  component:  UserGroupUsersComponent},
+
   // auth
   { path: 'sign-up', component: SignUpFormComponent },
   { path: 'sign-in', component: SignInFormComponent },
@@ -53,8 +63,12 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
 
+  { path: 'events',  component:  EventsPageComponent},
+
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },
+
+  { path: 'admin',  component:  AdminPageComponent}
 ];
 
 @NgModule({

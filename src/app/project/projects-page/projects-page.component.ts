@@ -24,7 +24,6 @@ export class ProjectsPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.projectService.sync();
     this.projectService.getProjects().subscribe((res: any) => {
       if (res.success) {
         this.projects = res.projects;

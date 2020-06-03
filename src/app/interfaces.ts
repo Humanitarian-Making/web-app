@@ -1,3 +1,13 @@
+export enum UserGroupRoles {
+    admin= 'admin',
+    user= 'user',
+}
+
+export interface UserGroupRoleLabel {
+    value: UserGroupRoles;
+    label: string;
+}
+
 export interface StandardResponse {
     success: boolean;
     message?: string;
@@ -9,6 +19,10 @@ export interface TagUpdateResponse extends StandardResponse {
         children: StandardResponse;
         projects: StandardResponse;
     };
+}
+
+export interface LocationsResponse extends StandardResponse {
+    locations?: any[];
 }
 
 export interface TagsResponse extends StandardResponse {
@@ -140,6 +154,10 @@ export interface ProjectActionsRoles {
 
 export interface EditableTagRes extends StandardResponse {
     tag?: any;
+}
+
+export interface UserGroupRes extends StandardResponse {
+    userGroup?: any;
 }
 
 export interface CreateTagObject {

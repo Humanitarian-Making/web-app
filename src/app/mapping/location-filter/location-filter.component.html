@@ -1,0 +1,81 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+  <div class="location-name" *ngIf="!currentLocation">Locations</div>
+
+  <!-- <button *ngIf="!displayCreateLocationForm && !currentLocation" (click)="toggleCreateLocation()" mat-fab color="primary">
+    <mat-icon>add_location</mat-icon>
+  </button> -->
+
+  <form *ngIf="displayCreateLocationForm" [formGroup]="locationForm">
+    <h5>Create Location</h5>
+    <mat-form-field>
+      <mat-label>User Group</mat-label>
+      <mat-select formControlName="userGroup">
+        <mat-option *ngFor="let userGroup of userGroups" [value]="userGroup.userGroup._id">
+          {{userGroup.userGroup.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="desc">
+    </mat-form-field>
+    <div class="button-row">
+      <button mat-raised-button (click)="toggleCreateLocation()">Cancel</button>
+      <button mat-raised-button color="primary">Create</button>
+    </div>
+  </form>
+
+  <div *ngIf="currentLocation" >
+    <div class="location-name">{{currentLocation.name}}</div>
+    <div class="location-desc" *ngIf="currentLocation.desc">{{langService.getLanguageOption(currentLocation.desc)}}</div>
+    <div class="website-link" *ngIf="currentLocation.websiteUrl">
+      <a target="_blank" href="{{currentLocation.websiteUrl}}" >{{currentLocation.websiteUrl}}</a>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Checkbox Column -->
+    <!-- <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container> -->
+
+    <!-- latitude Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element" (click)="goToLocation(element)">{{element.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="distance">
+      <th mat-header-cell *matHeaderCellDef>Distance</th>
+      <td mat-cell *matCellDef="let element" (click)="goToLocation(element)">{{calcDistance(element.distance)}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon (click)="goToLocation(element)">place</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+    </tr>
+  </table>
+</div>
