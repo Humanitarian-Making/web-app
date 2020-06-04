@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class MapComponent implements OnInit {
   map: mapboxgl.Map;
-  style = 'mapbox://styles/mapbox/dark-v10';
   lat = 0.0;
   lng = 0.0;
   canvas;
@@ -46,7 +45,7 @@ export class MapComponent implements OnInit {
     this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
-      style: this.style,
+      style: 'mapbox://styles/mapbox/streets-v11',
       zoom: 1,
       center: [this.lng, this.lat]
     });
@@ -115,7 +114,8 @@ export class MapComponent implements OnInit {
         source: 'locations',
         type: 'circle',
         paint: {
-          'circle-color': '#ffffff'
+          'circle-radius': 8,
+          'circle-color': '#fc9362'
         }
       });
 
