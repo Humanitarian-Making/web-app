@@ -1,0 +1,22 @@
+<div *ngIf="!more" fxLayout="row" fxLayoutAlign="space-between center">
+  <div *ngIf="!more" class="descs">{{langService.getLanguageOption(descArray)}}</div>
+  <button mat-button matSuffix mat-icon-button aria-label="More" (click)="toggleMore()">
+    <mat-icon>more_vert</mat-icon>
+ </button>
+</div>
+
+<div *ngIf="more">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="descs">Descriptions</div>
+      <div>
+        <button mat-button matSuffix mat-icon-button aria-label="Add" (click)="clickAdd()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="toggleMore()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+  <app-location-desc *ngFor="let desc of descArray"  [desc]="desc" [locationId]="id" [view]="'view'" (update)="update($event)" ></app-location-desc>
+  <app-location-desc [desc]="addDescription" [locationId]="id" [view]="'add'" (update)="update($event)"></app-location-desc> 
+</div>

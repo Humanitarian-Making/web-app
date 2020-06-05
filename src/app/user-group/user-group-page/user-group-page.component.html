@@ -2,49 +2,34 @@
 <div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="userGroup">
   <div class="name">{{userGroup.name}}</div>
 
-  <div class="heading" (click)="goToUserGroupUsers()">Users ({{userGroup.users.length}}):</div>
-  <mat-list role="list" *ngFor="let user of userGroup.users">
-    <mat-list-item role="listitem">{{user._id}} - {{user.role}}</mat-list-item>
-  </mat-list>
+  <div role="list" class="list" fxLayout="column" fxLayoutAlign="start stretch">
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="list-row-name">Users ({{userGroup.users.length}})</div>  
+        <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('users')">
+          <mat-icon>view_list</mat-icon>
+        </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Locations ({{userGroup.locations.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('locations')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Projects ({{userGroup.projects.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('projects')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+  </div>
 
-  <div class="heading">Locations ({{userGroup.locations.length}}):</div>
-
-  <table mat-table [dataSource]="userGroup.locations" class="mat-elevation-z8" class="location-table">
-
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let location"> {{location.name}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="website">
-      <th mat-header-cell *matHeaderCellDef>Website</th>
-      <td mat-cell *matCellDef="let userGroup">{{userGroup.websiteUrl}}</td>
-      <td mat-cell>Add Location</td>
-    </ng-container>
-
-    <ng-container matColumnDef="latitude">
-      <th mat-header-cell *matHeaderCellDef>Latitude</th>
-      <td mat-cell *matCellDef="let location">{{location.location.coordinates[1]}}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="longitude" class="table-spacing">
-      <th mat-header-cell *matHeaderCellDef>Longitude</th>
-      <td mat-cell *matCellDef="let location">{{location.location.coordinates[0]}}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="['name', 'website', 'latitude', 'longitude']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['name','website', 'latitude', 'longitude'];"></tr>
-  </table>
-
-  <div class="heading">Projects ({{userGroup.projects.length}}):</div>
+  <!-- <div class="heading">Projects ({{userGroup.projects.length}}):</div>
   <table mat-table [dataSource]="userGroup.projects" class="mat-elevation-z8" class="location-table">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
       <td mat-cell *matCellDef="let project"> {{langService.getLanguageOption(project.name)}} </td>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="desc">
       <th mat-header-cell *matHeaderCellDef>Description</th>
       <td mat-cell *matCellDef="let project"> {{langService.getLanguageOption(project.desc)}} </td>
@@ -73,7 +58,7 @@
 
     <tr mat-header-row *matHeaderRowDef="projectColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: projectColumns;"></tr>
-  </table>
+  </table> -->
 </div>
 
 <!-- error -->

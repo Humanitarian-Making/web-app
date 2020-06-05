@@ -78,6 +78,16 @@ import { RemoveUserComponent } from './user-group/user-group-users/remove-user/r
 import { EditUserGroupUserComponent } from './user-group/user-group-users/edit-user-group-user/edit-user-group-user.component';
 import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 import { SyncReportsComponent } from './admin/sync-reports/sync-reports.component';
+import {
+  UserGroupLocationsComponent,
+  UserGroupLocationRowComponent,
+  UserGroupLocationNameComponent,
+  UserGroupLocationWebsiteComponent
+} from './user-group/user-group-locations/user-group-locations.component';
+import {
+  UserGroupLocationDescComponent,
+  UserGroupLocationDescArrayComponent
+} from './user-group/user-group-locations/user-group-location-desc/user-group-location-desc.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +131,13 @@ import { SyncReportsComponent } from './admin/sync-reports/sync-reports.componen
     RemoveUserComponent,
     EditUserGroupUserComponent,
     AdminPageComponent,
-    SyncReportsComponent
+    SyncReportsComponent,
+    UserGroupLocationsComponent,
+    UserGroupLocationRowComponent,
+    UserGroupLocationNameComponent,
+    UserGroupLocationDescComponent,
+    UserGroupLocationDescArrayComponent,
+    UserGroupLocationWebsiteComponent
   ],
   imports: [
     BrowserModule,
