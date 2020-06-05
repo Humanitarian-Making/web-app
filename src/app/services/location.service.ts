@@ -1,3 +1,4 @@
+import { StandardResponse } from 'src/app/interfaces';
 import { Observable, of, Subscriber, Subject, BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
@@ -73,5 +74,25 @@ export class LocationService {
       },
       properties,
     };
+  }
+
+  editName(locationId, name): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + `location/${locationId}/name/${name}`, { });
+  }
+
+  editWebsite(locationId, websiteUrl): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + `location/${locationId}/website`, { websiteUrl });
+  }
+
+  editDesc(locationId, descId, language, text): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + `location/${locationId}/desc/${descId}/edit`, { language, text });
+  }
+
+  addDesc(locationId, language, text): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + `location/${locationId}/desc/add`, { language, text });
+  }
+
+  deleteDesc(locationId, descId): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + `location/${locationId}/desc/${descId}/delete`, { });
   }
 }
