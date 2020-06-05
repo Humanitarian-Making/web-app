@@ -21,10 +21,10 @@ export class EventsPageComponent implements OnInit {
       location: 'London'
     },
     {
-      name: 'Event Name 2',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui commodi officiis impedit expedita quis',
-      date: moment().format('MMMM Do YYYY @ h:mm a'),
-      location: 'London'
+      name: 'Humanitarian Making Conference',
+      desc: 'We are gathering together, for the first time, aid agencies that are developing projects and programmes that use local manufacturing, digital fabrication, FabLabs and Makerspaces.',
+      date: 'TBC',
+      location: 'Toulouse, France'
     }
   ];
   constructor() { }
