@@ -1,0 +1,85 @@
+.dates {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+.conference-page {
+    font-family: sans-serif;
+}
+.headerlogo{
+    width: 23%;
+    margin-top:-4em;
+}
+.header-row-1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #EFAF00; 
+    margin-bottom:-0.1em;
+}
+.header-row-2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: #4A8BCB; 
+    margin-bottom:-0.3em;
+}
+.header-row-3 {
+    font-size: 4em;
+    font-weight: 700;
+    color: #EFAF00; 
+}
+.image-row {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sponsor-image {
+    width: 10%
+}   
+.label {
+    font-size: 1.5em;
+    color: #4A8BCB; 
+}
+.text {
+    font-size: 1.4em;
+    color: #606060;
+    margin-bottom: 2em;
+}
+.mail-link{
+    color:#4A8BCB
+}
+
+.circle1 {
+    position: absolute;
+    right: -400px;
+    top: 100px;
+    width: 35em;
+    z-index: -1;
+}
+
+.circle2 {
+    position: absolute;
+    right: -350px;
+    top: 700px;
+    width: 35em;
+    z-index: -1;
+}
+.circle3 {
+    position: absolute;
+    left: -300px;
+    bottom: -500px;
+    width: 35em;
+    z-index: -1;
+}
+.line1 {
+    position: absolute;
+    right: 0px;
+    width: 10em;
+    top: 600px;
+    z-index: -1;
+}
+.line2 {
+    position: absolute;
+    right: 50px;
+    width: 10em;
+    bottom: -388px;
+    z-index: -1;
+}

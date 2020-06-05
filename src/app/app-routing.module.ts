@@ -37,6 +37,7 @@ import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.compo
 import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
 import { UserGroupLocationsComponent } from './user-group/user-group-locations/user-group-locations.component';
+import { ConferenceComponent } from './pages/events-page/conference/conference.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -66,6 +67,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
 
   { path: 'events',  component:  EventsPageComponent},
+  { path: 'events/conference',  component: ConferenceComponent},
 
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },

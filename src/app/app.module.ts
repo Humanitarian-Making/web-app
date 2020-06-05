@@ -88,6 +88,7 @@ import {
   UserGroupLocationDescComponent,
   UserGroupLocationDescArrayComponent
 } from './user-group/user-group-locations/user-group-location-desc/user-group-location-desc.component';
+import { ConferenceComponent } from './pages/events-page/conference/conference.component';
 
 @NgModule({
   declarations: [
@@ -137,7 +138,8 @@ import {
     UserGroupLocationNameComponent,
     UserGroupLocationDescComponent,
     UserGroupLocationDescArrayComponent,
-    UserGroupLocationWebsiteComponent
+    UserGroupLocationWebsiteComponent,
+    ConferenceComponent
   ],
   imports: [
     BrowserModule,
