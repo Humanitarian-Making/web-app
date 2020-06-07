@@ -44,4 +44,8 @@ export class UserGroupService {
   editUserRole(userGroupId, editUserId, role): Observable<StandardResponse> {
     return this.http.put<StandardResponse>(environment.apiUrl + `user-group/${userGroupId}/user/${editUserId}/role/${role}/edit`, {});
   }
+
+  getLocations(id): Observable<UserGroupRes> {
+    return this.http.get<UserGroupRes>(environment.apiUrl + `user-group/${id}/locations`);
+  }
 }

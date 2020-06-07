@@ -1,4 +1,4 @@
-import { StandardResponse } from './../../interfaces';
+import { StandardResponse } from '../../../interfaces';
 import { UserGroupService } from 'src/app/services/user-group.service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, Validators, FormGroup, FormGroupDirective, NgForm } from '@angular/forms';

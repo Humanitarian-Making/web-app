@@ -36,6 +36,8 @@ import { ProfileComponent } from './auth/profile/profile.component';
 import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.component';
 import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
+import { UserGroupLocationsComponent } from './user-group/user-group-locations/user-group-locations.component';
+import { ConferenceComponent } from './pages/events-page/conference/conference.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -54,6 +56,7 @@ const routes: Routes = [
   // user group
   { path: 'user-group/:userGroupId',  component:  UserGroupPageComponent},
   { path: 'user-group/:userGroupId/users',  component:  UserGroupUsersComponent},
+  { path: 'user-group/:userGroupId/locations',  component:  UserGroupLocationsComponent},
 
   // auth
   { path: 'sign-up', component: SignUpFormComponent },
@@ -64,6 +67,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
 
   { path: 'events',  component:  EventsPageComponent},
+  { path: 'events/conference',  component: ConferenceComponent},
 
   { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
   { path: 'pages/code-of-practice',  component: EthicsPageComponent },

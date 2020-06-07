@@ -1,0 +1,78 @@
+<div class="desc-option" fxLayout="row" fxLayoutAlign="space-between center" [ngSwitch]="view">
+    <div *ngSwitchCase="'view'" fxFlex='90' fxLayout="column" fxLayoutAlign="space-between start">
+      <p class="desc-text">{{desc.text}}</p>
+      <p class="desc-language">{{desc.language}}</p>
+    </div>
+    <div *ngSwitchCase="'view'" fxLayout="row" fxLayoutAlign="end center">
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="changeView('delete')">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="changeView('edit')">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
+    <div *ngSwitchCase="'edit'" fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+      <form fxLayout="column" fxLayoutAlign="start start" class="full-width" >
+        <mat-form-field>
+          <mat-label>Language</mat-label>
+          <mat-select [formControl]="descLanguage">
+            <mat-option *ngFor="let language of languages" value="{{language.value}}">
+              {{language.label}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput [formControl]="descText"></textarea>
+        </mat-form-field>
+      </form>
+      <div fxFlex fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="confirmEdit()">
+          <mat-icon>done</mat-icon>
+        </button>
+        <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="changeView('view')">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'add'" fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+      <form fxLayout="column" fxLayoutAlign="start start" class="full-width">
+        <mat-form-field>
+          <mat-label>Language</mat-label>
+          <mat-select [formControl]="descLanguage">
+            <mat-option *ngFor="let language of languages" value="{{language.value}}">
+              {{language.label}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput [formControl]="descText" placeholder="Add Description"></textarea>
+        </mat-form-field>
+      </form>
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" [disabled]="!descText.valid || !descLanguage.valid" (click)="confirmAdd()">
+        <mat-icon>done</mat-icon>
+      </button>
+    </div>
+    
+
+    <div *ngSwitchCase="'delete'" fxFlex='90' fxLayout="column" fxLayoutAlign="space-between start">
+      <p class="desc-text">Confirm Delete</p>
+    </div>
+    <div *ngSwitchCase="'delete'"  fxLayout="row" fxLayoutAlign="end center">
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="confirmDelete()">
+        <mat-icon>done</mat-icon>
+      </button>
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="changeView('view')">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+
+    <div *ngSwitchCase="'loading'">
+      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="changeView('view')">
+        <mat-icon>hourglass_bottom</mat-icon>
+      </button>
+    </div>
+  </div>

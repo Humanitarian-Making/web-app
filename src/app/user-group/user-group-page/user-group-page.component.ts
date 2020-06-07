@@ -15,7 +15,7 @@ export class UserGroupPageComponent implements OnInit {
   public loading: boolean;
   public errorMessage: string;
 
-  public projectColumns = ['name', 'desc', 'created', 'updated', 'published', 'tags' ]
+  public projectColumns = ['name', 'desc', 'created', 'updated', 'published', 'tags' ];
 
   constructor(
     private authService: AuthService,
@@ -42,7 +42,7 @@ export class UserGroupPageComponent implements OnInit {
     });
   }
 
-  goToUserGroupUsers() {
-    this.router.navigateByUrl(`user-group/${this.userGroupId}/users`);
+  goTo(resource) {
+    this.router.navigateByUrl(`user-group/${this.userGroupId}/${resource}`);
   }
 }

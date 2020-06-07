@@ -73,11 +73,22 @@ import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-lev
 import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
-import { AddUserComponent } from './user-group/add-user/add-user.component';
-import { RemoveUserComponent } from './user-group/remove-user/remove-user.component';
-import { EditUserGroupUserComponent } from './user-group/edit-user-group-user/edit-user-group-user.component';
+import { AddUserComponent } from './user-group/user-group-users/add-user/add-user.component';
+import { RemoveUserComponent } from './user-group/user-group-users/remove-user/remove-user.component';
+import { EditUserGroupUserComponent } from './user-group/user-group-users/edit-user-group-user/edit-user-group-user.component';
 import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 import { SyncReportsComponent } from './admin/sync-reports/sync-reports.component';
+import {
+  UserGroupLocationsComponent,
+  UserGroupLocationRowComponent,
+  UserGroupLocationNameComponent,
+  UserGroupLocationWebsiteComponent
+} from './user-group/user-group-locations/user-group-locations.component';
+import {
+  UserGroupLocationDescComponent,
+  UserGroupLocationDescArrayComponent
+} from './user-group/user-group-locations/user-group-location-desc/user-group-location-desc.component';
+import { ConferenceComponent } from './pages/events-page/conference/conference.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +132,14 @@ import { SyncReportsComponent } from './admin/sync-reports/sync-reports.componen
     RemoveUserComponent,
     EditUserGroupUserComponent,
     AdminPageComponent,
-    SyncReportsComponent
+    SyncReportsComponent,
+    UserGroupLocationsComponent,
+    UserGroupLocationRowComponent,
+    UserGroupLocationNameComponent,
+    UserGroupLocationDescComponent,
+    UserGroupLocationDescArrayComponent,
+    UserGroupLocationWebsiteComponent,
+    ConferenceComponent
   ],
   imports: [
     BrowserModule,

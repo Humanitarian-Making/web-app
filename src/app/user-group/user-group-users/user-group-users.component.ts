@@ -1,12 +1,12 @@
-import { EditUserGroupUserComponent } from './../edit-user-group-user/edit-user-group-user.component';
-import { AddUserComponent, AddUserGroupUserInput } from './../add-user/add-user.component';
+import { EditUserGroupUserComponent } from './edit-user-group-user/edit-user-group-user.component';
+import { AddUserComponent, AddUserGroupUserInput } from './add-user/add-user.component';
 import { Component, OnInit } from '@angular/core';
 import { UserGroupService } from 'src/app/services/user-group.service';
 import { ActivatedRoute } from '@angular/router';
 import { UserGroupRoleLabel } from 'src/app/interfaces';
 import { MatDialog } from '@angular/material/dialog';
-import { RemoveUserComponent, RemoveUserGroupUserInput } from '../remove-user/remove-user.component';
-import { EditUserGroupUserInput } from '../edit-user-group-user/edit-user-group-user.component';
+import { RemoveUserComponent, RemoveUserGroupUserInput } from './remove-user/remove-user.component';
+import { EditUserGroupUserInput } from './edit-user-group-user/edit-user-group-user.component';
 
 @Component({
   selector: 'app-user-group-users',
