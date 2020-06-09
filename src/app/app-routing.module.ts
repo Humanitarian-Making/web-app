@@ -38,6 +38,7 @@ import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
 import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
 import { UserGroupLocationsComponent } from './user-group/user-group-locations/user-group-locations.component';
 import { ConferenceComponent } from './pages/events-page/conference/conference.component';
+import { UserGroupResourcesComponent } from './user-group/user-group-resources/user-group-resources.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'user-group/:userGroupId',  component:  UserGroupPageComponent},
   { path: 'user-group/:userGroupId/users',  component:  UserGroupUsersComponent},
   { path: 'user-group/:userGroupId/locations',  component:  UserGroupLocationsComponent},
+  { path: 'user-group/:userGroupId/resources',  component:  UserGroupResourcesComponent},
 
   // auth
   { path: 'sign-up', component: SignUpFormComponent },
