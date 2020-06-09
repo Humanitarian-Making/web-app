@@ -17,7 +17,13 @@
     </div>
     <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
       <div class="list-row-name">Projects ({{userGroup.projects.length}})</div>  
-      <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('projects')">
+      <button mat-mini-fab color="primary" aria-label="Manage Projects" (click)="goTo('projects')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Resources ({{userGroup.resources.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Resources" (click)="goTo('resources')">
         <mat-icon>view_list</mat-icon>
       </button>
     </div>
