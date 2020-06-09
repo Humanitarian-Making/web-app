@@ -89,6 +89,8 @@ import {
   UserGroupLocationDescArrayComponent
 } from './user-group/user-group-locations/user-group-location-desc/user-group-location-desc.component';
 import { ConferenceComponent } from './pages/events-page/conference/conference.component';
+import { DropzoneDirective } from './upload/dropzone.directive';
+import { UserGroupResourcesComponent } from './user-group/user-group-resources/user-group-resources.component';
 
 @NgModule({
   declarations: [
@@ -139,7 +141,9 @@ import { ConferenceComponent } from './pages/events-page/conference/conference.c
     UserGroupLocationDescComponent,
     UserGroupLocationDescArrayComponent,
     UserGroupLocationWebsiteComponent,
-    ConferenceComponent
+    ConferenceComponent,
+    DropzoneDirective,
+    UserGroupResourcesComponent
   ],
   imports: [
     BrowserModule,
