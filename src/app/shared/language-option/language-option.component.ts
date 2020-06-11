@@ -1,4 +1,4 @@
-import { LanguageService } from './../../services/language.service';
+import { LanguageService } from '../../core/services/language.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { LanguageOption, LanguageOptionRef } from './../../interfaces';
 

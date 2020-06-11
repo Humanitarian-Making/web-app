@@ -1,10 +1,10 @@
-import { AdminPageComponent } from './admin/admin-page/admin-page.component';
-import { UserGroupUsersComponent } from './user-group/user-group-users/user-group-users.component';
-import { UserGroupPageComponent } from './user-group/user-group-page/user-group-page.component';
-import { ReadinessLevelsComponent } from './pages/readiness-levels/readiness-levels.component';
-import { UpdateUserDetailsComponent } from './auth/update-user-details/update-user-details.component';
-import { SignUpFormComponent } from './auth/sign-up-form/sign-up-form.component';
-import { TagPageComponent } from './tag/tag-page/tag-page.component';
+import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
+import { UserGroupUsersComponent } from './features/user-group/user-group-users/user-group-users.component';
+import { UserGroupPageComponent } from './features/user-group/user-group-page/user-group-page.component';
+import { ReadinessLevelsComponent } from './features/pages/readiness-levels/readiness-levels.component';
+import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
+import { SignUpFormComponent } from './features/auth/sign-up-form/sign-up-form.component';
+import { TagPageComponent } from './features/tag/tag-page/tag-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -15,30 +15,30 @@ const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
 // pages
-import { HomeComponent } from './pages/home/home.component';
-import { EthicsPageComponent } from './pages/ethics-page/ethics-page.component';
-import { EventsPageComponent } from './pages/events-page/events-page.component';
+import { HomeComponent } from './features/pages/home/home.component';
+import { EthicsPageComponent } from './features/pages/ethics-page/ethics-page.component';
+import { EventsPageComponent } from './features/pages/events-page/events-page.component';
 
 
 // project
-import { ProjectPageComponent } from './project/project-page/project-page.component';
-import { ProjectsPageComponent } from './project/projects-page/projects-page.component';
-import { EditProjectComponent } from './project/edit-project/edit-project.component';
+import { ProjectPageComponent } from './features/project/project-page/project-page.component';
+import { ProjectsPageComponent } from './features/project/projects-page/projects-page.component';
+import { EditProjectComponent } from './features/project/edit-project/edit-project.component';
 
 
 // mapping
-import { MapPageComponent } from './mapping/map-page/map-page.component';
+import { MapPageComponent } from './features/mapping/map-page/map-page.component';
 
 // auth components
-import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './auth/verify-email/verify-email.component';
-import { ProfileComponent } from './auth/profile/profile.component';
-import { RootTagsPageComponent } from './tag/root-tags-page/root-tags-page.component';
-import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
-import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
-import { UserGroupLocationsComponent } from './user-group/user-group-locations/user-group-locations.component';
-import { ConferenceComponent } from './pages/events-page/conference/conference.component';
-import { UserGroupResourcesComponent } from './user-group/user-group-resources/user-group-resources.component';
+import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './features/auth/verify-email/verify-email.component';
+import { ProfileComponent } from './features/auth/profile/profile.component';
+import { RootTagsPageComponent } from './features/tag/root-tags-page/root-tags-page.component';
+import { EditTagComponent } from './features/tag/edit-tag/edit-tag.component';
+import { SignInFormComponent } from './features/auth/sign-in-form/sign-in-form.component';
+import { UserGroupLocationsComponent } from './features/user-group/user-group-locations/user-group-locations.component';
+import { ConferenceComponent } from './features/pages/events-page/conference/conference.component';
+import { UserGroupResourcesComponent } from './features/user-group/user-group-resources/user-group-resources.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

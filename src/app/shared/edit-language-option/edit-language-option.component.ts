@@ -1,15 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LanguageOptionRef, LanguageOption, StandardResponse } from './../../interfaces';
-import { LanguageService } from 'src/app/services/language.service';
+import { LanguageService } from 'src/app/core/services/language.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { TagService } from 'src/app/services/tag.service';
-import { ProjectService } from 'src/app/services/project.service';
+import { TagService } from 'src/app/core/services/tag.service';
+import { ProjectService } from 'src/app/core/services/project.service';
 import { map } from 'rxjs/operators';
 import { pipe, Observable } from 'rxjs';
-
-
-
 
 interface EditLanguageOption extends LanguageOption {
   status: string;
