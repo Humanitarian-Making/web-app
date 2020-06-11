@@ -26,6 +26,8 @@ import { SharedModule } from './shared/shared.module';
 import { UserGroupModule } from './features/user-group/user-group.module';
 import { PagesModule } from './features/pages/pages.module';
 import { TagModule } from './features/tag/tag.module';
+import { ProjectModule } from './features/project/project.module';
+import { MapModule } from './features/mapping/map.module';
 
 // auth
 import { ProfileComponent } from './features/auth/profile/profile.component';
@@ -36,27 +38,19 @@ import { SignInFormComponent } from './features/auth/sign-in-form/sign-in-form.c
 import { ProviderSignInComponent } from './features/auth/provider-sign-in/provider-sign-in.component';
 import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
 
-// mapping
-import { MapPageComponent } from './features/mapping/map-page/map-page.component';
-import { MapComponent } from './features/mapping/map/map.component';
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { GroupPageComponent } from './features/tag/group-page/group-page.component';
-
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ValidateEqualModule } from 'ng-validate-equal';
-import { LocationFilterComponent } from './features/mapping/location-filter/location-filter.component';
 
 // pages
 import { FooterComponent } from './core/components/footer/footer.component';
 import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
 import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports.component';
-import { ProjectModule } from './features/project/project.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapPageComponent,
-    MapComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
     ProfileComponent,
@@ -66,7 +60,6 @@ import { ProjectModule } from './features/project/project.module';
     SignUpFormComponent,
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
-    LocationFilterComponent,
     FooterComponent,
     AdminPageComponent,
     SyncReportsComponent,
@@ -85,6 +78,7 @@ import { ProjectModule } from './features/project/project.module';
     PagesModule,
     ProjectModule,
     TagModule,
+    MapModule,
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
