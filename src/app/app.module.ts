@@ -24,6 +24,7 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
 import { UserGroupModule } from './features/user-group/user-group.module';
+import { PagesModule } from './features/pages/pages.module';
 
 // auth
 import { ProfileComponent } from './features/auth/profile/profile.component';
@@ -61,26 +62,18 @@ import { AddTagComponent } from './features/tag/add-tag/add-tag.component';
 import { CreateTagComponent } from './features/tag/create-tag/create-tag.component';
 
 // pages
-import { HomeCardDeckComponent } from './features/pages/home/home-card-deck/home-card-deck.component';
-import { EthicsPageComponent } from './features/pages/ethics-page/ethics-page.component';
-import { HomeComponent } from './features/pages/home/home.component';
-import { ReadinessLevelsComponent } from './features/pages/readiness-levels/readiness-levels.component';
-import { EventsPageComponent } from './features/pages/events-page/events-page.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
 import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports.component';
-import { ConferenceComponent } from './features/pages/events-page/conference/conference.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectCardComponent,
-    HomeComponent,
     ProjectPageComponent,
     ProjectsPageComponent,
     MapPageComponent,
     MapComponent,
-    EthicsPageComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
     ProfileComponent,
@@ -99,14 +92,10 @@ import { ConferenceComponent } from './features/pages/events-page/conference/con
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
     SearchComponent,
-    ReadinessLevelsComponent,
     LocationFilterComponent,
-    HomeCardDeckComponent,
-    EventsPageComponent,
     FooterComponent,
     AdminPageComponent,
     SyncReportsComponent,
-    ConferenceComponent,
   ],
   imports: [
     BrowserModule,
@@ -119,6 +108,7 @@ import { ConferenceComponent } from './features/pages/events-page/conference/con
     SharedModule,
     MaterialModule,
     UserGroupModule,
+    PagesModule,
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
