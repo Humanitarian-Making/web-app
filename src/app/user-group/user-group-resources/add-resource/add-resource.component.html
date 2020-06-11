@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Add Resource</h1>
+<div mat-dialog-content>
+    <mat-horizontal-stepper [linear]="linear" #stepper>
+        <mat-step label="Upload File">
+            <app-uploader (uploadedResourceUrl)="resourceUploaded($event)"></app-uploader>
+        </mat-step>
+        <mat-step [stepControl]="addResourceForm" label="Details" [formGroup]="addResourceForm">
+            <mat-form-field class="full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="desc">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Tag</mat-label>
+                <mat-select formControlName="type">
+                    <mat-option *ngFor="let type of resourceTypes" [value]="type.value">
+                        {{type.label}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div>
+                <button mat-button color="primary" type="submit" [disabled]="!addResourceForm.valid" (click)="clickAddResource()">Submit</button>
+            </div>
+        </mat-step>
+        <mat-step label="Done">
+            <p>You are now done.</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>
+<div mat-dialog-content *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button>Done</button>
+</div>

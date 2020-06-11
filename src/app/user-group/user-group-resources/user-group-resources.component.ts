@@ -1,22 +1,21 @@
-import { LocationService } from 'src/app/services/location.service';
+import { ResourceService } from 'src/app/services/resource.service';
 import { FormControl, Validators } from '@angular/forms';
 import { LanguageService } from 'src/app/services/language.service';
 import {
   Component,
   OnInit,
   Input,
-  Directive,
-  TemplateRef,
-  ViewContainerRef,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserGroupService } from 'src/app/services/user-group.service';
 import { StandardResponse } from 'src/app/interfaces';
+import { AddResourceComponent } from './add-resource/add-resource.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteResourceComponent, DeleteResourceInput } from './delete-resource/delete-resource.component';
 
 @Component({
-  selector: 'app-user-group-locations',
-  templateUrl: './user-group-locations.component.html',
-  styleUrls: ['./user-group-locations.component.scss'],
+  selector: 'app-user-group-resources',
+  templateUrl: './user-group-resources.component.html',
+  styleUrls: ['./user-group-resources.component.scss'],
 })
 export class UserGroupResourcesComponent implements OnInit {
   public loading: boolean;
@@ -28,14 +27,15 @@ export class UserGroupResourcesComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public langService: LanguageService,
-    private userGroupService: UserGroupService
+    private resourceService: ResourceService,
+    private createResourceDialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     this.loading = true;
     this.userGroupId = this.route.snapshot.paramMap.get('userGroupId');
-    this.userGroupService
-      .getResources(this.userGroupId)
+    this.resourceService
+      .getUserGroupResources(this.userGroupId)
       .subscribe((res: any) => {
         console.log('res :', res);
         this.loading = false;
@@ -50,32 +50,76 @@ export class UserGroupResourcesComponent implements OnInit {
         }
       });
   }
+
+  clickAddResource() {
+    const input = {
+      userGroupId: this.userGroupId
+    };
+    console.log('input :', input);
+
+    const addTagDiologRef = this.createResourceDialog.open(AddResourceComponent, {
+      width: '50%',
+      data: input
+    });
+
+    addTagDiologRef.afterClosed().subscribe((res) => {
+      this.ngOnInit();
+    });
+  }
+
+
 }
 
 @Component({
   selector: '[app-resource-row]',
   template: `
-    <td class="table-text" app-location-name [name]="location.name" [id]="location._id"></td>
-    <td class="table-text" app-location-desc-array [descArray]="location.desc" [id]="location._id"></td>
-    <td class="table-text" app-location-website [website]="location.websiteUrl" [id]="location._id"></td>
-    <td class="table-text">{{ location.location.coordinates[1] }}</td>
-    <td class="table-text">{{ location.location.coordinates[0] }}</td>
+    <td class="table-text" app-resource-name [name]="resource.name" [userGroupId]="userGroupId" [resourceId]="resource._id"></td>
+    <td class="table-text">{{langService.getLanguageOption(resource.desc)}}</td>
+    <td class="table-text">{{resource.type}}</td>
+    <td class="table-text">{{resource.resourceUrl}}</td>
+    <td class="table-text">
+      <button mat-mini-fab color="primary" aria-label="Delete Resource" (click)="clickDeleteResource()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
   `,
-  styleUrls: ['./user-group-locations.component.scss'],
+  styleUrls: ['./user-group-resources.component.scss'],
 })
-export class UserGroupLocationRowComponent implements OnInit  {
-  @Input() location;
-  constructor(public langService: LanguageService) {
-    console.log(this.location);
+export class UserGroupResourceRowComponent implements OnInit  {
+  @Input() resource;
+  @Input() userGroupId;
+
+  constructor(
+    public langService: LanguageService,
+    private deleteResourceDialog: MatDialog
+  ) {
+    console.log(this.resource);
   }
 
   ngOnInit(): void {
-    console.log('location:', this.location);
+    console.log('resource:', this.resource);
+  }
+
+  clickDeleteResource() {
+    const input: DeleteResourceInput = {
+      userGroupId: this.userGroupId,
+      resourceId: this.resource._id
+    };
+    console.log('input :', input);
+
+    const deleteTagDialogRef = this.deleteResourceDialog.open(DeleteResourceComponent, {
+      width: '250px',
+      data: input
+    });
+
+    deleteTagDialogRef.afterClosed().subscribe((res) => {
+      this.ngOnInit();
+    });
   }
 }
 
 @Component({
-  selector: '[app-location-name]',
+  selector: '[app-resource-name]',
   template: `
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div *ngIf="!edit" class="name-text">{{ name }}</div>
@@ -97,15 +141,19 @@ export class UserGroupLocationRowComponent implements OnInit  {
       </button>
     </div>
   `,
-  styleUrls: ['./user-group-locations.component.scss'],
+  styleUrls: ['./user-group-resources.component.scss'],
 })
-export class UserGroupLocationNameComponent {
+export class UserGroupResourceNameComponent {
   @Input() name;
-  @Input() id;
+  @Input() resourceId;
+  @Input() userGroupId;
   public edit: boolean;
   public errorMessage;
   nameForm: FormControl;
-  constructor(public langService: LanguageService, private locationService: LocationService) {
+  constructor(
+    public langService: LanguageService,
+    private resourceService: ResourceService
+  ) {
     this.edit = false;
     this.nameForm = new FormControl('', Validators.required);
     this.nameForm.setValue(this.name);
@@ -117,68 +165,11 @@ export class UserGroupLocationNameComponent {
   }
 
   editName() {
-    this.locationService.editName(this.id, this.nameForm.value).subscribe((res: StandardResponse) => {
+    this.resourceService.editName(this.userGroupId, this.resourceId, this.nameForm.value).subscribe((res: StandardResponse) => {
       console.log('res :', res);
       if (res && res.success) {
         this.edit = false;
         this.name = this.nameForm.value;
-      } else {
-        this.errorMessage = res.message;
-      }
-    });
-  }
-}
-
-
-
-@Component({
-  selector: '[app-location-website]',
-  template: `
-    <div *ngIf="!edit" fxLayout="row" fxLayoutAlign="space-between center">
-      <p>{{ website }}</p>
-      <button mat-button matSuffix mat-icon-button aria-label="Edit" (click)="toggleEdit()">
-        <mat-icon>edit</mat-icon>
-      </button>
-    </div>
-    <form *ngIf="edit">
-      <mat-form-field class="example-full-width">
-        <mat-label>Website</mat-label>
-        <input matInput maxlength="300" [formControl]="websiteForm" />
-        <mat-hint align="end">{{websiteForm.value.length}} / 300</mat-hint>
-      </mat-form-field>
-        <button mat-button matSuffix mat-icon-button aria-label="Save" [disabled]="!websiteForm.valid" (click)="editWebsite()">
-         <mat-icon>done</mat-icon>
-        </button>
-        <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="toggleEdit()">
-        <mat-icon>close</mat-icon>
-       </button>
-    </form>
-  `,
-  styleUrls: ['./user-group-locations.component.scss'],
-})
-export class UserGroupLocationWebsiteComponent {
-  @Input() website;
-  @Input() id;
-  public edit: boolean;
-  public errorMessage;
-  websiteForm: FormControl;
-  constructor(public langService: LanguageService, private locationService: LocationService) {
-    this.edit = false;
-    this.websiteForm = new FormControl('');
-    this.websiteForm.setValue(this.website);
-  }
-
-  toggleEdit() {
-    this.websiteForm.setValue(this.website);
-    this.edit = !this.edit;
-  }
-
-  editWebsite() {
-    this.locationService.editWebsite(this.id, this.websiteForm.value).subscribe((res: StandardResponse) => {
-      console.log('res :', res);
-      if (res && res.success) {
-        this.edit = false;
-        this.website = this.websiteForm.value;
       } else {
         this.errorMessage = res.message;
       }

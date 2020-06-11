@@ -237,3 +237,15 @@ export interface UserUserGroup {
     role: string;
     open: boolean;
 }
+
+export interface AddResource {
+    name: string;
+    desc: string;
+    type: ResourceType;
+    resourceUrl: string;
+}
+
+export enum ResourceType {
+    challenge = 'challenge',
+    info = 'info'
+}

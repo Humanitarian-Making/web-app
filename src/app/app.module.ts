@@ -90,7 +90,15 @@ import {
 } from './user-group/user-group-locations/user-group-location-desc/user-group-location-desc.component';
 import { ConferenceComponent } from './pages/events-page/conference/conference.component';
 import { DropzoneDirective } from './upload/dropzone.directive';
-import { UserGroupResourcesComponent } from './user-group/user-group-resources/user-group-resources.component';
+import {
+  UserGroupResourcesComponent,
+  UserGroupResourceRowComponent,
+  UserGroupResourceNameComponent
+} from './user-group/user-group-resources/user-group-resources.component';
+import { AddResourceComponent } from './user-group/user-group-resources/add-resource/add-resource.component';
+import { UploaderComponent } from './upload/uploader/uploader.component';
+import { UploadTaskComponent } from './upload/upload-task/upload-task.component';
+import { DeleteResourceComponent } from './user-group/user-group-resources/delete-resource/delete-resource.component';
 
 @NgModule({
   declarations: [
@@ -143,7 +151,13 @@ import { UserGroupResourcesComponent } from './user-group/user-group-resources/u
     UserGroupLocationWebsiteComponent,
     ConferenceComponent,
     DropzoneDirective,
-    UserGroupResourcesComponent
+    UserGroupResourcesComponent,
+    UserGroupResourceRowComponent,
+    UserGroupResourceNameComponent,
+    AddResourceComponent,
+    UploaderComponent,
+    UploadTaskComponent,
+    DeleteResourceComponent
   ],
   imports: [
     BrowserModule,
@@ -170,7 +184,14 @@ import { UserGroupResourcesComponent } from './user-group/user-group-resources/u
       multi: true
     }
   ],
-  entryComponents: [CreateTagComponent, EditLanguageOptionComponent, SelectUserGroupComponent, AddUserComponent],
+  entryComponents: [
+    CreateTagComponent,
+    EditLanguageOptionComponent,
+    SelectUserGroupComponent,
+    AddUserComponent,
+    AddResourceComponent,
+    DeleteResourceComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

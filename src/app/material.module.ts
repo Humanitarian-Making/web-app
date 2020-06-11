@@ -19,7 +19,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -43,7 +45,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSlideToggleModule,
     MatExpansionModule,
     MatSidenavModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatStepperModule
   ],
   exports: [
     MatGridListModule,
@@ -64,7 +68,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSlideToggleModule,
     MatExpansionModule,
     MatSidenavModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

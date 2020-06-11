@@ -49,7 +49,5 @@ export class UserGroupService {
     return this.http.get<UserGroupRes>(environment.apiUrl + `user-group/${id}/locations`);
   }
 
-  getResources(id): Observable<UserGroupRes> {
-    return this.http.get<UserGroupRes>(environment.apiUrl + `user-group/${id}/resources`);
-  }
+ 
 }
