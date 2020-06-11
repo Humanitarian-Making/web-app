@@ -19,7 +19,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
-// custom modules
+// modules
 import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './features/auth/auth.module';
@@ -28,16 +28,15 @@ import { PagesModule } from './features/pages/pages.module';
 import { TagModule } from './features/tag/tag.module';
 import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
+import { AdminModule } from './features/admin/admin.module';
 
-import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { GroupPageComponent } from './features/tag/group-page/group-page.component';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ValidateEqualModule } from 'ng-validate-equal';
 
-// pages
+// core components
+import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
-import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
-import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +44,6 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
     ToolbarComponent,
     GroupPageComponent,
     FooterComponent,
-    AdminPageComponent,
-    SyncReportsComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +61,7 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
     ProjectModule,
     TagModule,
     MapModule,
+    AdminModule,
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
