@@ -1,13 +1,10 @@
 // angular modules
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -47,10 +44,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    FormsModule,
     SharedModule,
     MaterialModule,
     AuthModule,
