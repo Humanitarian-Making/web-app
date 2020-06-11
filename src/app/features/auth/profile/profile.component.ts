@@ -52,7 +52,7 @@ export class ProfileComponent implements OnInit {
     this.router.navigateByUrl(`user-group/${id}`);
   }
 
-  goToAdminPage(){
+  goToAdminPage() {
     this.router.navigateByUrl(`admin`);
   }
 

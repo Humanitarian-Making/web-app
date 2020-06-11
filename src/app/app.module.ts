@@ -30,7 +30,6 @@ import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
 import { AdminModule } from './features/admin/admin.module';
 
-import { GroupPageComponent } from './features/tag/group-page/group-page.component';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ValidateEqualModule } from 'ng-validate-equal';
 
@@ -42,7 +41,6 @@ import { FooterComponent } from './core/components/footer/footer.component';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    GroupPageComponent,
     FooterComponent,
   ],
   imports: [
