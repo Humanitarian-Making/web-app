@@ -18,6 +18,7 @@ import { EditLanguageOptionComponent } from './edit-language-option/edit-languag
 import { LanguageOptionComponent } from './language-option/language-option.component';
 import { UploaderComponent } from './upload/uploader/uploader.component';
 import { UploadTaskComponent } from './upload/upload-task/upload-task.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UploadTaskComponent } from './upload/upload-task/upload-task.component'
     DropzoneDirective,
     UploaderComponent,
     UploadTaskComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { UploadTaskComponent } from './upload/upload-task/upload-task.component'
     DropzoneDirective,
     UploaderComponent,
     UploadTaskComponent,
+    ProjectCardComponent,
   ],
   entryComponents: [
     EditLanguageOptionComponent,

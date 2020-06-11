@@ -1,8 +1,6 @@
-import { LanguageService } from './node_modules/src/app/core/services/language.service';
+import { LanguageService } from 'src/app/core/services/language.service';
 import { Component, OnInit, AfterViewInit,  Input, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { ProjectService } from '../../core/services/project.service';
 
 @Component({
   selector: 'app-project-card',
@@ -14,7 +12,6 @@ export class ProjectCardComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private projectService: ProjectService,
     public langService: LanguageService
   ) { }
 
@@ -27,8 +24,6 @@ export class ProjectCardComponent implements OnInit {
       this.project.imageUrl = './../assets/hm-logo.png';
     }
   }
-
-
 }
 
 

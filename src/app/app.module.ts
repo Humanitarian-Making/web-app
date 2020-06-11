@@ -36,10 +36,6 @@ import { ProviderSignInComponent } from './features/auth/provider-sign-in/provid
 import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
 
 // projects
-import { ProjectPageComponent } from './features/project/project-page/project-page.component';
-import { ProjectsPageComponent } from './features/project/projects-page/projects-page.component';
-import { EditProjectComponent } from './features/project/edit-project/edit-project.component';
-import { ProjectCardComponent } from './features/project/project-card/project-card.component';
 
 // mapping
 import { MapPageComponent } from './features/mapping/map-page/map-page.component';
@@ -49,7 +45,6 @@ import { GroupPageComponent } from './features/tag/group-page/group-page.compone
 
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ValidateEqualModule } from 'ng-validate-equal';
-import { SearchComponent } from './features/project/search/search.component';
 import { LocationFilterComponent } from './features/mapping/location-filter/location-filter.component';
 
 // tag
@@ -65,20 +60,17 @@ import { CreateTagComponent } from './features/tag/create-tag/create-tag.compone
 import { FooterComponent } from './core/components/footer/footer.component';
 import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
 import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports.component';
+import { ProjectModule } from './features/project/project.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectCardComponent,
-    ProjectPageComponent,
-    ProjectsPageComponent,
     MapPageComponent,
     MapComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
     ProfileComponent,
     ToolbarComponent,
-    EditProjectComponent,
     GroupPageComponent,
     TagPageComponent,
     RootTagsPageComponent,
@@ -91,7 +83,6 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
     SignUpFormComponent,
     ProviderSignInComponent,
     UpdateUserDetailsComponent,
-    SearchComponent,
     LocationFilterComponent,
     FooterComponent,
     AdminPageComponent,
@@ -109,6 +100,7 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
     MaterialModule,
     UserGroupModule,
     PagesModule,
+    ProjectModule,
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
