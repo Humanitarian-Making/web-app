@@ -12,7 +12,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatDialogRef } from '@angular/material/dialog';
 
-
 // firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -23,20 +22,12 @@ import { environment } from '../environments/environment';
 // custom modules
 import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './features/auth/auth.module';
 import { UserGroupModule } from './features/user-group/user-group.module';
 import { PagesModule } from './features/pages/pages.module';
 import { TagModule } from './features/tag/tag.module';
 import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
-
-// auth
-import { ProfileComponent } from './features/auth/profile/profile.component';
-import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './features/auth/verify-email/verify-email.component';
-import { SignUpFormComponent } from './features/auth/sign-up-form/sign-up-form.component';
-import { SignInFormComponent } from './features/auth/sign-in-form/sign-in-form.component';
-import { ProviderSignInComponent } from './features/auth/provider-sign-in/provider-sign-in.component';
-import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
 
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { GroupPageComponent } from './features/tag/group-page/group-page.component';
@@ -51,15 +42,8 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
 @NgModule({
   declarations: [
     AppComponent,
-    ForgotPasswordComponent,
-    VerifyEmailComponent,
-    ProfileComponent,
     ToolbarComponent,
     GroupPageComponent,
-    SignInFormComponent,
-    SignUpFormComponent,
-    ProviderSignInComponent,
-    UpdateUserDetailsComponent,
     FooterComponent,
     AdminPageComponent,
     SyncReportsComponent,
@@ -74,6 +58,7 @@ import { SyncReportsComponent } from './features/admin/sync-reports/sync-reports
     FormsModule,
     SharedModule,
     MaterialModule,
+    AuthModule,
     UserGroupModule,
     PagesModule,
     ProjectModule,
