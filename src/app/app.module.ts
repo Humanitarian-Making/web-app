@@ -28,7 +28,6 @@ import { MapModule } from './features/mapping/map.module';
 import { AdminModule } from './features/admin/admin.module';
 
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
-import { ValidateEqualModule } from 'ng-validate-equal';
 
 // core components
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
@@ -59,8 +58,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
     AngularFireAnalyticsModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    FlexLayoutModule,
-    ValidateEqualModule
+    FlexLayoutModule
   ],
   providers: [
     { provide: MatDialogRef, useValue: {} },
