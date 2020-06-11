@@ -25,6 +25,7 @@ import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
 import { UserGroupModule } from './features/user-group/user-group.module';
 import { PagesModule } from './features/pages/pages.module';
+import { TagModule } from './features/tag/tag.module';
 
 // auth
 import { ProfileComponent } from './features/auth/profile/profile.component';
@@ -35,8 +36,6 @@ import { SignInFormComponent } from './features/auth/sign-in-form/sign-in-form.c
 import { ProviderSignInComponent } from './features/auth/provider-sign-in/provider-sign-in.component';
 import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
 
-// projects
-
 // mapping
 import { MapPageComponent } from './features/mapping/map-page/map-page.component';
 import { MapComponent } from './features/mapping/map/map.component';
@@ -46,15 +45,6 @@ import { GroupPageComponent } from './features/tag/group-page/group-page.compone
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { LocationFilterComponent } from './features/mapping/location-filter/location-filter.component';
-
-// tag
-import { TagPageComponent } from './features/tag/tag-page/tag-page.component';
-import { RootTagsPageComponent } from './features/tag/root-tags-page/root-tags-page.component';
-import { EditTagGroupsPageComponent } from './features/tag/edit-tag-groups-page/edit-tag-groups-page.component';
-import { EditTagGroupPageComponent } from './features/tag/edit-tag-group-page/edit-tag-group-page.component';
-import { EditTagComponent } from './features/tag/edit-tag/edit-tag.component';
-import { AddTagComponent } from './features/tag/add-tag/add-tag.component';
-import { CreateTagComponent } from './features/tag/create-tag/create-tag.component';
 
 // pages
 import { FooterComponent } from './core/components/footer/footer.component';
@@ -72,13 +62,6 @@ import { ProjectModule } from './features/project/project.module';
     ProfileComponent,
     ToolbarComponent,
     GroupPageComponent,
-    TagPageComponent,
-    RootTagsPageComponent,
-    EditTagGroupsPageComponent,
-    EditTagGroupPageComponent,
-    CreateTagComponent,
-    AddTagComponent,
-    EditTagComponent,
     SignInFormComponent,
     SignUpFormComponent,
     ProviderSignInComponent,
@@ -101,6 +84,7 @@ import { ProjectModule } from './features/project/project.module';
     UserGroupModule,
     PagesModule,
     ProjectModule,
+    TagModule,
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
@@ -116,9 +100,6 @@ import { ProjectModule } from './features/project/project.module';
       useClass: TokenInterceptor,
       multi: true
     }
-  ],
-  entryComponents: [
-    CreateTagComponent,
   ],
   bootstrap: [AppComponent]
 })
