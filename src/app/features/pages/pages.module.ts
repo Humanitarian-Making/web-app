@@ -6,12 +6,12 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from './../../shared/shared.module';
 import { MaterialModule } from './../../shared/material.module';
 
+import { PagesRoutingModule } from './pages-routing.module';
+
 import { HomeCardDeckComponent } from './home/home-card-deck/home-card-deck.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { HomeComponent } from './home/home.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
-import { EventsPageComponent } from './events-page/events-page.component';
-import { ConferenceComponent } from './events-page/conference/conference.component';
 
 @NgModule({
   declarations: [
@@ -19,22 +19,19 @@ import { ConferenceComponent } from './events-page/conference/conference.compone
     EthicsPageComponent,
     ReadinessLevelsComponent,
     HomeCardDeckComponent,
-    EventsPageComponent,
-    ConferenceComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    PagesRoutingModule
   ],
   exports: [
     HomeComponent,
     EthicsPageComponent,
     ReadinessLevelsComponent,
     HomeCardDeckComponent,
-    EventsPageComponent,
-    ConferenceComponent,
   ],
   entryComponents: [ ],
   providers: []

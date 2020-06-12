@@ -21,11 +21,13 @@ import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './features/auth/auth.module';
 import { UserGroupModule } from './features/user-group/user-group.module';
-import { PagesModule } from './features/pages/pages.module';
 import { TagModule } from './features/tag/tag.module';
 import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
 import { AdminModule } from './features/admin/admin.module';
+import { PagesModule } from './features/pages/pages.module';
+import { EventsModule } from './features/events/events.module';
+import { ChallengesModule } from './features/challenges/challenges.module';
 
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 
@@ -49,6 +51,8 @@ import { FooterComponent } from './core/components/footer/footer.component';
     AuthModule,
     UserGroupModule,
     PagesModule,
+    EventsModule,
+    ChallengesModule,
     ProjectModule,
     TagModule,
     MapModule,

@@ -16,15 +16,11 @@ const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
 // pages
 import { HomeComponent } from './features/pages/home/home.component';
-import { EthicsPageComponent } from './features/pages/ethics-page/ethics-page.component';
-import { EventsPageComponent } from './features/pages/events-page/events-page.component';
-
 
 // project
 import { ProjectPageComponent } from './features/project/project-page/project-page.component';
 import { ProjectsPageComponent } from './features/project/projects-page/projects-page.component';
 import { EditProjectComponent } from './features/project/edit-project/edit-project.component';
-
 
 // mapping
 import { MapPageComponent } from './features/mapping/map-page/map-page.component';
@@ -37,7 +33,6 @@ import { RootTagsPageComponent } from './features/tag/root-tags-page/root-tags-p
 import { EditTagComponent } from './features/tag/edit-tag/edit-tag.component';
 import { SignInFormComponent } from './features/auth/sign-in-form/sign-in-form.component';
 import { UserGroupLocationsComponent } from './features/user-group/user-group-locations/user-group-locations.component';
-import { ConferenceComponent } from './features/pages/events-page/conference/conference.component';
 import { UserGroupResourcesComponent } from './features/user-group/user-group-resources/user-group-resources.component';
 
 const routes: Routes = [
@@ -67,12 +62,6 @@ const routes: Routes = [
   { path: 'profile/update', component: UpdateUserDetailsComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-
-  { path: 'events',  component:  EventsPageComponent},
-  { path: 'events/conference',  component: ConferenceComponent},
-
-  { path: 'pages/readiness-levels',  component:  ReadinessLevelsComponent},
-  { path: 'pages/code-of-practice',  component: EthicsPageComponent },
 
   { path: 'admin',  component:  AdminPageComponent}
 ];
