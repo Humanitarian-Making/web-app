@@ -26,7 +26,6 @@ export class EventsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   goToUrl(url) {
     this.router.navigateByUrl(`event/${url}`);
   }

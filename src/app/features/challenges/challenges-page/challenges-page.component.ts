@@ -11,8 +11,14 @@ export class ChallengesPageComponent implements OnInit {
   challenges = [
     {
       name: 'Soap Challenge',
-      desc: ``,
-      url: ''
+      desc: `Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  fasdfasdf asdfa sdfasd fasdf asdf asdfas`,
+    },
+    {
+      name: 'Test Challenge',
+      desc: `Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  
+      fasdfasdf asdfa sdfasd fasdf asdf asdfas 
+      Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  
+      fasdfasdf asdfa sdfasd fasdf asdf asdfas`,
     }
   ];
   constructor(private router: Router) { }

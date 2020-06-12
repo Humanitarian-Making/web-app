@@ -1,14 +1,13 @@
 <div fxLayout="column" fxLayoutAlign="start center">
     <div class="title">Design Challenges</div>
-    <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
-    fxLayoutAlign="start start">
-            <div class="card card-border-blue" *ngFor="let challenge of challenges" (click)="goToUrl(challenge.url)">
-                <div class="card-body">
-                    <h5 class="card-title">{{challenge.name}}</h5>
-                    <div class="event-date">{{challenge.date}}</div>
-                    <p class="card-text">{{challenge.desc}}</p>
-
-                    <img src="assets/images/1.png" alt="">
+    <div fxLayout="column" fxLayoutAlign="start start"> 
+            <div *ngFor="let challenge of challenges" (click)="goToUrl(challenge.url)">
+                <div fxLayout="row" fxLayoutAlign="start start">
+                    <img src="assets/images/1.png" alt="" fxFlex='15'>
+                    <div fxLayout="column" fxLayoutAlign="start start">
+                        <h5>{{challenge.name}}</h5>
+                        <p>{{challenge.desc}}</p>
+                    </div>                    
                 </div>
             </div>
     </div>
