@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutAlign="start center"  class="page" *ngIf="challenge">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+      <button mat-mini-fab color="accent" (click)="goToChallenges()" class="action-button">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <div class="action-button-group">
+      </div>
+    </div>
+    <div class="challenge-name">{{langService.getLanguageOption(challenge.name)}}</div>
+    <img class="image" src={{challenge.imageUrl}} alt="Image of challenge" >
+  
+    
+    <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+        <div class="field-text">{{langService.getLanguageOption(challenge.desc)}}</div>
+    </div>
+  
+  </div>
+  <div *ngIf="!challenge">
+    <mat-spinner  style="margin:0 auto;"></mat-spinner>
+  </div>

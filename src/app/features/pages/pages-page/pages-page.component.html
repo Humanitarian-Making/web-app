@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+    <div class="title">Pages</div>
+    <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
+    fxLayoutAlign="start start">
+            <div class="card card-border-blue" *ngFor="let page of pages" (click)="goToLink(page.link)">
+                <div class="card-body">
+                    <h5 class="card-title">{{page.name}}</h5>
+                    <p class="card-text">{{page.desc}}</p>
+
+                    <img class="card-image" *ngIf="page.image" src="{{getImageUrl(page.image.url)}}" alt="{{page.image.desc}}" >
+                </div>
+            </div>
+    </div>
+</div>
