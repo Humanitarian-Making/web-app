@@ -14,8 +14,7 @@ const adminOnly = () => hasCustomClaim('admin');
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
-// pages
-import { HomeComponent } from './features/pages/home/home.component';
+import { HomeComponent } from './core/components/home/home.component';
 
 // project
 import { ProjectPageComponent } from './features/project/project-page/project-page.component';

@@ -8,17 +8,15 @@ import { MaterialModule } from './../../shared/material.module';
 
 import { PagesRoutingModule } from './pages-routing.module';
 
-import { HomeCardDeckComponent } from './home/home-card-deck/home-card-deck.component';
+import { PagesPageComponent } from './pages-page/pages-page.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
-import { HomeComponent } from './home/home.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    PagesPageComponent,
     EthicsPageComponent,
     ReadinessLevelsComponent,
-    HomeCardDeckComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,12 +24,6 @@ import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.co
     MaterialModule,
     SharedModule,
     PagesRoutingModule
-  ],
-  exports: [
-    HomeComponent,
-    EthicsPageComponent,
-    ReadinessLevelsComponent,
-    HomeCardDeckComponent,
   ],
   entryComponents: [ ],
   providers: []

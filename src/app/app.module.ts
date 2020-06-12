@@ -34,11 +34,15 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 // core components
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { HomeCardDeckComponent } from './core/components/home/home-card-deck/home-card-deck.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    HomeComponent,
+    HomeCardDeckComponent,
     FooterComponent,
   ],
   imports: [

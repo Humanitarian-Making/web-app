@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { ChallengesPageComponent } from './challenges-page/challenges-page.component';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 const routes: Routes = [
     {
@@ -9,13 +10,8 @@ const routes: Routes = [
         component: ChallengesPageComponent
     },
     {
-        path: 'challenge',
-        children: [
-            // {
-            //     path: 'conference',
-            //     component:  ConferenceComponent
-            // }
-        ]
+        path: 'challenge/:challengeSlug',
+        component: ChallengeComponent
     }
 ];
 @NgModule({

@@ -241,7 +241,7 @@ export interface UserUserGroup {
 export interface AddResource {
     name: string;
     desc: string;
-    type: any;
+    type: any; // ResourceType;
     resourceUrl: string;
 }
 
