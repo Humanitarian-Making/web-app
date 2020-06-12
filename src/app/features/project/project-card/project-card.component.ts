@@ -24,7 +24,7 @@ export class ProjectCardComponent implements OnInit {
 
   ngOnInit() {
     if (this.project.imageUrl === null) {
-      this.project.imageUrl = './../assets/hm-logo.png';
+      this.project.imageUrl = 'assets/logos/hm.png';
     }
   }
 

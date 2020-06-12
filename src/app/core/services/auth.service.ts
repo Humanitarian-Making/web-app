@@ -14,7 +14,7 @@ import { environment } from '../../../environments/environment';
 export class AuthService {
   userData: any; // Save logged in user data
   userLanguage = 'english';
-  private defaultPhotoURL = './../assets/logos/profile.png';
+  private defaultPhotoURL = 'assets/logos/profile.png';
   public photoURL = this.defaultPhotoURL;
   public displayName;
   public user;

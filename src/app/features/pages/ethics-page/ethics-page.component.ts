@@ -14,7 +14,7 @@ export class EthicsPageComponent implements OnInit {
   }
 
   getImage(ref) {
-    const refString = './../../../../assets/images/' + ref + '.png';
+    const refString = 'assets/images/' + ref + '.png';
     return refString;
   }
 }
