@@ -1,0 +1,25 @@
+
+  
+  
+  
+  <div *ngIf="snapshot | async as snap" fxLayout="row" fxLayoutAlign="space-between center"   >
+    <div *ngIf="percentage | async as pct" fxFlex="70">
+        <mat-progress-bar mode="determinate" [value]="pct"></mat-progress-bar>
+    </div>
+    <div fxFlex="30">
+        <button mat-mini-fab color="warn" aria-label="Pause Upload" (click)="task.pause()" [disabled]="!isActive(snap)">
+            <mat-icon>pause</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" aria-label="Pause Upload" (click)="task.cancel()" [disabled]="!isActive(snap)">
+            <mat-icon>cancel</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" aria-label="Pause Upload" (click)="task.resume()" [disabled]="!(snap?.state === 'paused')">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+    </div>
+  </div>
+
+  <div *ngIf="downloadURL as url">
+    <h3>Results!</h3>
+    <a [href]="url" target="_blank" rel="noopener">Download Me!</a>
+  </div> 

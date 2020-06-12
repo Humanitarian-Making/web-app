@@ -1,0 +1,78 @@
+<!-- Content -->
+<div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="userGroup">
+  <div class="name">{{userGroup.name}}</div>
+
+  <div role="list" class="list" fxLayout="column" fxLayoutAlign="start stretch">
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="list-row-name">Users ({{userGroup.users.length}})</div>  
+        <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('users')">
+          <mat-icon>view_list</mat-icon>
+        </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Locations ({{userGroup.locations.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Users" (click)="goTo('locations')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Projects ({{userGroup.projects.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Projects" (click)="goTo('projects')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+    <div class="list-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="list-row-name">Resources ({{userGroup.resources.length}})</div>  
+      <button mat-mini-fab color="primary" aria-label="Manage Resources" (click)="goTo('resources')">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- <div class="heading">Projects ({{userGroup.projects.length}}):</div>
+  <table mat-table [dataSource]="userGroup.projects" class="mat-elevation-z8" class="location-table">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let project"> {{langService.getLanguageOption(project.name)}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="desc">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let project"> {{langService.getLanguageOption(project.desc)}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="created">
+      <th mat-header-cell *matHeaderCellDef>Created</th>
+      <td mat-cell *matCellDef="let project"> {{project.created}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="updated">
+      <th mat-header-cell *matHeaderCellDef>Updated</th>
+      <td mat-cell *matCellDef="let project"> {{project.updated}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="published">
+      <th mat-header-cell *matHeaderCellDef>Published</th>
+      <td mat-cell *matCellDef="let project"> {{project.published}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tags">
+      <th mat-header-cell *matHeaderCellDef># Tags</th>
+      <td mat-cell *matCellDef="let project"> {{project.tags.length}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="projectColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: projectColumns;"></tr>
+  </table> -->
+</div>
+
+<!-- error -->
+<div fxLayout="column" fxLayoutAlign="start center" class="page" *ngIf="errorMessage">
+  <div class="error">{{errorMessage}}</div>
+</div>
+
+<!-- loading -->
+<div *ngIf="loading">
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>
