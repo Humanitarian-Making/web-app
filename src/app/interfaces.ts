@@ -241,11 +241,49 @@ export interface UserUserGroup {
 export interface AddResource {
     name: string;
     desc: string;
-    type: ResourceType;
+    type: any;
     resourceUrl: string;
 }
 
-export enum ResourceType {
-    challenge = 'challenge',
-    info = 'info'
+export interface Link {
+    url: string;
+    internal: boolean;
 }
+
+export interface Image {
+    name: string;
+    type: boolean;
+}
+
+export interface Asset {
+    type: AssetType;
+    name: string;
+    mime: MimeType;
+}
+
+export enum AssetType {
+    image = 'images',
+    logo = 'logos',
+    challenge = 'challenges',
+    event = 'events'
+}
+
+export interface Resource {
+    name: LanguageOption[];
+    desc?: LanguageOption[];
+    asset: Asset;
+}
+
+export enum MimeType {
+    pdf = 'pdf',
+    jpg = 'jpg',
+    png = 'png'
+}
+
+export interface Challenge {
+    slug: string;
+    name: LanguageOption[];
+    desc: LanguageOption[];
+    resources: Resource[];
+}
+
