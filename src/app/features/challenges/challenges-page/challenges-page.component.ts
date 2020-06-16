@@ -1,5 +1,9 @@
+import { LanguageService } from 'src/app/core/services/language.service';
+import { AssetService } from './../../../core/services/asset.service';
+import { ChallengeService } from './../challenge.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Challenge } from 'src/app/interfaces';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,26 +12,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./challenges-page.component.scss']
 })
 export class ChallengesPageComponent implements OnInit {
-  challenges = [
-    {
-      name: 'Soap Challenge',
-      desc: `Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  fasdfasdf asdfa sdfasd fasdf asdf asdfas`,
-    },
-    {
-      name: 'Test Challenge',
-      desc: `Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  
-      fasdfasdf asdfa sdfasd fasdf asdf asdfas 
-      Lorem fasfasdfasdfasdfasdfasdfasdfasdfasdf  
-      fasdfasdf asdfa sdfasd fasdf asdf asdfas`,
-    }
-  ];
-  constructor(private router: Router) { }
+  public challenges: Challenge[];
+  constructor(
+    private router: Router,
+    private challengeService: ChallengeService,
+    public asset: AssetService,
+    public lang: LanguageService
+  ) { }
 
   ngOnInit(): void {
+    this.challenges = this.challengeService.challenges;
   }
 
-
-  goToUrl(url) {
-    this.router.navigateByUrl(`challenge/${url}`);
+  goToUrl(slug) {
+    this.router.navigateByUrl(`challenge/${slug}`);
   }
 }

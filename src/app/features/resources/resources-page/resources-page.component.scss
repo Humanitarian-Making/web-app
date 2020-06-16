@@ -1,0 +1,43 @@
+@import 'src/styles.scss';
+
+.resource {
+    padding: 0.5em;
+    min-width: 100%;
+    margin: 0.5em;
+    // background-color: whitesmoke;
+    border-radius: 0.5em;
+    max-height: 12em;
+    overflow: hidden;
+    border-color: whitesmoke;
+    border-width: 1px;
+    border-style: solid;
+    &:hover {
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.20);
+        transform: translateY(-2px);
+        transition: all 0.15s ease-in;
+        cursor: pointer;
+    }
+}
+
+.title {
+    font-size: 2em;
+    margin: 1em;
+}
+
+.resource-text {
+    padding: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.resource-image {
+    padding: 0.5em;
+    max-height: 100%; 
+    max-width: 100%;
+}
+
+.image {
+    max-height: 100%; 
+    max-width: 100%;
+}

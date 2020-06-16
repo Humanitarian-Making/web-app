@@ -14,13 +14,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  goToProjects() {
-    this.router.navigateByUrl('projects');
-  }
-
-  goToReadiness() {
-    this.router.navigateByUrl('pages/readiness-levels');
-  }
-
 }

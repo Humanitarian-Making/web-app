@@ -16,7 +16,7 @@ export class LanguageService {
 
   createOption(t: string, l?: string): LanguageOption {
     if (l) {
-      return {text: t, language: 'english' };
+      return {text: t, language: l };
     } else {
       return {text: t, language: 'english'};
     }

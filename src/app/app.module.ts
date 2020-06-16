@@ -25,7 +25,7 @@ import { TagModule } from './features/tag/tag.module';
 import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
 import { AdminModule } from './features/admin/admin.module';
-import { PagesModule } from './features/pages/pages.module';
+import { ResourcesModule } from './features/resources/resources.module';
 import { EventsModule } from './features/events/events.module';
 import { ChallengesModule } from './features/challenges/challenges.module';
 
@@ -34,11 +34,15 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 // core components
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { HomeCardDeckComponent } from './core/components/home/home-card-deck/home-card-deck.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    HomeComponent,
+    HomeCardDeckComponent,
     FooterComponent,
   ],
   imports: [
@@ -50,7 +54,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
     MaterialModule,
     AuthModule,
     UserGroupModule,
-    PagesModule,
+    ResourcesModule,
     EventsModule,
     ChallengesModule,
     ProjectModule,

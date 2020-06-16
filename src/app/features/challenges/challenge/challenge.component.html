@@ -1,0 +1,30 @@
+<div class="page">
+<div fxLayout="column" fxLayoutAlign="start center"   *ngIf="challenge">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+      <button mat-mini-fab color="accent" (click)="goToChallenges()" class="action-button">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <div class="challenge-name">{{lang.getLanguageOption(challenge.name)}}</div>
+      <span></span>
+    </div>
+    
+    <img class="image" src={{asset.get(challenge.image)}} alt="Image of challenge" >
+  
+    <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+        <div class="challenge-desc">{{lang.getLanguageOption(challenge.desc)}}</div>
+    </div>
+  </div>
+  
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <p class="resources">Resources</p>
+      <div class="resources-row" fxLayout="row wrap" fxLayoutAlign="start start" *ngFor="let resource of challenge.resources">
+        <a href="{{asset.get(resource.asset)}}" download class="resource-card" fxLayout="column" fxLayoutAlign="start center">
+          <p class="resource-name">{{lang.getLanguageOption(resource.name)}}</p>
+          <mat-icon class="download-icon">get_app</mat-icon>
+        </a>
+      </div>
+    </div>
+  <div *ngIf="!challenge">
+    <mat-spinner  style="margin:0 auto;"></mat-spinner>
+  </div>
+</div>

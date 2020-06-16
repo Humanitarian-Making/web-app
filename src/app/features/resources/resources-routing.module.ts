@@ -1,12 +1,17 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+import { ResourcesPageComponent } from './resources-page/resources-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 
 const routes: Routes = [
     {
-        path: 'pages',
+        path: 'resources',
+        component:  ResourcesPageComponent
+    },
+    {
+        path: 'resource',
         children: [
             {
                 path: 'readiness-levels',
@@ -23,6 +28,5 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class PagesRoutingModule {
-
+export class ResourcesRoutingModule {
 }

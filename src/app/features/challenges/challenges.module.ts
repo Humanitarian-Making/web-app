@@ -8,10 +8,12 @@ import { MaterialModule } from '../../shared/material.module';
 
 import { ChallengesRoutingModule } from './challenges-routing.module';
 import { ChallengesPageComponent } from './challenges-page/challenges-page.component';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 @NgModule({
   declarations: [
-    ChallengesPageComponent
+    ChallengesPageComponent,
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,

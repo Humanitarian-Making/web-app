@@ -1,0 +1,23 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="page">
+    <div class="title">Resources</div>
+    <div fxLayout="column" fxLayoutAlign="start start"> 
+            <div 
+            *ngFor="let resource of resources" 
+            fxLayout="row" 
+            fxLayout.sm="column"  
+            fxLayout.xs="column" 
+            fxLayoutAlign="start start"
+            fxLayoutAlign.sm="start center"
+            fxLayoutAlign.xs="start center"
+            class="resource"
+            (click)="goToUrl(resource.slug)" >
+                <div fxFlex='25' fxLayout="row"  fxLayoutAlign="center center" class="resource-image">
+                    <img class="image" src="{{asset.get(resource.image)}}" alt="" >
+                </div>
+                <div fxFlex='75' fxLayout="column" fxLayoutAlign="start start" class="resource-text">
+                    <h5>{{lang.getLanguageOption(resource.name)}}</h5>
+                    <p>{{lang.getLanguageOption(resource.desc)}}</p>
+                </div>                    
+            </div>
+    </div>
+</div>
