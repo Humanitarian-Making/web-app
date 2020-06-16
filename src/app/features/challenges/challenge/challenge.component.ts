@@ -1,3 +1,5 @@
+import { AssetService } from './../../../core/services/asset.service';
+import { LanguageService } from 'src/app/core/services/language.service';
 import { ChallengeService } from './../challenge.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,7 +16,9 @@ export class ChallengeComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public challengeService: ChallengeService,
-    private router: Router
+    private router: Router,
+    public lang: LanguageService,
+    public asset: AssetService
   ) { }
 
   ngOnInit(): void {

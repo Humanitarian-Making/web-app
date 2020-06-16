@@ -284,6 +284,7 @@ export interface Challenge {
     slug: string;
     name: LanguageOption[];
     desc: LanguageOption[];
+    image: Asset;
     resources: Resource[];
 }
 
