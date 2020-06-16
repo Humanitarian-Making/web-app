@@ -33,7 +33,7 @@ export class ChallengeService {
         ]
       },
       {
-        slug: 'prius_battery_reuse',
+        slug: 'prius-battery-reuse',
         name: [lang.createOption('Fiji Prius Battery Reuse Project')],
         desc: [lang.createOption(`
         Background: In Fiji, almost ½ of the cars are Prius. Fiji has been importing 10-year-old Toyota Prius

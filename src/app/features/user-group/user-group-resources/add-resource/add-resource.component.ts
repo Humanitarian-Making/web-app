@@ -1,6 +1,6 @@
 import { StandardResponse, AddResource } from 'src/app/interfaces';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ResourceService } from 'src/app/core/services/resource.service';
+// import { ResourceService } from 'src/app/core/services/resource.service';
 import { Component, Inject, ViewChild, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatStepper } from '@angular/material/stepper';
@@ -26,10 +26,10 @@ export class AddResourceComponent {
 
   constructor(
     public dialogRef: MatDialogRef<AddResourceComponent>,
-    private resourceService: ResourceService,
+    // private resourceService: ResourceService,
     @Inject(MAT_DIALOG_DATA) public input: AddResourceInput
   ) {
-    this.resourceTypes = this.resourceService.resourceTypes;
+    // this.resourceTypes = this.resourceService.resourceTypes;
     console.log('this.input :', this.input);
     this.addResourceForm = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -51,13 +51,13 @@ export class AddResourceComponent {
       resourceUrl: this.addResourceForm.controls.resourceUrl.value,
       type: this.addResourceForm.controls.type.value,
     };
-    this.resourceService.addResource(this.input.userGroupId, addResource).subscribe((res: StandardResponse) => {
-      if (res && res.success) {
-        this.stepper.next();
-      } else {
-        this.errorMessage = res.message;
-      }
-    });
+    // this.resourceService.addResource(this.input.userGroupId, addResource).subscribe((res: StandardResponse) => {
+    //   if (res && res.success) {
+    //     this.stepper.next();
+    //   } else {
+    //     this.errorMessage = res.message;
+    //   }
+    // });
   }
 
   resourceUploaded(e) {

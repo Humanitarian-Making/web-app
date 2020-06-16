@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
-import { SharedModule } from './../../shared/shared.module';
-import { MaterialModule } from './../../shared/material.module';
+import { SharedModule } from '../../shared/shared.module';
+import { MaterialModule } from '../../shared/material.module';
 
-import { PagesRoutingModule } from './pages-routing.module';
+import { ResourcesRoutingModule } from './resources-routing.module';
 
-import { PagesPageComponent } from './pages-page/pages-page.component';
+import { ResourcesPageComponent } from './resources-page/resources-page.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 
 @NgModule({
   declarations: [
-    PagesPageComponent,
+    ResourcesPageComponent,
     EthicsPageComponent,
     ReadinessLevelsComponent,
   ],
@@ -23,9 +23,9 @@ import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.co
     CommonModule,
     MaterialModule,
     SharedModule,
-    PagesRoutingModule
+    ResourcesRoutingModule
   ],
   entryComponents: [ ],
   providers: []
 })
-export class PagesModule { }
+export class ResourcesModule { }

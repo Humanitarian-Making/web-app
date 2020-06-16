@@ -1,4 +1,3 @@
-import { ResourceService } from 'src/app/core/services/resource.service';
 import { FormControl, Validators } from '@angular/forms';
 import { LanguageService } from 'src/app/core/services/language.service';
 import {
@@ -27,28 +26,28 @@ export class UserGroupResourcesComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public langService: LanguageService,
-    private resourceService: ResourceService,
+    // private resourceService: ResourceService,
     private createResourceDialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     this.loading = true;
     this.userGroupId = this.route.snapshot.paramMap.get('userGroupId');
-    this.resourceService
-      .getUserGroupResources(this.userGroupId)
-      .subscribe((res: any) => {
-        console.log('res :', res);
-        this.loading = false;
-        if (res.success) {
-          this.userGroup = res.userGroupResources;
-          this.resources = res.userGroupResources.resources;
-          this.errorMessage = null;
-        } else {
-          this.errorMessage = res.message;
-          this.userGroup = null;
-          this.resources = null;
-        }
-      });
+    // this.resourceService
+    //   .getUserGroupResources(this.userGroupId)
+    //   .subscribe((res: any) => {
+    //     console.log('res :', res);
+    //     this.loading = false;
+    //     if (res.success) {
+    //       this.userGroup = res.userGroupResources;
+    //       this.resources = res.userGroupResources.resources;
+    //       this.errorMessage = null;
+    //     } else {
+    //       this.errorMessage = res.message;
+    //       this.userGroup = null;
+    //       this.resources = null;
+    //     }
+    //   });
   }
 
   clickAddResource() {
@@ -152,7 +151,7 @@ export class UserGroupResourceNameComponent {
   nameForm: FormControl;
   constructor(
     public langService: LanguageService,
-    private resourceService: ResourceService
+    // private resourceService: ResourceService
   ) {
     this.edit = false;
     this.nameForm = new FormControl('', Validators.required);
@@ -165,14 +164,14 @@ export class UserGroupResourceNameComponent {
   }
 
   editName() {
-    this.resourceService.editName(this.userGroupId, this.resourceId, this.nameForm.value).subscribe((res: StandardResponse) => {
-      console.log('res :', res);
-      if (res && res.success) {
-        this.edit = false;
-        this.name = this.nameForm.value;
-      } else {
-        this.errorMessage = res.message;
-      }
-    });
+    // this.resourceService.editName(this.userGroupId, this.resourceId, this.nameForm.value).subscribe((res: StandardResponse) => {
+    //   console.log('res :', res);
+    //   if (res && res.success) {
+    //     this.edit = false;
+    //     this.name = this.nameForm.value;
+    //   } else {
+    //     this.errorMessage = res.message;
+    //   }
+    // });
   }
 }

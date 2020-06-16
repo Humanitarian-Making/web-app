@@ -25,7 +25,7 @@ import { TagModule } from './features/tag/tag.module';
 import { ProjectModule } from './features/project/project.module';
 import { MapModule } from './features/mapping/map.module';
 import { AdminModule } from './features/admin/admin.module';
-import { PagesModule } from './features/pages/pages.module';
+import { ResourcesModule } from './features/resources/resources.module';
 import { EventsModule } from './features/events/events.module';
 import { ChallengesModule } from './features/challenges/challenges.module';
 
@@ -54,7 +54,7 @@ import { HomeCardDeckComponent } from './core/components/home/home-card-deck/hom
     MaterialModule,
     AuthModule,
     UserGroupModule,
-    PagesModule,
+    ResourcesModule,
     EventsModule,
     ChallengesModule,
     ProjectModule,

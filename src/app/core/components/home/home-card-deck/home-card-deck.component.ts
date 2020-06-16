@@ -83,13 +83,13 @@ export class HomeCardDeckComponent implements OnInit {
         desc: 'Project logos',
       },
       link: {
-        url: 'page/code-of-practice',
+        url: 'resource/code-of-practice',
         internal: true
       }
     },
     {
       name: [
-        {text: 'Challenges', language: 'english'}
+        {text: 'Design Challenges', language: 'english'}
       ],
       desc: [
         {text: 'Design Challenges are created to inspire innovation where there is a need.', language: 'english'}
@@ -115,10 +115,26 @@ export class HomeCardDeckComponent implements OnInit {
         desc: 'Project logos',
       },
       link: {
-        url: 'page/readiness-levels',
+        url: 'resource/readiness-levels',
         internal: true
       }
-    }
+    },
+    {
+      name: [
+        {text: 'Resources', language: 'english'}
+      ],
+      desc: [
+        {text: '', language: 'english'}
+      ],
+      image: {
+        url: 'hm.png',
+        desc: 'Project logos',
+      },
+      link: {
+        url: 'resources',
+        internal: true
+      }
+    },
   ];
 
   constructor(private router: Router, public lang: LanguageService) { }

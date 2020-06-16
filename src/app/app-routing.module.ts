@@ -1,7 +1,7 @@
 import { AdminPageComponent } from './features/admin/admin-page/admin-page.component';
 import { UserGroupUsersComponent } from './features/user-group/user-group-users/user-group-users.component';
 import { UserGroupPageComponent } from './features/user-group/user-group-page/user-group-page.component';
-import { ReadinessLevelsComponent } from './features/pages/readiness-levels/readiness-levels.component';
+import { ReadinessLevelsComponent } from './features/resources/readiness-levels/readiness-levels.component';
 import { UpdateUserDetailsComponent } from './features/auth/update-user-details/update-user-details.component';
 import { SignUpFormComponent } from './features/auth/sign-up-form/sign-up-form.component';
 import { TagPageComponent } from './features/tag/tag-page/tag-page.component';
