@@ -17,16 +17,25 @@
 
 .level {
     width: 100%;
+    margin-top: 2em;
+    min-height: 7em;
+}
+.level-column {
+    // min-width: 100%;
 }
 
 .level-heading {
     text-align: center;
     font-size: 1.8em;
-    margin-top: 1em;
 }
 .level-text {
-    text-align: center;
     font-size: 1em;
+    max-width: 90%;
+
+}
+
+.level-image {
+    max-width: 5em;
 }
 
 .levels {

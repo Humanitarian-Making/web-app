@@ -64,6 +64,48 @@ export class ChallengeService {
             }
           }
         ]
+      },
+      {
+        slug: 'shelter-winterisation',
+        name: [lang.createOption('Shelter Winterisation')],
+        desc: [lang.createOption(`Winterisation of shelters is very difficult. People freeze to death in the refugee shelters in winter across the world. We need to winterproof, insulating material for semi-permanent refugee housing structures in high elevation areas. `)],
+        image: {
+          type: AssetType.image,
+          name: 'winterisation',
+          mime: MimeType.png
+        },
+        resources: [
+          {
+            name: [lang.createOption('Project Brief')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.challenge,
+              name: 'shelter_winterisations',
+              mime: MimeType.pdf
+            }
+          }
+        ]
+      },
+      {
+        slug: 'soap-challenge',
+        name: [lang.createOption('Soap Challenge')],
+        desc: [lang.createOption(`How to place toys inside bars of soap being made using existing mass production methods?`)],
+        image: {
+          type: AssetType.image,
+          name: 'soap_challenge',
+          mime: MimeType.png
+        },
+        resources: [
+          {
+            name: [lang.createOption('Project Brief')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.challenge,
+              name: 'soap-challenge',
+              mime: MimeType.pdf
+            }
+          }
+        ]
       }
     ];
   }
