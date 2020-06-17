@@ -5,23 +5,64 @@
         that something is “ready.” Four separate readiness scales are listed for each item in this catalog along with a
         consideration of risk. The five categories are explained below along with the readiness scales on the following
         provides users of this catalog with a clear understanding of how the system works. </div>
-    <div class="level-heading">Field readiness level</div>
-    <div class="level-text">This measures the degree in which an item is suitable for life saving situations. It is a
-        key quality that sets items apart in humanitarian contexts. </div>
-    <div class="level-heading">Maker readiness level</div>
-    <div class="level-text">This is an indication of the relative ease in making the item as it relates to the
-        complication and skill involved. </div>
-    <div class="level-heading">User readiness level</div>
-    <div class="level-text">This is a measure of the end users acceptability of the item considering issues such as
-        whether it is already commonly used, if the item is in an existing catalog and when there are established
-        standards for its use. </div>
-    <div class="level-heading">Technology readiness level</div>
-    <div class="level-text">This is an indication of the development process that the item is in (e.g., whether it is at
-        a conceptual stage or available for replication and widespread use). </div>
-    <div class="level-heading">Risk level</div>
-    <div class="level-text">This is a measure of severity and likelihood of the risk involved for the maker and end user
-        of the item. The mitigation and control measures are documented by Field Ready in separate risk assessments for
-        each item it makes. </div>
+
+    <div fxLayout="column" fxLayoutAlign="start start">
+        <div 
+        fxLayout="row" 
+        fxLayoutAlign="start-between start" 
+
+        fxLayout.xs="column" 
+        fxLayoutAlign.xs="start center"
+
+
+        class="level"> 
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlex='90' fxFlex.xs='100' class="level-column">
+                <div class="level-heading">Field readiness level</div>
+                <div class="level-text">This measures the degree in which an item is suitable for life saving situations. It is a
+                key quality that sets items apart in humanitarian contexts. </div>
+            </div>
+            <img class="level-image" fxFlex='10' fxFlex.xs='10' src="{{asset.humIcon('IDP-refugee-camp')}}" alt="">
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start-between start" class="level"> 
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlex='90' class="level-column">
+                <div class="level-heading">Maker readiness level</div>
+                <div class="level-text">This is an indication of the relative ease in making the item as it relates to the
+                    complication and skill involved. </div>
+            </div>
+            <img class="level-image" fxFlex='10' src="{{asset.humIcon('Early-Recovery')}}" alt="">
+        </div>
+        
+        <div fxLayout="row" fxLayoutAlign="start-between start" class="level"> 
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlex='90' class="level-column">
+                <div class="level-heading">User readiness level</div>
+                <div class="level-text">This is a measure of the end users acceptability of the item considering issues such as
+                    whether it is already commonly used, if the item is in an existing catalog and when there are established
+                    standards for its use. </div>
+            </div>
+            <img class="level-image" fxFlex='10' src="{{asset.humIcon('Group')}}" alt="">
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start-between start" class="level"> 
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlex='90' class="level-column">
+                <div class="level-heading">Technology readiness level</div>
+                <div class="level-text">This is an indication of the development process that the item is in (e.g., whether it is at
+                    a conceptual stage or available for replication and widespread use). </div>
+            </div>
+            <img class="level-image" fxFlex='10' src="{{asset.humIcon('Work-from-home')}}" alt="">
+        </div>
+        
+        <div fxLayout="row" fxLayoutAlign="start-between start" class="level"> 
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlex='90' class="level-column">
+                <div class="level-heading">Risk level</div>
+                <div class="level-text">This is a measure of severity and likelihood of the risk involved for the maker and end user
+                    of the item. The mitigation and control measures are documented by Field Ready in separate risk assessments for
+                    each item it makes. </div>
+            </div>
+            <img class="level-image" fxFlex='10' src="{{asset.humIcon('Dangerous-area')}}" alt="">
+        </div>
+    </div>
+   
     <mat-accordion class="accordion">
         <mat-expansion-panel>
             <mat-expansion-panel-header>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AssetService } from 'src/app/core/services/asset.service';
 
 @Component({
   selector: 'app-readiness-levels',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReadinessLevelsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public asset: AssetService) { }
 
   ngOnInit(): void {
+  }
+
+  getImage(ref) {
+    const refString = 'assets/images/' + ref + '.png';
+    return refString;
   }
 
 }

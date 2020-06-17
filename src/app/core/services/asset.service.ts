@@ -30,4 +30,8 @@ export class AssetService {
     return url;
 
   }
+
+  humIcon(name): string {
+    return `assets/humanitarian-icons/${name}.png`;
+  }
 }
