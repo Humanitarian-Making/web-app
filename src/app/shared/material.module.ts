@@ -22,6 +22,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -47,7 +50,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSidenavModule,
     MatCheckboxModule,
     MatProgressBarModule,
-    MatStepperModule
+    MatStepperModule,
+    MatAutocompleteModule,
+    LayoutModule,
+    MatMenuModule
   ],
   exports: [
     MatGridListModule,
@@ -70,7 +76,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSidenavModule,
     MatCheckboxModule,
     MatProgressBarModule,
-    MatStepperModule
+    MatStepperModule,
+    MatAutocompleteModule,
+    LayoutModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule { }
