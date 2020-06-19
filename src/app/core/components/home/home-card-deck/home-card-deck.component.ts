@@ -1,3 +1,4 @@
+import { AssetService } from './../../../services/asset.service';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -28,10 +29,10 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Projects', language: 'english'}
       ],
       desc: [
-        {text: 'Projects', language: 'english'}
+        {text: 'View Projects created by various humanitarian aid agency', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'Shelter',
         desc: 'Project logos',
       },
       link: {
@@ -47,8 +48,8 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Map of manufacturing locations and FabLabs', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
-        desc: 'Project logos',
+        url: 'Map',
+        desc: 'Map Logo',
       },
       link: {
         url: 'map',
@@ -63,7 +64,7 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Education, information and conference', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'Calendar',
         desc: 'Project logos',
       },
       link: {
@@ -79,7 +80,7 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Humanitarian Making Code of Practice is rules contributes will work with', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'User',
         desc: 'Project logos',
       },
       link: {
@@ -92,10 +93,10 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Design Challenges', language: 'english'}
       ],
       desc: [
-        {text: 'Design Challenges are created to inspire innovation where there is a need.', language: 'english'}
+        {text: 'Design Challenges are created to inspire innovation where there is a needed.', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'Innovation',
         desc: 'Project logos',
       },
       link: {
@@ -108,10 +109,10 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Readiness Levels', language: 'english'}
       ],
       desc: [
-        {text: `How is 'readiness' measured?`, language: 'english'}
+        {text: `Each Project has a readiness level. How is 'readiness' measured?`, language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'Preparedness',
         desc: 'Project logos',
       },
       link: {
@@ -124,10 +125,10 @@ export class HomeCardDeckComponent implements OnInit {
         {text: 'Resources', language: 'english'}
       ],
       desc: [
-        {text: '', language: 'english'}
+        {text: 'View resources', language: 'english'}
       ],
       image: {
-        url: 'hm.png',
+        url: 'Services-and-tools',
         desc: 'Project logos',
       },
       link: {
@@ -137,7 +138,7 @@ export class HomeCardDeckComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router, public lang: LanguageService) { }
+  constructor(private router: Router, public lang: LanguageService, public asset: AssetService) { }
 
   ngOnInit(): void {
   }
