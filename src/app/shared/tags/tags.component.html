@@ -1,0 +1,15 @@
+<!-- <div class="tags" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row" fxLayoutAlign.xs="start center">
+    <mat-chip-list aria-label="Tag Selection" *ngIf="project.tags.length > 0">
+      <mat-chip *ngFor="let tag of project.tags" (click)="goToTag(tag._id)">
+        {{langService.getLanguageOption(tag.parent.name)}} | {{langService.getLanguageOption(tag.name)}}
+      </mat-chip>
+    </mat-chip-list>
+</div> -->
+<div *ngFor="let tag of tags">
+    <tag></tag>
+</div>
+<add-tag 
+  *ngIf="config.edit" 
+  [resource]="config.resource" 
+  (added)="addTag($event)"
+></add-tag>

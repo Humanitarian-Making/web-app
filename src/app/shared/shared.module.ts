@@ -19,6 +19,9 @@ import { LanguageOptionComponent } from './language-option/language-option.compo
 import { UploaderComponent } from './upload/uploader/uploader.component';
 import { UploadTaskComponent } from './upload/upload-task/upload-task.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { TagsComponent } from './tags/tags.component';
+import { AddTagComponent } from './tags/add-tag/add-tag.component';
+import { TagComponent } from './tags/tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     UploaderComponent,
     UploadTaskComponent,
     ProjectCardComponent,
+    TagsComponent,
+    AddTagComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +61,9 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     UploaderComponent,
     UploadTaskComponent,
     ProjectCardComponent,
+    TagsComponent,
+    AddTagComponent,
+    TagComponent
   ],
   entryComponents: [
     EditLanguageOptionComponent,

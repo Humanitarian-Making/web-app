@@ -288,3 +288,23 @@ export interface Challenge {
     resources: Resource[];
 }
 
+export enum TagLayout {
+    horizontal = 'horizontal',
+    vertical = 'vertical'
+}
+export interface TagResource {
+    type: TagResourceType;
+    id: string;
+};
+
+export enum TagResourceType {
+    project = 'project',
+    location = 'location'
+}
+
+export interface TagsConfig {
+    resource: TagResource;
+    layout: TagLayout;
+    edit: boolean;
+    populated: boolean;
+}
