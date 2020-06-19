@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="page">
+    <div class="title">Design Challenges</div>
+    <div fxLayout="column" fxLayoutAlign="start start"> 
+            <div *ngFor="let challenge of challenges" (click)="goToUrl(challenge.slug)">
+                <div 
+                fxLayout="row" 
+                fxLayout.sm="column"  
+                fxLayout.xs="column" 
+                fxLayoutAlign="start start"
+                fxLayoutAlign.sm="start center"
+                fxLayoutAlign.xs="start center"
+                class="challenge"
+                >
+                    <img src="{{asset.get(challenge.image)}}" alt="" fxFlex='25' fxFlex.sm="80">
+                    <div fxLayout="column" fxLayoutAlign="start start" class="challenge-text">
+                        <h5>{{lang.getLanguageOption(challenge.name)}}</h5>
+                        <p>{{lang.getLanguageOption(challenge.desc)}}</p>
+                    </div>                    
+                </div>
+            </div>
+    </div>
+</div>

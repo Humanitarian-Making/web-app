@@ -1,0 +1,89 @@
+.title {
+    text-align: center;
+    font-size: 3em;
+}
+
+.cat-name {
+    font-size: 1.4em;
+    color: #4a8bcb;
+    text-align: center;
+}
+
+.cat-sub {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.level {
+    width: 100%;
+    margin-top: 2em;
+    min-height: 7em;
+}
+.level-column {
+    // min-width: 100%;
+}
+
+.level-heading {
+    text-align: center;
+    font-size: 1.8em;
+}
+.level-text {
+    font-size: 1em;
+    max-width: 90%;
+
+}
+
+.level-image {
+    max-width: 5em;
+}
+
+.levels {
+    font-size: 1.6em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+.level-name {
+    font-size: 1.2em;
+    margin: .2em;
+    text-align: center;
+}
+.level-desc {
+    text-align: center;
+    font-size: 1em;
+}
+.rule-name {
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+.rule-desc {
+    font-size: 1em;
+    text-align: center;
+}
+
+.level-1 {
+    background-color: rgba(255,0,0,.7);
+}
+.level-2 {
+    background-color: rgba(165,42,42,.7);
+}
+.level-3 {
+    background-color: rgba(255,255,0,.7);
+}
+.level-4 {
+    background-color: rgba(153,205,50,.7);
+}
+.level-5 {
+    background-color: rgba(0,128,0,.7);
+}
+
+.accordion {
+    margin: 1em;
+}
+.hero-image {
+    width: 20%
+  }
+.img {
+    margin: 0.5em;
+}
+  

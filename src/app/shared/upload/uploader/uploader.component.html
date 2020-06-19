@@ -1,0 +1,15 @@
+<div class="dropzone" 
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering"
+     *ngIf="!file" 
+     >
+
+     <h3>Upload File</h3>
+     <p>Drag and Drop a File</p>
+     <input type="file"
+       id="avatar" name="avatar"
+       accept="image/jpeg,image/gif,image/png,application/pdf">
+</div>
+<app-upload-task *ngIf="file" [file]="file" (uploaded)="uploaded($event)"></app-upload-task>

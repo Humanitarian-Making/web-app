@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Delete Resource</h1>
+<div mat-dialog-content>
+   <p>You are able to delete this resource, please confirm </p>
+</div>
+<div mat-dialog-content *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="confirmDelete()">Confirm</button>
+    <button mat-button (click)="cancelDelete()">Cancel</button>
+</div>

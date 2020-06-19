@@ -237,3 +237,54 @@ export interface UserUserGroup {
     role: string;
     open: boolean;
 }
+
+export interface AddResource {
+    name: string;
+    desc: string;
+    type: any; // ResourceType;
+    resourceUrl: string;
+}
+
+export interface Link {
+    url: string;
+    internal: boolean;
+}
+
+export interface Image {
+    name: string;
+    type: boolean;
+}
+
+export interface Asset {
+    type: AssetType;
+    name: string;
+    mime: MimeType;
+}
+
+export enum AssetType {
+    image = 'images',
+    logo = 'logos',
+    challenge = 'challenges',
+    event = 'events'
+}
+
+export interface Resource {
+    name: LanguageOption[];
+    desc?: LanguageOption[];
+    asset: Asset;
+}
+
+export enum MimeType {
+    pdf = 'pdf',
+    jpg = 'jpg',
+    png = 'png'
+}
+
+export interface Challenge {
+    slug: string;
+    name: LanguageOption[];
+    desc: LanguageOption[];
+    image: Asset;
+    resources: Resource[];
+}
+

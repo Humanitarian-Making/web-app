@@ -1,0 +1,33 @@
+<!-- Toolbar -->
+<mat-toolbar>
+    <span>
+      <img src="assets/logos/hm.png" class="logo" [routerLink]="['']">
+    </span>
+    <span class="spacer"></span>
+    <span>
+      <a (click)="goToUrl('map')">
+        <button mat-button>
+          Map
+        </button>
+      </a>
+    </span>
+    <span>
+      <a (click)="goToUrl('projects')">
+        <button mat-button>
+          Projects
+        </button>
+      </a>
+  </span>
+  <span *ngIf="user">
+    <a (click)="goToUrl('profile')">
+      <img mat-card-avatar src="{{authService.photoURL}}" class="avatarPhoto">
+    </a>
+</span>
+  <span *ngIf="!user">
+    <a (click)="goToUrl('sign-in')">
+      <button mat-button>
+        Sign In
+      </button>
+    </a>
+  </span>
+</mat-toolbar>
