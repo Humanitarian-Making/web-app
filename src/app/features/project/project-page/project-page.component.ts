@@ -6,6 +6,7 @@ import { ProjectService } from '../../../core/services/project.service';
 import { tap, map } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { AddTagComponent } from 'src/app/features/tag/add-tag/add-tag.component';
+import { TagsConfig, TagLayout, TagResourceType } from 'src/app/interfaces';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class ProjectPageComponent implements OnInit {
   project;
   @ViewChild('canvas', {static: true}) canvas: ElementRef;
   public context: CanvasRenderingContext2D;
+  public tagsConfig: TagsConfig;
 
   constructor(
     private route: ActivatedRoute,
@@ -55,6 +57,15 @@ export class ProjectPageComponent implements OnInit {
         this.project = res.project;
       }
     });
+    this.tagsConfig = {
+      layout: TagLayout.horizontal,
+      edit: true,
+      populated: true,
+      resource: {
+        type: TagResourceType.project,
+        id: this.projectId
+      }
+    };
   }
 
   addTag() {

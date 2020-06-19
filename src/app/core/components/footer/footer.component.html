@@ -1,7 +1,7 @@
-<footer class="footer" fxLayout="row" fxLayoutAlign="space-between center">
-    <span fxFlex="15"></span>
-    <a fxFlex="15"class="mail-link" href="mailto:info@humanitarianmaking.org">info@humanitarianmaking.org</a>
-    <a fxFlex="15" href="https://www.shuttleworthfoundation.org/">
+<footer class="footer" fxLayout="row" fxLayoutAlign="{{layout}}">
+    <span fxFlex="15" *ngIf="!isSmallScreen"></span>
+    <a fxFlex="itemSize" *ngIf="!isSmallScreen" class="mail-link" href="mailto:info@humanitarianmaking.org">info@humanitarianmaking.org</a>
+    <a fxFlex="itemSize" href="https://www.shuttleworthfoundation.org/">
         <img src="assets/logos/shuttleworth.svg" class="footer-logo">
     </a>
 </footer>

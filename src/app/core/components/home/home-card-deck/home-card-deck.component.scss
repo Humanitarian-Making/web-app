@@ -26,7 +26,6 @@
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -57,8 +56,19 @@
     border-top: 6px solid #EFB044;
 }
 .card-image {
-    width:100px; 
-    margin-right: 50px;
-    margin-bottom: 0;
-    margin-left: 50px;
+    height:100px; 
+    padding: 3px
+}
+
+.desc {
+    font-size: 0.9em;
+    margin: 0.2em;
+}
+
+.text {
+    max-height: 5em;
+    text-align: center;
+}
+.card-title {
+    margin: 0px;
 }

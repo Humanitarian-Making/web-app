@@ -1,0 +1,30 @@
+<div>Add</div>
+<div [ngSwitch]="state">
+    <div *ngSwitchCase="'view'">
+        <button mat-mini-fab color="accent" (click)="startAdd()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+    <div *ngSwitchCase="'loading'">
+        loading
+    </div>
+    <div *ngSwitchCase="'adding'">
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="Number"
+                   matInput
+                   [formControl]="searchControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        
+        <button mat-mini-fab color="accent" (click)="cancelAdd()">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+</div>
