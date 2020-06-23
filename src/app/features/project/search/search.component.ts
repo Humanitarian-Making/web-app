@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import { TagsRes } from '../../../interfaces';
 import { TagService } from 'src/app/core/services/tag.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
@@ -5,6 +6,7 @@ import { ProjectService } from 'src/app/core/services/project.service';
 import { MatDialog } from '@angular/material/dialog';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { AddTagComponent, AddTagInput } from 'src/app/features/tag/add-tag/add-tag.component';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
@@ -12,7 +14,8 @@ import { AddTagComponent, AddTagInput } from 'src/app/features/tag/add-tag/add-t
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  @Output() updateSearchTags = new EventEmitter<string[]>();
+  @Output() updateSearch = new EventEmitter<{text: string, tagIds: string[]}>();
+  public textSearchControl: FormControl = new FormControl('');
 
   tags: any[];
   organisations: any[];
@@ -27,6 +30,13 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.tags = [];
+    this.textSearchControl = new FormControl('');
+    this.textSearchControl.valueChanges
+      .pipe(debounceTime(500))
+      .subscribe(() => {
+        this.update();
+      });
+
     this.tagService.getOfType('organisation').subscribe((res: TagsRes) => {
       if (res.success) {
         this.organisations = res.tags;
@@ -39,19 +49,19 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  emitTagIds() {
+  update() {
     const tagIds = this.tags.map(tag => tag._id);
-    this.updateSearchTags.emit(tagIds);
+    this.updateSearch.emit({text: this.textSearchControl.value, tagIds});
   }
 
   selectOrganisation(i) {
     this.tags.push(this.organisations[i]);
-    this.emitTagIds();
+    this.update();
   }
 
   selectSector(i) {
     this.tags.push(this.sectors[i]);
-    this.emitTagIds();
+    this.update();
   }
 
   clickAddTag() {
@@ -66,14 +76,14 @@ export class SearchComponent implements OnInit {
     addTagDiologRef.afterClosed().subscribe(tag => {
       if (tag) {
         this.tags.push(tag);
-        this.emitTagIds();
+        this.update();
       }
     });
   }
 
   removeQueryItem(index) {
     this.tags.splice(index, 1);
-    this.emitTagIds();
+    this.update();
   }
 
 }

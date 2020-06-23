@@ -16,6 +16,7 @@ import { last, tap } from 'rxjs/operators';
 })
 export class ProjectsPageComponent implements OnInit {
   public projects: any[] = [];
+  public loading: boolean;
 
   constructor(
     private projectService: ProjectService,
@@ -24,8 +25,10 @@ export class ProjectsPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loading = true;
     this.projectService.getProjects().subscribe((res: any) => {
       if (res.success) {
+        this.loading = false;
         this.projects = res.projects;
       }
     });
@@ -33,20 +36,13 @@ export class ProjectsPageComponent implements OnInit {
     console.log(this.projects);
   }
 
-  search(queryTagIds) {
-    console.log('queryTagIds :', queryTagIds);
-    if (queryTagIds.length === 0) {
-      this.projectService.getProjects().subscribe((res: any) => {
-        if (res.success) {
-          this.projects = res.projects;
-        }
-      });
-    } else {
-      this.projectService.filterByProjectTags(queryTagIds).subscribe((res: any) => {
-        if (res.success) {
-          this.projects = res.projects;
-        }
-      });
-    }
+  search(params) {
+    this.loading = true;
+    this.projectService.search(params.text, params.tagIds).subscribe((res: any) => {
+      if (res.success) {
+        this.loading = false;
+        this.projects = res.projects;
+      }
+    });
   }
 }
