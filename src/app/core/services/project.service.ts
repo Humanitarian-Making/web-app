@@ -31,16 +31,16 @@ export class ProjectService {
     return this.http.get(environment.apiUrl + 'projects');
   }
 
-  filterByProjectTags(tagIds: string[]) {
-    return this.http.put(environment.apiUrl + 'projects/filter', {tags: tagIds});
+  search(text: string, tagIds: string[]) {
+    return this.http.put(environment.apiUrl + 'projects/search', {text, tags: tagIds});
   }
 
-  addTagToProject(projectId, tagId) {
-    return this.http.put(environment.apiUrl + 'project/' + projectId + '/tag/' + tagId + '/add', {});
+  addTagToProject(projectId, tagId): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + 'project/' + projectId + '/tag/' + tagId + '/add', {});
   }
 
-  removeTag(projectId, tagId) {
-    return this.http.put(environment.apiUrl + 'project/' + projectId + '/tag/' + tagId + '/remove', {});
+  removeTag(projectId, tagId): Observable<StandardResponse> {
+    return this.http.put<StandardResponse>(environment.apiUrl + 'project/' + projectId + '/tag/' + tagId + '/remove', {});
   }
 
   async sync() {

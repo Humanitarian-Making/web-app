@@ -1,8 +1,8 @@
 <div fxLayout="column" fxLayoutAlign="start center">
   <h2>Projects</h2>
-  <app-search (updateSearchTags)=search($event)></app-search>
+  <app-search (updateSearch)=search($event)></app-search>
   <br> 
-  <div *ngIf="!projects">
+  <div *ngIf="loading">
     <mat-spinner  style="margin:0 auto;"></mat-spinner>
     <p style="text-align: center;">Loading</p>
   </div>
