@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { TagResourceType } from './../../interfaces';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { TagLayout, TagsConfig } from 'src/app/interfaces';
+import { TagInput } from './tag/tag.component';
 
 
 
@@ -9,35 +11,54 @@ import { TagLayout, TagsConfig } from 'src/app/interfaces';
   templateUrl: './tags.component.html',
   styleUrls: ['./tags.component.scss']
 })
-export class TagsComponent implements OnInit {
-  @Input() private inputTags: any[];
+export class TagsComponent implements OnChanges {
   @Input() public config: TagsConfig;
-  public tags: any[] = [];
+  public tags: TagInput[] = [];
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.tags);
+  ngOnChanges(): void {
+    console.log('this.config :', this.config);
+
     if (!this.config.populated) {
-      this.populateTags();
-    } else {
-      this.inputTags.map((tag) => {
-        this.tags.push({
-          populated: true,
-          tagId: tag._id
-        });
+      this.tags = this.config.tags.map((tag) => {
+        return {
+          resource: TagResourceType.project,
+          resourceId: this.config.resource.id,
+          edit: this.config.edit,
+          populated: false,
+          tagId: tag._id,
+          name: tag.name,
+          desc: tag.desc,
+          parent: tag.parent
+        };
       });
+    } else {
+      this.tags = this.config.tags.map((tag) => {
+        return {
+          resource: TagResourceType.project,
+          resourceId: this.config.resource.id,
+          edit: this.config.edit,
+          populated: true,
+          tagId: tag._id,
+          name: tag.name,
+          desc: tag.desc,
+          parent: tag.parent
+        };
+      });
+      console.log(this.tags);
+
     }
   }
 
-  populateTags() {
-
+  addTag(tag: TagInput) {
+    console.log('addTag tag:', tag);
+    this.tags.push(tag);
   }
 
-  addTag(tagId) {
-    this.tags.push({
-      populated: false,
-      tagId
-    });
+  removeTag(tagId) {
+    console.log('removeTag tagId :', tagId);
+    const index = this.tags.findIndex((tag) => tag.tagId);
+    this.tags.splice(index, 1);
   }
 
 }

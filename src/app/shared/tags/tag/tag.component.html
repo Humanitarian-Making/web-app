@@ -1,1 +1,26 @@
-<p>tag works!</p>
+<div *ngIf="state === 'view'" class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+    <div class="tag-name">{{lang.getLanguageOption(tag.parent.name)}}</div>
+    <div>|</div>
+    <div class="tag-name">{{lang.getLanguageOption(tag.name)}}</div>
+    <button mat-button matSuffix aria-label="Cancel Add" (click)="clickDelete()" *ngIf="tag.edit">
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>
+
+<div class="add-tag-chip" fxLayout="row" fxLayoutAlign="center center" *ngIf="state === 'confirmDelete'">
+    <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+        Confirm Delete
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+            <button mat-button matSuffix aria-label="Confirm Add" (click)="confirmDelete()">
+                <mat-icon>check</mat-icon>
+            </button>
+        </div>
+        <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+            <button mat-button matSuffix aria-label="Cancel Add" (click)="cancelDelete()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

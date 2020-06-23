@@ -303,6 +303,7 @@ export enum TagResourceType {
 }
 
 export interface TagsConfig {
+    tags: any[];
     resource: TagResource;
     layout: TagLayout;
     edit: boolean;

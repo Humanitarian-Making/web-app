@@ -5,11 +5,14 @@
       </mat-chip>
     </mat-chip-list>
 </div> -->
-<div *ngFor="let tag of tags">
-    <tag></tag>
+<div fxLayout="row wrap" fxLayoutAlign="start center">
+  <div *ngFor="let tag of tags">
+    <tag [tag]="tag" (removed)="removeTag($event)"></tag>
 </div>
 <add-tag 
   *ngIf="config.edit" 
   [resource]="config.resource" 
   (added)="addTag($event)"
 ></add-tag>
+</div>
+
