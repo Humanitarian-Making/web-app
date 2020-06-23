@@ -42,7 +42,7 @@ export class SignInFormComponent implements OnInit {
     .then((cred) => {
       this.loading = false;
       console.log(cred);
-      this.router.navigateByUrl('/profile');
+      this.router.navigateByUrl('/');
     })
     .catch((err) => {
       this.errorMessage = err.message;
