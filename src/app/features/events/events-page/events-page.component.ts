@@ -11,6 +11,16 @@ import { Router } from '@angular/router';
 export class EventsPageComponent implements OnInit {
   events = [
     {
+      name: 'How to distribute fabrication of COVID-19 solutions',
+      desc: `This week's debate will deepen the discussion by exploring the important subject of distributed fabrication.`,
+      date: 'Thursday, June 18th',
+      location: 'Online: Zoom',
+      link: {
+        internal: false,
+        url: 'https://viralresponse.io/+viralresponse/stories/live-event-how-to-distribute-fabrication-of-covid-19-solutions'
+      }
+    },
+    {
       name: 'Humanitarian Making Conference',
       desc: `We are gathering together, for the first time,
       aid agencies that are developing projects and programmes
@@ -18,7 +28,10 @@ export class EventsPageComponent implements OnInit {
       FabLabs and Makerspaces.`,
       date: 'TBC',
       location: 'Toulouse, France',
-      url: 'conference'
+      link: {
+        internal: true,
+        url: 'conference'
+      }
     }
   ];
   constructor(private router: Router) { }
@@ -26,7 +39,11 @@ export class EventsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToUrl(url) {
-    this.router.navigateByUrl(`event/${url}`);
+  goTo(link) {
+    if (link.internal) {
+      this.router.navigateByUrl(`event/${link.url}`);
+    } else {
+      window.location.href = link.url;
+    }
   }
 }

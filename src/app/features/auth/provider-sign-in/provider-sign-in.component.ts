@@ -27,8 +27,8 @@ export class ProviderSignInComponent implements OnInit {
   loginWithGoogle() {
     console.log('Log in with Google');
     this.authService.loginWithGoogle()
-      .then( (user ) => {
-        this.router.navigateByUrl('profile');
+      .then( (user) => {
+        this.router.navigateByUrl('');
       }).catch((err) => {
         this.providerError = err.message;
       });
@@ -38,7 +38,7 @@ export class ProviderSignInComponent implements OnInit {
     console.log('Log in with Facebook');
     this.authService.loginWithFacebook()
       .then( (user ) => {
-        this.router.navigateByUrl('profile');
+        this.router.navigateByUrl('');
       }).catch((err) => {
         this.providerError = err.message;
       });
