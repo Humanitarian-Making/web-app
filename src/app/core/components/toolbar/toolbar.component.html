@@ -19,11 +19,7 @@
         </button>
       </a>
     </span>
-    <span *ngIf="user">
-      <a (click)="goToUrl('profile')">
-        <img mat-card-avatar src="{{authService.photoURL}}" class="avatarPhoto">
-      </a>
-    </span>
+    
     <span *ngIf="!user">
       <a (click)="goToUrl('sign-in')">
         <button mat-button>
@@ -47,9 +43,11 @@
       <button mat-menu-item *ngIf="!user" (click)="goToUrl('sign-in')">
         Sign In
       </button>
-      <button mat-menu-item *ngIf="user" (click)="goToUrl('profile')">
-        <img mat-card-avatar src="{{authService.photoURL}}" class="avatarPhoto">
-      </button>
     </mat-menu>
   </div>
+  <span *ngIf="user">
+    <a (click)="goToUrl('profile')">
+      <img mat-card-avatar src="{{authService.photoURL}}" class="avatarPhoto">
+    </a>
+  </span>
 </mat-toolbar>

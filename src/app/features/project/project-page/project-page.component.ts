@@ -17,6 +17,7 @@ import { TagsConfig, TagLayout, TagResourceType } from 'src/app/interfaces';
 export class ProjectPageComponent implements OnInit {
   projectId: string;
   project;
+  canEditTags = false;
   @ViewChild('canvas', {static: true}) canvas: ElementRef;
   public context: CanvasRenderingContext2D;
   public tagsConfig: TagsConfig;
@@ -54,18 +55,20 @@ export class ProjectPageComponent implements OnInit {
     .subscribe((res: any) => {
       console.log(res);
       if (res.success) {
+        // this.authService.auth.user.subscribe((user) => {});
         this.project = res.project;
+        this.tagsConfig = {
+          tags: this.project.tags,
+          layout: TagLayout.horizontal,
+          edit: true,
+          populated: true,
+          resource: {
+            type: TagResourceType.project,
+            id: this.projectId
+          }
+        };
       }
     });
-    this.tagsConfig = {
-      layout: TagLayout.horizontal,
-      edit: true,
-      populated: true,
-      resource: {
-        type: TagResourceType.project,
-        id: this.projectId
-      }
-    };
   }
 
   addTag() {

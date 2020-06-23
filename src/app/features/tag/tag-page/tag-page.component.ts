@@ -39,7 +39,7 @@ export class TagPageComponent implements OnInit {
         this.tag = res.tag;
       }
     });
-    this.projectService.filterByProjectTags([this.tagId]).subscribe((res: any) => {
+    this.projectService.search('', [this.tagId]).subscribe((res: any) => {
       if (res.success) {
         this.projects = res.projects;
       }

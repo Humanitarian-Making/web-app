@@ -1,0 +1,67 @@
+@import './../../../styles.scss';
+
+$chipHeight: 1.8em;
+$addChipHeight: 4em;
+$namePadding: 0.2em;
+$chipFontSize: 1em;
+$backgroundColor: #E0E0E0;
+.tag-chip {
+    background-color: $backgroundColor;
+    height: $chipHeight;
+    border-radius: $chipHeight/2;
+    margin: 0.5em;
+    line-height: 1;
+    color: black;
+    padding-left: $namePadding;
+    padding-right: $namePadding;
+    font-size: $chipFontSize;
+
+    .tag-name {
+        margin-left: $namePadding;
+        margin-right: $namePadding;
+    }
+}
+
+.add-tag-chip {
+    background-color: whitesmoke;
+    border-radius: 0.5em;
+}
+
+mat-icon {
+    font-size: 1.5em;
+    min-width: 24px !important;
+    padding: 0px !important;
+}
+
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 24px;
+    line-height: 36px;
+    padding: 0 0px;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.add-tag {
+    background-color: whitesmoke;
+    border-radius: 0.5em;
+}
+
+.form-full-width {
+    width: 300px;
+}

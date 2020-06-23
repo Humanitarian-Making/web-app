@@ -1,5 +1,9 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
-  <div class="search-label">Search: </div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Wheelchair" [formControl]="textSearchControl">
+  </mat-form-field>
+
   <mat-form-field class="drop-down-field">
     <mat-label>Organisation</mat-label>
     <mat-select>

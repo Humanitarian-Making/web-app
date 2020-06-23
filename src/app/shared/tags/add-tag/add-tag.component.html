@@ -1,30 +1,49 @@
-<div>Add</div>
-<div [ngSwitch]="state">
-    <div *ngSwitchCase="'view'">
-        <button mat-mini-fab color="accent" (click)="startAdd()">
+<div [ngSwitch]="state" >
+    <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center" *ngSwitchCase="'view'" (click)="startAdd()"> 
+        <div class="tag-name">Add</div>
+        <button mat-button matSuffix >
             <mat-icon>add</mat-icon>
         </button>
     </div>
-    <div *ngSwitchCase="'loading'">
-        loading
+    <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center" *ngSwitchCase="'loading'">
+        Loading
     </div>
-    <div *ngSwitchCase="'adding'">
-        <mat-form-field class="example-full-width">
+    <div fxLayout="row" fxLayoutAlign="center center" *ngSwitchCase="'search'">
+        <mat-form-field class="form-full-width">
             <input type="text"
-                   placeholder="Pick one"
-                   aria-label="Number"
+                   placeholder="Search"
                    matInput
                    [formControl]="searchControl"
                    [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option}}
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)=selected($event)>
+              <mat-option *ngFor="let tag of filteredOptions | async" [value]="tag">
+                <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+                    <div class="tag-name" *ngIf="tag.parent && tag.parent.name">{{lang.getLanguageOption(tag.parent.name)}}</div>
+                    <div *ngIf="tag.parent && tag.parent.name">|</div>
+                    <div class="tag-name">{{tag.name.text}}</div>
+                </div>
               </mat-option>
             </mat-autocomplete>
           </mat-form-field>
-        
-        <button mat-mini-fab color="accent" (click)="cancelAdd()">
-            <mat-icon>cancel</mat-icon>
-        </button>
+    </div>
+
+    <div class="add-tag-chip" fxLayout="row" fxLayoutAlign="center center" *ngSwitchCase="'selected'">
+            <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+                <div class="tag-name">{{lang.getLanguageOption(selectedTag.parent.name)}}</div>
+                <div>|</div>
+                <div class="tag-name">{{selectedTag.name.text}}</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-button matSuffix aria-label="Confirm Add" (click)="confirmAdd()">
+                        <mat-icon>check</mat-icon>
+                    </button>
+                </div>
+                <div class="tag-chip" fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-button matSuffix aria-label="Cancel Add" (click)="cancelAdd()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
     </div>
 </div>

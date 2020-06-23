@@ -29,6 +29,10 @@ export class TagService {
     return this.http.get(environment.apiUrl + `tag/` + tagId);
   }
 
+  getSelectable() {
+    return this.http.get(environment.apiUrl + `tags/selectable`);
+  }
+
   getRootTags() {
     return this.http.get(environment.apiUrl + `rootTags`);
   }
