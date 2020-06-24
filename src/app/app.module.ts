@@ -36,6 +36,11 @@ import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { HomeCardDeckComponent } from './core/components/home/home-card-deck/home-card-deck.component';
+import { HomeTitleSectionComponent } from './core/components/home/home-sections/home-title-section/home-title-section.component';
+import { HomeAgenciesSectionComponent } from './core/components/home/home-sections/home-agencies-section/home-agencies-section.component';
+import { HomeFeaturedProjectsComponent } from './core/components/home/home-sections/home-featured-projects/home-featured-projects.component';
+import { HomeMapSectionComponent } from './core/components/home/home-sections/home-map-section/home-map-section.component';
+import { HomeEventSectionComponent } from './core/components/home/home-sections/home-event-section/home-event-section.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,11 @@ import { HomeCardDeckComponent } from './core/components/home/home-card-deck/hom
     HomeComponent,
     HomeCardDeckComponent,
     FooterComponent,
+    HomeTitleSectionComponent,
+    HomeAgenciesSectionComponent,
+    HomeFeaturedProjectsComponent,
+    HomeMapSectionComponent,
+    HomeEventSectionComponent,
   ],
   imports: [
     BrowserModule,
