@@ -31,6 +31,10 @@ export class ProjectService {
     return this.http.get(environment.apiUrl + 'projects');
   }
 
+  getFeatured(limit: number) {
+    return this.http.get(`${environment.apiUrl}projects/featured/limit/${limit}`);
+  }
+
   search(text: string, tagIds: string[]) {
     return this.http.put(environment.apiUrl + 'projects/search', {text, tags: tagIds});
   }
