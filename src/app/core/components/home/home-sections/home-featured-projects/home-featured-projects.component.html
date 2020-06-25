@@ -1,5 +1,5 @@
-<div fxLayout="column" fxLayoutAlign="start center">
-    <h2>Featured Projects</h2>
+<div fxLayout="column" fxLayoutAlign="start stretch">
+    <h2 class="section-heading">Featured Projects</h2>
     <div *ngIf="loading">
       <mat-spinner  style="margin:0 auto;"></mat-spinner>
       <p style="text-align: center;">Loading</p>
@@ -9,5 +9,9 @@
       <div fxFlex='33' fxFlex.md='40' fxFlex.sm='40' fxFlex.xs='95' *ngFor="let project of projects">
         <app-project-card [project]="project"></app-project-card>
       </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+      <div></div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="blue-button">More</div>
     </div>
   </div>

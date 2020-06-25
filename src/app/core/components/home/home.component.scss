@@ -1,62 +1,106 @@
-@import './../../../../styles.scss';
+@import "./../../../../styles.scss";
 
 .home-page {
   color: #444444;
 }
-  .logo {
-    width: 35%
-  } 
+.logo {
+  width: 35%;
+}
 
-  .title {
-    font-size: 3em;
-    text-align: center;
-    margin-top: 0.6em;
-  }
-  .sub-title {
-    font-size: 1.5em;
-    margin: 0.4;
-    text-align: center;
-  }
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0.6em;
+}
+.sub-title {
+  font-size: 1.5em;
+  margin: 0.4;
+  text-align: center;
+}
 
-  
-  
-  $button-height: 2.5em;
-  $button-width: 10em;
-  @mixin home-button($color) {
-    height: $button-height;
-    width: $button-width;
-    border-radius: $button-height/2;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $color;
-    color: $color;
-    margin: 2em;
-  }
-  
-  .yellow-button {
-    @include home-button($yellow);
-  }
-  
-  .blue-button {
-    @include home-button($blue);
-  }
+.section-heading {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+}
 
-  .agency-section {
-    margin: 1em;
-    background-color: whitesmoke;
-  }
-  
-  .agency-desc {
-    margin: 1em;
-    text-align: center;
-    font-size: 1.2em;
-  }
+.button-row {
+  margin: 1em;
+}
 
-  .logo-image { 
-    filter: grayscale(100%); 
-    width: 8em;
-    margin: 0.5em;
-  }
+full-width {
+  width: 100%;
+}
 
+$button-height: 2.5em;
+$button-width: 10em;
+@mixin home-button($color) {
+  height: $button-height;
+  width: $button-width;
+  border-radius: $button-height/2;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $color;
+  color: $color;
+  margin: 1em;
+}
+
+.yellow-button {
+  @include home-button($yellow);
+}
+
+.blue-button {
+  @include home-button($blue);
+}
+
+.white-button {
+  @include home-button(white);
+}
+
+.agency-section {
+  margin: 1em;
+  background-color: whitesmoke;
+}
+
+.agency-desc {
+  margin: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.logo-image {
+  filter: grayscale(100%);
+  width: 8em;
+  margin: 0.5em;
+}
+
+.map-section {
+  position: relative;
+  color: white;
+}
+
+.map-image {
+  filter: grayscale(100%) sepia(50%) hue-rotate(324deg) brightness(0.5);
+  width: 100%;
+  z-index: -1;
+}
+
+.map-content {
+  position: absolute;
+  top: 8em;
+  left: 0.5em;
+  padding: 0.5em;
+}
+
+.map-title {
+  width: 15em;
+  margin: 0.5em;
+  margin-bottom: 1em;
+}
+.map-desc {
+  width: 15em;
+  margin: 1em;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
 
 
