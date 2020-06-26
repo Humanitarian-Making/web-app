@@ -1,10 +1,12 @@
 $primary: #455a64;
 $blue: #4A8BCB;
 $yellow: #EFB044;
+$grey: #444444;
 
 html,
 body {
   height: 100%;
+  color: $grey;
 }
 
 body {

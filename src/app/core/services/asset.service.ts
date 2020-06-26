@@ -25,8 +25,6 @@ export class AssetService {
         url = `assets/logos/${asset.name}.${asset.mime}`;
         break;
     }
-    console.log('url :', url);
-
     return url;
 
   }

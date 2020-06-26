@@ -1,0 +1,11 @@
+<mat-card class="event-card"  (click)="goTo(event.link)">
+  <img mat-card-image src={{asset.get(event.image)}} alt="Image of project">
+  <mat-card-content>
+    <div class="name">
+      {{event.name}}
+    </div>
+    <div class="desc">
+      {{event.desc}}
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,4 +1,8 @@
-.project-card {
+$height: 20em;
+
+.event-card {
+    height: $height;
+    width: $height;
     margin: 1em;
     background-color: whitesmoke;
     transition: all 0.15s ease-out;

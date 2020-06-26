@@ -1,121 +1,110 @@
+@import "./../../../../styles.scss";
 
-
-  .spacer {
-    flex: 1;
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
-
-.hero {
-  text-align: center;
+.home-page {
+  color: #444444;
 }
-.hero-image {
-  width: 35%
+.logo {
+  width: 35%;
 }
 
 .title {
   font-size: 3em;
-  font-weight: bold;
   text-align: center;
+  margin-top: 0.6em;
 }
 .sub-title {
-  font-size: 2em;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.floatRight{
-  float: right;        
-  margin-left: -50%;        
-  margin-top: -4em;
-} 
- 
-.resource-title {
-  font-size: 18px;
-  text-align: center;
-}
-
-.site-details{
-  font-size: 1.3em;
-  text-align: center;
-  margin-bottom: 3em;
-}
-
-.foot-note {
-  text-align: center;
-}
-
-.projects {
-  background-color: #4a8bcb;
-  border: 2px solid #4a8bcb;
-  border-radius: 1.5em;
-  height: 3em;
-  margin: 2em;
-  padding: 1em;
-  color: #fff;
-}
-
-.projects:hover {
-  background-color: #fff;
-  border: 2px solid #4a8bcb;
-  color: #21252a;
-}
-
-.readiness {
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
-.readiness-text {
   font-size: 1.5em;
+  margin: 0.4;
   text-align: center;
 }
 
-.page {
-  margin: 32px auto;
-  padding: 0 16px;
-  max-width: 960px;
+.section-heading {
+  font-size: 1.5em;
+  margin: 1em;
+  margin-left: 0.5em;
 }
 
-.get_involved {
-  font-size: 25px;
-  font-weight: bold;
+.button-row {
+  margin: 1em;
 }
+
+full-width {
+  width: 100%;
+}
+
+$button-height: 2.5em;
+$button-width: 10em;
+@mixin home-button($color) {
+  height: $button-height;
+  width: $button-width;
+  border-radius: $button-height/2;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $color;
+  color: $color;
+  margin: 1em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.yellow-button {
+  @include home-button($yellow);
+}
+
+.blue-button {
+  @include home-button($blue);
+}
+
+.white-button {
+  @include home-button(white);
+}
+
+.agency-section {
+  margin: 1em;
+  background-color: whitesmoke;
+}
+
+.agency-desc {
+  margin: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.logo-image {
+  filter: grayscale(100%);
+  width: 8em;
+  margin: 0.5em;
+}
+
+.map-section {
+  position: relative;
+  color: white;
+}
+
+.map-image {
+  filter: grayscale(100%) sepia(50%) hue-rotate(324deg) brightness(0.5);
+  width: 100%;
+  z-index: -1;
+}
+
+.map-content {
+  position: absolute;
+  bottom: 2em;
+  left: 0.5em;
+  padding: 0.5em;
+}
+
+.map-title {
+  width: 15em;
+  margin: 0.5em;
+  margin-bottom: 1em;
+}
+.map-desc {
+  width: 15em;
+  margin: 1em;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+
