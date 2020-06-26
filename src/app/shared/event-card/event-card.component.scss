@@ -1,9 +1,10 @@
-$height: 20em;
+$height: 18em;
 
 .event-card {
     height: $height;
     width: $height;
     margin: 1em;
+    padding: 0px;
     background-color: whitesmoke;
     transition: all 0.15s ease-out;
     transform: translateY(-6px);
@@ -14,14 +15,29 @@ $height: 20em;
     }
 }
 
+.image-div {
+    background-color: white;
+    width: 100%;
+}
+
 .desc {
     overflow: hidden;
-    height: 36px;
+    height: 3em;
+    font-size: 0.9em;
     text-align: justify;
 }
 
 .name {
-    height: 1.2em;
+    height: 1em;
     font-size: 1.4em;
     overflow: hidden;
+}
+
+mat-card-content {
+    height: 3em
+}
+
+.mat-card-image {
+    width: 100%;
+    margin: 0em;
 }
