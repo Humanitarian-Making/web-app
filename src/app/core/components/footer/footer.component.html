@@ -1,7 +1,18 @@
-<footer class="footer" fxLayout="row" fxLayoutAlign="{{layout}}">
-    <span fxFlex="15" *ngIf="!isSmallScreen"></span>
-    <a fxFlex="itemSize" *ngIf="!isSmallScreen" class="mail-link" href="mailto:info@humanitarianmaking.org">info@humanitarianmaking.org</a>
-    <a fxFlex="itemSize" href="https://www.shuttleworthfoundation.org/">
-        <img src="assets/logos/shuttleworth.svg" class="footer-logo">
-    </a>
+<footer class="footer" fxLayout="row" fxLayoutAlign="space-around start">
+    <div fxLayout="column" fxLayoutAlign="space-around start">
+        <div fxLayout="row" fxLayoutAlign="start center" class="logo-row">
+            <a fxFlex="itemSize" href="https://www.shuttleworthfoundation.org/">
+                <img src="assets/logos/hm.png" class="footer-logo">
+            </a>
+            <div class="logo-row-name">HUMANITARIAN MAKING</div>
+        </div>
+        <a fxFlex="itemSize" *ngIf="!isSmallScreen" class="mail-link" href="mailto:info@humanitarianmaking.org">info@humanitarianmaking.org</a>
+
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start start">
+        <p>Supported By:</p>
+        <a fxFlex="itemSize" href="https://www.shuttleworthfoundation.org/">
+            <img src="assets/logos/shuttleworth.svg" class="footer-logo">
+        </a>
+    </div>
 </footer>

@@ -1,1 +1,16 @@
-<p>home-event-section works!</p>
+<div fxLayout="column" fxLayoutAlign="start stretch" class="full-width">
+    <h2 class="section-heading">Upcoming Events</h2>
+    <div 
+        class="full-width"
+        fxLayout="row wrap" fxLayoutAlign="start center"
+        fxLayout.xs="column" fxLayoutAlign.xs="center center"
+    >
+            <event-card *ngFor="let event of events" [event]="event"></event-card>
+    </div>
+    <div class="full-width" 
+        fxLayout="row" fxLayoutAlign="end center" 
+        fxLayout.xs="row" fxLayoutAlign.xs="center center" 
+        >
+        <div fxLayout="row" fxLayoutAlign="center center" class="blue-button" (click)="goToEvents()">More</div>
+    </div>
+</div>

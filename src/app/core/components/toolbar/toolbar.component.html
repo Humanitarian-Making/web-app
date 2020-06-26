@@ -6,14 +6,14 @@
   <span class="spacer"></span>
   <div *ngIf="!isSmallScreen">
     <span>
-      <a (click)="goToUrl('map')">
+      <a (click)="goToUrl('map')" class="toolbar-button">
         <button mat-button>
           Map
         </button>
       </a>
     </span>
     <span>
-      <a (click)="goToUrl('projects')">
+      <a (click)="goToUrl('projects')" class="toolbar-button">
         <button mat-button>
           Projects
         </button>
@@ -21,7 +21,7 @@
     </span>
     
     <span *ngIf="!user">
-      <a (click)="goToUrl('sign-in')">
+      <a (click)="goToUrl('sign-in')" class="toolbar-button">
         <button mat-button>
           Sign In
         </button>

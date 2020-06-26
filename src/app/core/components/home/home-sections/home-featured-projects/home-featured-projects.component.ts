@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/core/services/project.service';
+import { Router } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -10,7 +11,7 @@ import { ProjectService } from 'src/app/core/services/project.service';
 export class HomeFeaturedProjectsComponent implements OnInit {
   public loading: boolean;
   public projects: any[];
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit(): void {
     this.loading = true;
@@ -20,6 +21,10 @@ export class HomeFeaturedProjectsComponent implements OnInit {
         this.projects = res.projects;
       }
     });
+  }
+
+  goToProjects() {
+    this.router.navigateByUrl('projects');
   }
 
 }

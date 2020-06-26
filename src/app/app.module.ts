@@ -41,6 +41,7 @@ import { HomeAgenciesSectionComponent } from './core/components/home/home-sectio
 import { HomeFeaturedProjectsComponent } from './core/components/home/home-sections/home-featured-projects/home-featured-projects.component';
 import { HomeMapSectionComponent } from './core/components/home/home-sections/home-map-section/home-map-section.component';
 import { HomeEventSectionComponent } from './core/components/home/home-sections/home-event-section/home-event-section.component';
+import { HomeResourceSectionComponent } from './core/components/home/home-sections/home-resource-section/home-resource-section.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { HomeEventSectionComponent } from './core/components/home/home-sections/
     HomeFeaturedProjectsComponent,
     HomeMapSectionComponent,
     HomeEventSectionComponent,
+    HomeResourceSectionComponent,
   ],
   imports: [
     BrowserModule,
