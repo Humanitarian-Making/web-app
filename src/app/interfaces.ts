@@ -265,7 +265,8 @@ export enum AssetType {
     image = 'images',
     logo = 'logos',
     challenge = 'challenges',
-    event = 'events'
+    event = 'events',
+    resources = 'resources'
 }
 
 export interface Resource {
