@@ -21,6 +21,9 @@ export class AssetService {
       case AssetType.image:
         url = `assets/images/${asset.name}.${asset.mime}`;
         break;
+      case AssetType.resources:
+        url = `assets/resources/${asset.name}.${asset.mime}`;
+        break;
       case AssetType.logo:
         url = `assets/logos/${asset.name}.${asset.mime}`;
         break;
