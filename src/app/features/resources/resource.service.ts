@@ -37,8 +37,40 @@ export class ResourceService {
           name: 'accountable',
           mime: MimeType.png
         },
+      },
+      {
+        slug: 'injection-moulding',
+        name: [lang.createOption('Injection Mould for Medical Kit')],
+        desc: [lang.createOption(`Instead of 3D printing, create a kit based on injection moulding.
+        Specifically, small scale portable machine, with electric
+        gas heated to melt the plastics, hand operated.`)],
+        image: {
+          type: AssetType.image,
+          name: 'injection_moulding',
+          mime: MimeType.png
+        },
+        resources: [
+          {
+            name: [lang.createOption('Project Brief')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.challenge,
+              name: 'medical_injection_moulding',
+              mime: MimeType.pdf
+            }
+          }
+        ]
       }
     ];
 
+  }
+
+  getResource(slug) {
+    const index = this.resources.findIndex((resource) => resource.slug === slug);
+    if (index !== -1) {
+      return this.resources[index];
+    } else {
+      return null;
+    }
   }
 }

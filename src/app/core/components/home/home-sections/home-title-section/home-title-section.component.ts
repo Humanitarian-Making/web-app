@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./../../home.component.scss']
 })
 export class HomeTitleSectionComponent implements OnInit {
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {

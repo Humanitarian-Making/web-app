@@ -11,12 +11,14 @@ import { ResourcesRoutingModule } from './resources-routing.module';
 import { ResourcesPageComponent } from './resources-page/resources-page.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
+import { ResourcePageComponent } from './resource-page/resource-page.component';
 
 @NgModule({
   declarations: [
     ResourcesPageComponent,
     EthicsPageComponent,
     ReadinessLevelsComponent,
+    ResourcePageComponent,
   ],
   imports: [
     BrowserModule,

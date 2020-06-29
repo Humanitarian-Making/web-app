@@ -1,6 +1,4 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'app-home',
@@ -9,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'Humanitarian Making';
+  public smallScreen: boolean;
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }

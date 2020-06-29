@@ -19,6 +19,13 @@
         </button>
       </a>
     </span>
+    <span>
+      <a (click)="goToUrl('resources')" class="toolbar-button">
+        <button mat-button>
+          Resources
+        </button>
+      </a>
+    </span>
     
     <span *ngIf="!user">
       <a (click)="goToUrl('sign-in')" class="toolbar-button">
