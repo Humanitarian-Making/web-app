@@ -99,10 +99,34 @@ $button-width: 10em;
   color: white;
 }
 
+.tint {
+  position: relative;
+  float: left;
+}
+
+@mixin tint($color) {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color;
+  }
+}
+
+.yellow-tint {
+  @include tint(rgba(239,176,68, 0.5));
+}
+.blue-tint {
+  @include tint(rgba(74,139,203, 0.5));
+}
+
+
 .map-image {
-  filter: grayscale(100%) sepia(50%) hue-rotate(324deg) brightness(0.5);
   width: 100%;
-  z-index: -1;
 }
 
 .map-content {
@@ -118,7 +142,7 @@ $button-width: 10em;
   margin-bottom: 1em;
 }
 .map-desc {
-  width: 15em;
+  width: 100%;
   margin: 1em;
   margin-bottom: 2em;
   font-size: 1.2em;
@@ -167,5 +191,3 @@ $button-width: 10em;
     font-size: 1em;
   }
 }
-
-

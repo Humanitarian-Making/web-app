@@ -42,6 +42,7 @@ import { HomeFeaturedProjectsComponent } from './core/components/home/home-secti
 import { HomeMapSectionComponent } from './core/components/home/home-sections/home-map-section/home-map-section.component';
 import { HomeEventSectionComponent } from './core/components/home/home-sections/home-event-section/home-event-section.component';
 import { HomeResourceSectionComponent } from './core/components/home/home-sections/home-resource-section/home-resource-section.component';
+import { HomeChallengesSectionComponent } from './core/components/home/home-sections/home-challenges-section/home-challenges-section.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { HomeResourceSectionComponent } from './core/components/home/home-sectio
     HomeMapSectionComponent,
     HomeEventSectionComponent,
     HomeResourceSectionComponent,
+    HomeChallengesSectionComponent,
   ],
   imports: [
     BrowserModule,

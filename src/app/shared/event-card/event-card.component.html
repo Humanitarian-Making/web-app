@@ -2,9 +2,12 @@
   <div fxFlex="70" class="image-div" fxLayout="column" fxLayoutAlign="center center">
     <img mat-card-image src={{asset.get(event.image)}} alt="Image of project">
   </div>
-  <div fxFlex="30">
+  <div fxFlex="30" fxLayout="column" fxLayoutAlign="start start" class="event-content">
     <div class="name">
       {{event.name}}
+    </div>
+    <div class="date">
+      Date: {{event.date}}
     </div>
     <div class="desc">
       {{event.desc}}

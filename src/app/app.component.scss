@@ -2,6 +2,7 @@
   flex-direction: column;
   align-items: center;
   overflow: auto;
+  min-height: calc(100vh - 190px) !important;
 }
 
 
