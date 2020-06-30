@@ -60,7 +60,7 @@ export class ProjectPageComponent implements OnInit {
         this.tagsConfig = {
           tags: this.project.tags,
           layout: TagLayout.horizontal,
-          edit: true,
+          edit: false,
           populated: true,
           resource: {
             type: TagResourceType.project,

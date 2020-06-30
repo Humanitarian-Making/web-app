@@ -1,0 +1,68 @@
+@import './../../../styles.scss';
+
+$height: 18em;
+
+.event-card {
+    height: $height;
+    width: $height;
+    margin: 1em;
+    padding: 0px;
+    background-color: whitesmoke;
+    transition: all 0.15s ease-out;
+    transform: translateY(-6px);
+    border-bottom: 6px solid whitesmoke;
+    box-shadow: 3px 3px 3px grey;
+    &:hover {
+        border-bottom: 6px solid #EFB044;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px grey;
+    }
+}
+
+.image-div {
+    background-color: white;
+    width: 100%;
+}
+
+.event-content {
+    width: calc(100%);
+    padding: 0.1em 0.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.desc {
+    width: calc(100%);
+    -webkit-line-clamp: 2;
+    height: 1em;
+    max-height: 1em;
+    line-height: 1em;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name {
+    width: calc(100%);
+    height: 1.3em;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.date {
+    color: $blue;
+    font-size: 1em;
+    margin: 0.2em 0em;
+}
+
+mat-card-content {
+    height: 3em
+}
+
+.mat-card-image {
+    width: 100%;
+    margin: 0em;
+}

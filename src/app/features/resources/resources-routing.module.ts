@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { ResourcesPageComponent } from './resources-page/resources-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
+import { ResourcePageComponent } from './resource-page/resource-page.component';
 
 const routes: Routes = [
     {
@@ -20,6 +21,10 @@ const routes: Routes = [
             {
                 path: 'code-of-practice',
                 component: EthicsPageComponent
+            },
+            {
+                path: ':resourceSlug',
+                component: ResourcePageComponent
             },
         ]
     }

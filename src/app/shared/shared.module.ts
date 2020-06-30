@@ -22,6 +22,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { TagsComponent } from './tags/tags.component';
 import { AddTagComponent } from './tags/add-tag/add-tag.component';
 import { TagComponent } from './tags/tag/tag.component';
+import { EventCardComponent } from './event-card/event-card.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TagComponent } from './tags/tag/tag.component';
     UploaderComponent,
     UploadTaskComponent,
     ProjectCardComponent,
+    EventCardComponent,
     TagsComponent,
     AddTagComponent,
     TagComponent
@@ -61,6 +63,7 @@ import { TagComponent } from './tags/tag/tag.component';
     UploaderComponent,
     UploadTaskComponent,
     ProjectCardComponent,
+    EventCardComponent,
     TagsComponent,
     AddTagComponent,
     TagComponent

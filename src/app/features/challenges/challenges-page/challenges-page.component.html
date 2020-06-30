@@ -11,12 +11,10 @@
                 fxLayoutAlign.xs="start center"
                 class="challenge"
                 >
-                    <img src="{{asset.get(challenge.image)}}" alt="" fxFlex='25' fxFlex.sm="80">
+                    <img src="{{asset.get(challenge.image)}}" alt="" fxFlex='25' fxFlex.sm="80" style='width: 100%'>
                     <div fxLayout="column" fxLayoutAlign="start start" class="challenge-text">
                         <h5>{{lang.getLanguageOption(challenge.name)}}</h5>
                         <p>{{lang.getLanguageOption(challenge.desc)}}</p>
                     </div>                    
                 </div>
             </div>
-    </div>
-</div>

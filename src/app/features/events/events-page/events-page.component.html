@@ -1,13 +1,10 @@
-<div fxLayout="column" fxLayoutAlign="start center">
+<div fxLayout="column" fxLayoutAlign="start center" class="page">
     <div class="title">Events</div>
-    <div fxLayout.xs="column" fxLayout.sm="row wrap" fxLayout.md="row wrap" fxLayout="row wrap"
-    fxLayoutAlign="start start">
-            <div class="card card-border-blue" *ngFor="let event of events" (click)="goTo(event.link)">
-                <div class="card-body">
-                    <h5 class="card-title">{{event.name}}</h5>
-                    <div class="event-date">{{event.date}}</div>
-                    <p class="card-text">{{event.desc}}</p>
-                </div>
-            </div>
+    <div 
+        class="full-width"
+        fxLayout="row wrap" fxLayoutAlign="start center"
+        fxLayout.xs="column" fxLayoutAlign.xs="center center"
+    >
+            <event-card *ngFor="let event of events" [event]="event"></event-card>
     </div>
 </div>

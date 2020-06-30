@@ -1,0 +1,30 @@
+<div class="page">
+  <div fxLayout="column" fxLayoutAlign="start center"   *ngIf="resource">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+        <button mat-mini-fab color="accent" (click)="goToResources()" class="action-button">
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <div class="name">{{lang.getLanguageOption(resource.name)}}</div>
+        <span></span>
+      </div>
+      
+      <img class="image" src={{asset.get(resource.image)}} alt="Image of resource" >
+    
+      <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+          <div class="resource-desc">{{lang.getLanguageOption(resource.desc)}}</div>
+      </div>
+    </div>
+    
+      <div fxLayout="column" fxLayoutAlign="start start">
+        <p class="resources">Resources</p>
+        <div class="resources-row" fxLayout="row wrap" fxLayoutAlign="start start">
+          <a  *ngFor="let resource of resource.resources" href="{{asset.get(resource.asset)}}" download class="resource-card" fxLayout="column" fxLayoutAlign="start center">
+            <p class="resource-name">{{lang.getLanguageOption(resource.name)}}</p>
+            <mat-icon class="download-icon">get_app</mat-icon>
+          </a>
+        </div>
+      </div>
+    <div *ngIf="!resource">
+      <mat-spinner  style="margin:0 auto;"></mat-spinner>
+    </div>
+  </div>

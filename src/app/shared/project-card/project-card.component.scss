@@ -1,5 +1,13 @@
 .project-card {
     margin: 1em;
+    background-color: whitesmoke;
+    transition: all 0.15s ease-out;
+    transform: translateY(-6px);
+    border-bottom: 6px solid whitesmoke;
+    &:hover {
+        border-bottom: 6px solid #EFB044;
+        cursor: pointer;
+    }
 }
 
 .desc {
@@ -9,9 +17,7 @@
 }
 
 .name {
-    height: 1.4em;
-    text-align: center;
-    font-weight: bold;
+    height: 1.2em;
     font-size: 1.4em;
     overflow: hidden;
 }

@@ -37,8 +37,65 @@ export class ResourceService {
           name: 'accountable',
           mime: MimeType.png
         },
+      },
+      {
+        slug: 'makerspace-covid-19-safety-protocols',
+        name: [lang.createOption('Makerspace Covid-19 Safety Protocols')],
+        desc: [lang.createOption(`Covid-19 requires new safety protocols for everyday life. Here are safety protocols for Makerspaces in English, Kurdish, Portugese and Arabic. `)],
+        image: {
+          type: AssetType.image,
+          name: 'covid',
+          mime: MimeType.png
+        },
+        resources: [
+          {
+            name: [lang.createOption('English Version')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.resources,
+              name: `MAKERSPACE SAFETY PROTOCOLS TO COVID-19 (A4) (English)`,
+              mime: MimeType.pdf
+            }
+          },
+          {
+            name: [lang.createOption('Kurdish Version')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.resources,
+              name: `MAKERSPACE SAFETY PROTOCOLS TO COVID-19 (A4) (Kurdish)`,
+              mime: MimeType.pdf
+            }
+          },
+          {
+            name: [lang.createOption('Portugese Version')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.resources,
+              name: `MAKERSPACE SAFETY PROTOCOLS TO COVID-19 (A4) (Portugese)`,
+              mime: MimeType.pdf
+            }
+          },
+          {
+            name: [lang.createOption('Arabic Version')],
+            desc: [lang.createOption('')],
+            asset: {
+              type: AssetType.resources,
+              name: `MAKERSPACE SAFETY PROTOCOLS TO COVID-19 (Arabic)`,
+              mime: MimeType.pdf
+            }
+          }
+        ]
       }
     ];
 
+  }
+
+  getResource(slug) {
+    const index = this.resources.findIndex((resource) => resource.slug === slug);
+    if (index !== -1) {
+      return this.resources[index];
+    } else {
+      return null;
+    }
   }
 }
