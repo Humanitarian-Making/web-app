@@ -17,10 +17,17 @@
     background: white;
     color: rgba(0, 0, 0, 0.87);
   }
-
+  $border-width: 3px;
   .toolbar-button {
+    border-top: $border-width solid white;
+    border-bottom: $border-width solid white;
     &:hover {
-      border-bottom: 6px solid #EFB044;
+      border-top: $border-width solid white;
+      border-bottom: $border-width solid #EFB044;
       cursor: pointer;
+      box-shadow: 2px grey;
+    }
+    &:focus {
+      outline: -webkit-focus-ring-color auto 0px;
     }
   }
