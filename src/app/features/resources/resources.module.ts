@@ -12,6 +12,7 @@ import { ResourcesPageComponent } from './resources-page/resources-page.componen
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 import { ResourcePageComponent } from './resource-page/resource-page.component';
+import { ResearchComponent } from './research/research.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ResourcePageComponent } from './resource-page/resource-page.component';
     EthicsPageComponent,
     ReadinessLevelsComponent,
     ResourcePageComponent,
+    ResearchComponent,
   ],
   imports: [
     BrowserModule,
