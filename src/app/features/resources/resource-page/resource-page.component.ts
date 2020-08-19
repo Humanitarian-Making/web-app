@@ -26,6 +26,6 @@ export class ResourcePageComponent implements OnInit {
 
   goToResources() {
     this.router.navigateByUrl('resources');
-}
+  }
 
 }

@@ -1,0 +1,54 @@
+<div class="page">
+    <div fxLayout="column" fxLayoutAlign="start center"   *ngIf="resource">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="top-row">
+          <button mat-mini-fab color="accent" (click)="goToResources()" class="action-button">
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <div class="name">Humanitarian Making Ecosystem Study</div>
+          <span></span>
+        </div>
+        
+        <!-- <img class="image" src={{asset.get(resource.image)}} alt="Image of resource" > -->
+      
+        <div fxLayout="column" fxLayoutAlign="start center" class="desc-field">
+            <div class="resource-desc">
+                <p>This is a research project to understand the current state of the ‘Humanitarian Making’ ecosystem, and to map how it has developed over the past ten years. The purpose of the
+                    research is to provide a baseline (as both an ecosystem map and timeline) for the first-ever
+                    conference on Humanitarian Making, which is planned for the fall of 2020 or spring 2021 in Toulouse, as travel
+                    restrictions permit. The research is commissioned by Field Ready and supported by the Shuttleworth
+                    Foundation. It is being undertaken by Ian Gray of the University of Exeter and Gray Dot Catalyst. 
+                </p>
+                <br>
+                <p> The research team will:</p>
+                <ol>
+                    <li>Carry out a literature review (including grey literature),</li>
+                    <li>Interview key informants,</li>
+                    <li>Survey humanitarian makers and organisations in the humanitarian making ecosystem.</li>
+                </ol>
+                <br>
+                <p>Through this research, we want to achieve the following: </p>
+                <ol>
+                    <li>Develop a comprehensive list of humanitarian organisations engaged in humanitarian making; </li>
+                    <li>Create a timeline of how the ecosystem has developed over the past 10 years; </li>
+                    <li>Analyse the strengths and weaknesses of the ecosystem, as well as any gaps;</li>
+                    <li>Provide insights and recommendations for discussion at the conference on preferred futures for the ecosystem.</li>
+                </ol>
+                <br>
+                <p>These are ambitious aims for a small research project. We will only be successful if we are able to elicit the support and involvement of other organisations in the humanitarian making ecosystem. We are grateful for your support!</p>
+            </div>
+        </div>
+      </div>
+      
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <p class="resources">Resources</p>
+          <div class="resources-row" fxLayout="row wrap" fxLayoutAlign="start start">
+            <a  *ngFor="let resource of resource.resources" href="{{asset.get(resource.asset)}}" download class="resource-card" fxLayout="column" fxLayoutAlign="start center">
+              <p class="resource-name">{{lang.getLanguageOption(resource.name)}}</p>
+              <mat-icon class="download-icon">get_app</mat-icon>
+            </a>
+          </div>
+        </div>
+      <div *ngIf="!resource">
+        <mat-spinner  style="margin:0 auto;"></mat-spinner>
+      </div>
+    </div>
