@@ -5,35 +5,18 @@
   </span>
   <span class="spacer"></span>
   <div *ngIf="!isSmallScreen">
-    <span>
-      <a (click)="goToUrl('map')" class="toolbar-button">
-        <button mat-button>
+        <button mat-button (click)="goToUrl('map')" class="toolbar-button">
           Map
         </button>
-      </a>
-    </span>
-    <span>
-      <a (click)="goToUrl('projects')" class="toolbar-button">
-        <button mat-button>
+        <button mat-button (click)="goToUrl('projects')" class="toolbar-button">
           Projects
         </button>
-      </a>
-    </span>
-    <span>
-      <a (click)="goToUrl('resources')" class="toolbar-button">
-        <button mat-button>
+        <button mat-button (click)="goToUrl('resources')" class="toolbar-button">
           Resources
         </button>
-      </a>
-    </span>
-    
-    <span *ngIf="!user">
-      <a (click)="goToUrl('sign-in')" class="toolbar-button">
-        <button mat-button>
+        <button mat-button  *ngIf="!user" (click)="goToUrl('sign-in')" class="toolbar-button">
           Sign In
         </button>
-      </a>
-    </span>
   </div>
 
   <div *ngIf="isSmallScreen">
@@ -46,6 +29,9 @@
       </button>
       <button mat-menu-item (click)="goToUrl('projects')">
         Projects
+      </button>
+      <button mat-menu-item (click)="goToUrl('resources')">
+        Resources
       </button>
       <button mat-menu-item *ngIf="!user" (click)="goToUrl('sign-in')">
         Sign In

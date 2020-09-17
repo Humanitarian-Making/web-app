@@ -5,6 +5,7 @@ import { ResourcesPageComponent } from './resources-page/resources-page.componen
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { ResourcePageComponent } from './resource-page/resource-page.component';
+import { ResearchComponent } from './research/research.component';
 
 const routes: Routes = [
     {
@@ -19,13 +20,17 @@ const routes: Routes = [
                 component:  ReadinessLevelsComponent
             },
             {
+                path: 'research',
+                component:  ResearchComponent
+            },
+            {
                 path: 'code-of-practice',
                 component: EthicsPageComponent
             },
             {
                 path: ':resourceSlug',
                 component: ResourcePageComponent
-            },
+            }
         ]
     }
 ];

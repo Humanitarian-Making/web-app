@@ -44,7 +44,7 @@ export class ResourceService {
         desc: [lang.createOption(`Covid-19 requires new safety protocols for everyday life. Here are safety protocols for Makerspaces in English, Kurdish, Portugese and Arabic. `)],
         image: {
           type: AssetType.image,
-          name: 'covid',
+          name: 'covid-2',
           mime: MimeType.png
         },
         resources: [
@@ -85,6 +85,17 @@ export class ResourceService {
             }
           }
         ]
+      },
+      {
+        slug: 'research',
+        name: [lang.createOption('Humanitarian Making Ecosystem Study')],
+        desc: [lang.createOption(`A research project to understand the current state of the
+        ‘Humanitarian Making’ ecosystem, and to map how it has developed over the past ten years. `)],
+        image: {
+          type: AssetType.image,
+          name: '',
+          mime: MimeType.png
+        }
       }
     ];
 
