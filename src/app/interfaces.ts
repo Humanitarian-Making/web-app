@@ -278,7 +278,8 @@ export interface Resource {
 export enum MimeType {
     pdf = 'pdf',
     jpg = 'jpg',
-    png = 'png'
+    png = 'png',
+    xlsx = 'xlsx'
 }
 
 export interface Challenge {

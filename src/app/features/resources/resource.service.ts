@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { AssetType, MimeType } from 'src/app/interfaces';
 
@@ -91,6 +90,26 @@ export class ResourceService {
         name: [lang.createOption('Humanitarian Making Ecosystem Study')],
         desc: [lang.createOption(`A research project to understand the current state of the
         ‘Humanitarian Making’ ecosystem, and to map how it has developed over the past ten years. `)],
+        image: {
+          type: AssetType.image,
+          name: '',
+          mime: MimeType.png
+        }
+      },
+      {
+        slug: 'training-materials',
+        name: [lang.createOption('Shortcutting Supply Chains for Humanitarian Relief: A How-To Guide')],
+        desc: [lang.createOption(`Access Field Ready's high quality training on how we operate and manufacture at the cutting edge in the field. `)],
+        image: {
+          type: AssetType.image,
+          name: '',
+          mime: MimeType.png
+        }
+      },
+      {
+        slug: 'grn',
+        name: [lang.createOption('Goods Received Notes')],
+        desc: [lang.createOption(`Access Field Ready's high quality training on how we operate and manufacture at the cutting edge in the field. `)],
         image: {
           type: AssetType.image,
           name: '',

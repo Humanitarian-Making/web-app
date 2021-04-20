@@ -11,8 +11,10 @@ import { ResourcesRoutingModule } from './resources-routing.module';
 import { ResourcesPageComponent } from './resources-page/resources-page.component';
 import { EthicsPageComponent } from './ethics-page/ethics-page.component';
 import { ReadinessLevelsComponent } from './readiness-levels/readiness-levels.component';
+import { TrainingPageComponent } from './training-page/training-page.component';
 import { ResourcePageComponent } from './resource-page/resource-page.component';
 import { ResearchComponent } from './research/research.component';
+import { GRNPageComponent } from './grn-page/grn-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ResearchComponent } from './research/research.component';
     ReadinessLevelsComponent,
     ResourcePageComponent,
     ResearchComponent,
+    TrainingPageComponent,
+    GRNPageComponent
   ],
   imports: [
     BrowserModule,

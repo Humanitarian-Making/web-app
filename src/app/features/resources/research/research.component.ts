@@ -10,6 +10,7 @@ import { AssetType, MimeType } from 'src/app/interfaces';
   templateUrl: './research.component.html',
   styleUrls: ['./research.component.scss']
 })
+
 export class ResearchComponent implements OnInit {
   public resource;
   constructor(
