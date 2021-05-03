@@ -16,6 +16,7 @@ const redirectLoggedInToProfile = () => redirectLoggedInTo(['profile']);
 
 import { HomeComponent } from './core/components/home/home.component';
 
+import { CreateSustainabilityReviewPageComponent, SustainabilityReviewPageComponent } from './features/tools/sustainability-review/sustainability-review-page.component';
 // project
 import { ProjectPageComponent } from './features/project/project-page/project-page.component';
 import { ProjectsPageComponent } from './features/project/projects-page/projects-page.component';
@@ -37,6 +38,10 @@ import { UserGroupResourcesComponent } from './features/user-group/user-group-re
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'map',  component: MapPageComponent },
+  
+  // sustainability reviews
+  { path: 'sustainability', component: CreateSustainabilityReviewPageComponent },
+  { path: 'sustainability/:reviewId', component: SustainabilityReviewPageComponent },
 
   // project
   { path: 'projects',  component: ProjectsPageComponent },

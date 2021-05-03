@@ -1,0 +1,54 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+  <h1 id="title">Social Sustainability Toolkit</h1>
+  <p *ngIf="updating">Updating</p>
+  <p *ngIf="reviewId">{{reviewId}}</p>
+  <div id="outer">
+    <div class="layer1" id="17">
+      <div class="wide b" id="14"></div>
+      <div class="midi b top-left-midi topright" id="15"></div>
+      <div class="midi b top-right-midi topright" id="15a"></div>
+
+      <div class="layer2" (click)="selectSection(1)">
+        <div class="midi b" id="9"></div>
+        <div class="midi b" id="10"></div>
+        <div class="midi b" id="11"></div>
+
+        <div class="layer3">
+          <div class="mini b" id="1"></div>
+          <div class="mini b" id="5"></div>
+          <div class="mini b" id="2"></div>
+          <div class="mini b" id="6"></div>
+          <div class="mini b" id="3"></div>
+          <div class="mini b" id="7"></div>
+          <div class="mini b" id="4"></div>
+          <div class="mini b" id="8"></div>
+        </div>
+
+        <div class="midi b" id="12"></div>
+        <div class="midi b" id="13"></div>
+      </div>
+      <div class="midi b bot-right-midi topright" id="15b"></div>
+      <div class="high b" id="16"></div>
+    </div>
+
+    <div id="sidebar">
+      <h1 id="boxtitle">{{currentSection.title}}</h1>
+      <p id="desc">{{currentSection.desc}}</p>
+
+      <a href="#0" onclick="redPressed()" class="button-1" id="rbut"
+        >Priority</a
+      >
+      <a href="#0" onclick="orangePressed()" class="button-1" id="obut">Good</a>
+      <a href="#0" onclick="greenPressed()" class="button-1" id="gbut"
+        >Excellent</a
+      >
+      <a href="#0" onclick="greyPressed()" class="button-1" id="greybut">N/A</a>
+      <textarea id="t" name="t" rows="6"> </textarea>
+    </div>
+  </div>
+  <br />
+  <div *ngIf="loading">
+    <!-- <mat-spinner  style="margin:0 auto;"></mat-spinner> -->
+    <p style="text-align: center">Loading</p>
+  </div>
+</div>

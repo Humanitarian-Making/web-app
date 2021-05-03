@@ -1,7 +1,7 @@
 import { AddTagInput } from '../../tag/add-tag/add-tag.component';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { Component, OnInit } from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { ProjectService } from '../../../core/services/project.service';
 import { Observable } from 'rxjs/internal/Observable';
