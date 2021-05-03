@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+  <h1 id="title">Social Sustainability Toolkit</h1>
+  <button *ngIf="!loading" (click)="create()" mat-raised-button color="primary">
+    Create New Review
+  </button>
+  <div *ngIf="loading">
+    <!-- <mat-spinner  style="margin:0 auto;"></mat-spinner> -->
+    <p style="text-align: center">Loading</p>
+  </div>
+</div>

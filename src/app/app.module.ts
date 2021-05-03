@@ -43,6 +43,7 @@ import { HomeMapSectionComponent } from './core/components/home/home-sections/ho
 import { HomeEventSectionComponent } from './core/components/home/home-sections/home-event-section/home-event-section.component';
 import { HomeResourceSectionComponent } from './core/components/home/home-sections/home-resource-section/home-resource-section.component';
 import { HomeChallengesSectionComponent } from './core/components/home/home-sections/home-challenges-section/home-challenges-section.component';
+import { CreateSustainabilityReviewPageComponent, SustainabilityReviewPageComponent } from './features/tools/sustainability-review/sustainability-review-page.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,8 @@ import { HomeChallengesSectionComponent } from './core/components/home/home-sect
     HomeEventSectionComponent,
     HomeResourceSectionComponent,
     HomeChallengesSectionComponent,
+    CreateSustainabilityReviewPageComponent,
+    SustainabilityReviewPageComponent
   ],
   imports: [
     BrowserModule,
